@@ -1,0 +1,1838 @@
+subj,group,dimCB,testOrder,x,phase,y,trialNum,FCrule
+19003,differential,BG,expec-ID,6,test,93,1,similarity
+19003,differential,BG,expec-ID,9,test,25,2,similarity
+19003,differential,BG,expec-ID,8,test,24,3,similarity
+19003,differential,BG,expec-ID,10,test,25,4,similarity
+19003,differential,BG,expec-ID,7,test,94,5,similarity
+19003,differential,BG,expec-ID,1,test,25,6,similarity
+19003,differential,BG,expec-ID,3,test,24,7,similarity
+19003,differential,BG,expec-ID,2,test,26,8,similarity
+19003,differential,BG,expec-ID,5,test,95,9,similarity
+19003,differential,BG,expec-ID,4,test,0,10,similarity
+19003,differential,BG,expec-ID,11,test,25,11,similarity
+19007,single,BG,expec-ID,1,test,30,1,similarity
+19007,single,BG,expec-ID,2,test,7,2,similarity
+19007,single,BG,expec-ID,4,test,58,3,similarity
+19007,single,BG,expec-ID,8,test,62,4,similarity
+19007,single,BG,expec-ID,3,test,42,5,similarity
+19007,single,BG,expec-ID,7,test,98,6,similarity
+19007,single,BG,expec-ID,6,test,92,7,similarity
+19007,single,BG,expec-ID,11,test,19,8,similarity
+19007,single,BG,expec-ID,10,test,28,9,similarity
+19007,single,BG,expec-ID,5,test,67,10,similarity
+19007,single,BG,expec-ID,9,test,72,11,similarity
+19009,differential,GB,expec-ID,8,test,90,1,linear blue
+19009,differential,GB,expec-ID,9,test,96,2,linear blue
+19009,differential,GB,expec-ID,11,test,97,3,linear blue
+19009,differential,GB,expec-ID,2,test,6,4,linear blue
+19009,differential,GB,expec-ID,5,test,20,5,linear blue
+19009,differential,GB,expec-ID,7,test,85,6,linear blue
+19009,differential,GB,expec-ID,6,test,85,7,linear blue
+19009,differential,GB,expec-ID,1,test,16,8,linear blue
+19009,differential,GB,expec-ID,3,test,18,9,linear blue
+19009,differential,GB,expec-ID,4,test,25,10,linear blue
+19009,differential,GB,expec-ID,10,test,79,11,linear blue
+19010,single,BG,expec-ID,1,test,25,1,linear green
+19010,single,BG,expec-ID,4,test,57,2,linear green
+19010,single,BG,expec-ID,8,test,63,3,linear green
+19010,single,BG,expec-ID,6,test,73,4,linear green
+19010,single,BG,expec-ID,3,test,35,5,linear green
+19010,single,BG,expec-ID,5,test,62,6,linear green
+19010,single,BG,expec-ID,10,test,80,7,linear green
+19010,single,BG,expec-ID,2,test,32,8,linear green
+19010,single,BG,expec-ID,9,test,91,9,linear green
+19010,single,BG,expec-ID,11,test,70,10,linear green
+19010,single,BG,expec-ID,7,test,97,11,linear green
+19015,differential,BG,expec-ID,9,test,37,1,similarity
+19015,differential,BG,expec-ID,5,test,4,2,similarity
+19015,differential,BG,expec-ID,11,test,27,3,similarity
+19015,differential,BG,expec-ID,1,test,18,4,similarity
+19015,differential,BG,expec-ID,8,test,72,5,similarity
+19015,differential,BG,expec-ID,6,test,82,6,similarity
+19015,differential,BG,expec-ID,10,test,22,7,similarity
+19015,differential,BG,expec-ID,4,test,15,8,similarity
+19015,differential,BG,expec-ID,7,test,66,9,similarity
+19015,differential,BG,expec-ID,3,test,2,10,similarity
+19015,differential,BG,expec-ID,2,test,3,11,similarity
+19016,single,GB,expec-ID,1,test,70,1,linear green
+19016,single,GB,expec-ID,11,test,25,2,linear green
+19016,single,GB,expec-ID,4,test,100,3,linear green
+19016,single,GB,expec-ID,7,test,37,4,linear green
+19016,single,GB,expec-ID,2,test,100,5,linear green
+19016,single,GB,expec-ID,3,test,100,6,linear green
+19016,single,GB,expec-ID,8,test,24,7,linear green
+19016,single,GB,expec-ID,9,test,19,8,linear green
+19016,single,GB,expec-ID,6,test,77,9,linear green
+19016,single,GB,expec-ID,5,test,79,10,linear green
+19016,single,GB,expec-ID,10,test,17,11,linear green
+19019,single,GB,expec-ID,5,test,83,1,linear green
+19019,single,GB,expec-ID,1,test,86,2,linear green
+19019,single,GB,expec-ID,2,test,79,3,linear green
+19019,single,GB,expec-ID,11,test,48,4,linear green
+19019,single,GB,expec-ID,8,test,42,5,linear green
+19019,single,GB,expec-ID,9,test,43,6,linear green
+19019,single,GB,expec-ID,10,test,71,7,linear green
+19019,single,GB,expec-ID,3,test,87,8,linear green
+19019,single,GB,expec-ID,6,test,71,9,linear green
+19019,single,GB,expec-ID,4,test,72,10,linear green
+19019,single,GB,expec-ID,7,test,37,11,linear green
+19025,single,GB,expec-ID,10,test,33,1,similarity
+19025,single,GB,expec-ID,8,test,45,2,similarity
+19025,single,GB,expec-ID,6,test,80,3,similarity
+19025,single,GB,expec-ID,2,test,69,4,similarity
+19025,single,GB,expec-ID,4,test,64,5,similarity
+19025,single,GB,expec-ID,9,test,41,6,similarity
+19025,single,GB,expec-ID,5,test,68,7,similarity
+19025,single,GB,expec-ID,1,test,67,8,similarity
+19025,single,GB,expec-ID,3,test,71,9,similarity
+19025,single,GB,expec-ID,7,test,41,10,similarity
+19025,single,GB,expec-ID,11,test,68,11,similarity
+19029,differential,GB,expec-ID,5,test,2,1,linear blue
+19029,differential,GB,expec-ID,11,test,61,2,linear blue
+19029,differential,GB,expec-ID,10,test,61,3,linear blue
+19029,differential,GB,expec-ID,7,test,98,4,linear blue
+19029,differential,GB,expec-ID,4,test,3,5,linear blue
+19029,differential,GB,expec-ID,3,test,5,6,linear blue
+19029,differential,GB,expec-ID,2,test,6,7,linear blue
+19029,differential,GB,expec-ID,9,test,73,8,linear blue
+19029,differential,GB,expec-ID,8,test,69,9,linear blue
+19029,differential,GB,expec-ID,1,test,22,10,linear blue
+19029,differential,GB,expec-ID,6,test,99,11,linear blue
+19030,differential,GB,expec-ID,2,test,0,1,similarity
+19030,differential,GB,expec-ID,7,test,92,2,similarity
+19030,differential,GB,expec-ID,11,test,0,3,similarity
+19030,differential,GB,expec-ID,6,test,100,4,similarity
+19030,differential,GB,expec-ID,1,test,0,5,similarity
+19030,differential,GB,expec-ID,9,test,0,6,similarity
+19030,differential,GB,expec-ID,4,test,0,7,similarity
+19030,differential,GB,expec-ID,3,test,0,8,similarity
+19030,differential,GB,expec-ID,5,test,100,9,similarity
+19030,differential,GB,expec-ID,8,test,0,10,similarity
+19030,differential,GB,expec-ID,10,test,0,11,similarity
+19036,differential,GB,expec-ID,7,test,87,1,linear blue
+19036,differential,GB,expec-ID,11,test,71,2,linear blue
+19036,differential,GB,expec-ID,10,test,70,3,linear blue
+19036,differential,GB,expec-ID,6,test,5,4,linear blue
+19036,differential,GB,expec-ID,4,test,9,5,linear blue
+19036,differential,GB,expec-ID,1,test,20,6,linear blue
+19036,differential,GB,expec-ID,5,test,39,7,linear blue
+19036,differential,GB,expec-ID,3,test,29,8,linear blue
+19036,differential,GB,expec-ID,9,test,73,9,linear blue
+19036,differential,GB,expec-ID,8,test,72,10,linear blue
+19036,differential,GB,expec-ID,2,test,36,11,linear blue
+19037,single,GB,expec-ID,11,test,0,1,linear green
+19037,single,GB,expec-ID,6,test,100,2,linear green
+19037,single,GB,expec-ID,3,test,0,3,linear green
+19037,single,GB,expec-ID,2,test,0,4,linear green
+19037,single,GB,expec-ID,7,test,99,5,linear green
+19037,single,GB,expec-ID,5,test,99,6,linear green
+19037,single,GB,expec-ID,8,test,99,7,linear green
+19037,single,GB,expec-ID,9,test,99,8,linear green
+19037,single,GB,expec-ID,4,test,100,9,linear green
+19037,single,GB,expec-ID,1,test,99,10,linear green
+19037,single,GB,expec-ID,10,test,1,11,linear green
+19039,differential,BG,expec-ID,5,test,73,1,similarity
+19039,differential,BG,expec-ID,1,test,2,2,similarity
+19039,differential,BG,expec-ID,7,test,61,3,similarity
+19039,differential,BG,expec-ID,3,test,1,4,similarity
+19039,differential,BG,expec-ID,10,test,50,5,similarity
+19039,differential,BG,expec-ID,2,test,8,6,similarity
+19039,differential,BG,expec-ID,6,test,74,7,similarity
+19039,differential,BG,expec-ID,9,test,59,8,similarity
+19039,differential,BG,expec-ID,4,test,21,9,similarity
+19039,differential,BG,expec-ID,8,test,19,10,similarity
+19039,differential,BG,expec-ID,11,test,42,11,similarity
+19042,single,GB,expec-ID,6,test,76,1,linear blue
+19042,single,GB,expec-ID,9,test,72,2,linear blue
+19042,single,GB,expec-ID,7,test,93,3,linear blue
+19042,single,GB,expec-ID,8,test,25,4,linear blue
+19042,single,GB,expec-ID,2,test,83,5,linear blue
+19042,single,GB,expec-ID,3,test,75,6,linear blue
+19042,single,GB,expec-ID,5,test,83,7,linear blue
+19042,single,GB,expec-ID,11,test,84,8,linear blue
+19042,single,GB,expec-ID,10,test,76,9,linear blue
+19042,single,GB,expec-ID,4,test,19,10,linear blue
+19042,single,GB,expec-ID,1,test,27,11,linear blue
+19043,differential,GB,expec-ID,3,test,0,1,similarity
+19043,differential,GB,expec-ID,2,test,3,2,similarity
+19043,differential,GB,expec-ID,5,test,72,3,similarity
+19043,differential,GB,expec-ID,11,test,22,4,similarity
+19043,differential,GB,expec-ID,7,test,94,5,similarity
+19043,differential,GB,expec-ID,1,test,1,6,similarity
+19043,differential,GB,expec-ID,9,test,12,7,similarity
+19043,differential,GB,expec-ID,6,test,81,8,similarity
+19043,differential,GB,expec-ID,4,test,82,9,similarity
+19043,differential,GB,expec-ID,10,test,14,10,similarity
+19043,differential,GB,expec-ID,8,test,10,11,similarity
+19044,differential,BG,expec-ID,11,test,18,1,similarity
+19044,differential,BG,expec-ID,8,test,92,2,similarity
+19044,differential,BG,expec-ID,5,test,0,3,similarity
+19044,differential,BG,expec-ID,3,test,0,4,similarity
+19044,differential,BG,expec-ID,4,test,2,5,similarity
+19044,differential,BG,expec-ID,7,test,100,6,similarity
+19044,differential,BG,expec-ID,2,test,6,7,similarity
+19044,differential,BG,expec-ID,9,test,29,8,similarity
+19044,differential,BG,expec-ID,1,test,5,9,similarity
+19044,differential,BG,expec-ID,6,test,99,10,similarity
+19044,differential,BG,expec-ID,10,test,23,11,similarity
+19045,single,BG,expec-ID,6,test,62,1,similarity
+19045,single,BG,expec-ID,9,test,28,2,similarity
+19045,single,BG,expec-ID,3,test,57,3,similarity
+19045,single,BG,expec-ID,5,test,57,4,similarity
+19045,single,BG,expec-ID,10,test,42,5,similarity
+19045,single,BG,expec-ID,8,test,63,6,similarity
+19045,single,BG,expec-ID,1,test,38,7,similarity
+19045,single,BG,expec-ID,11,test,42,8,similarity
+19045,single,BG,expec-ID,7,test,62,9,similarity
+19045,single,BG,expec-ID,2,test,37,10,similarity
+19045,single,BG,expec-ID,4,test,52,11,similarity
+19047,single,BG,expec-ID,4,test,34,1,similarity
+19047,single,BG,expec-ID,11,test,15,2,similarity
+19047,single,BG,expec-ID,3,test,15,3,similarity
+19047,single,BG,expec-ID,2,test,16,4,similarity
+19047,single,BG,expec-ID,6,test,82,5,similarity
+19047,single,BG,expec-ID,9,test,31,6,similarity
+19047,single,BG,expec-ID,7,test,83,7,similarity
+19047,single,BG,expec-ID,8,test,56,8,similarity
+19047,single,BG,expec-ID,1,test,22,9,similarity
+19047,single,BG,expec-ID,5,test,67,10,similarity
+19047,single,BG,expec-ID,10,test,33,11,similarity
+19049,single,BG,expec-ID,5,test,81,1,linear blue
+19049,single,BG,expec-ID,11,test,38,2,linear blue
+19049,single,BG,expec-ID,1,test,63,3,linear blue
+19049,single,BG,expec-ID,6,test,82,4,linear blue
+19049,single,BG,expec-ID,8,test,66,5,linear blue
+19049,single,BG,expec-ID,9,test,55,6,linear blue
+19049,single,BG,expec-ID,7,test,62,7,linear blue
+19049,single,BG,expec-ID,4,test,66,8,linear blue
+19049,single,BG,expec-ID,3,test,67,9,linear blue
+19049,single,BG,expec-ID,10,test,45,10,linear blue
+19049,single,BG,expec-ID,2,test,60,11,linear blue
+19054,differential,BG,expec-ID,1,test,0,1,similarity
+19054,differential,BG,expec-ID,3,test,0,2,similarity
+19054,differential,BG,expec-ID,8,test,0,3,similarity
+19054,differential,BG,expec-ID,5,test,0,4,similarity
+19054,differential,BG,expec-ID,11,test,0,5,similarity
+19054,differential,BG,expec-ID,6,test,100,6,similarity
+19054,differential,BG,expec-ID,9,test,0,7,similarity
+19054,differential,BG,expec-ID,2,test,0,8,similarity
+19054,differential,BG,expec-ID,4,test,0,9,similarity
+19054,differential,BG,expec-ID,7,test,99,10,similarity
+19054,differential,BG,expec-ID,10,test,52,11,similarity
+19055,differential,BG,expec-ID,5,test,93,1,similarity
+19055,differential,BG,expec-ID,4,test,0,2,similarity
+19055,differential,BG,expec-ID,11,test,50,3,similarity
+19055,differential,BG,expec-ID,10,test,49,4,similarity
+19055,differential,BG,expec-ID,7,test,95,5,similarity
+19055,differential,BG,expec-ID,6,test,90,6,similarity
+19055,differential,BG,expec-ID,2,test,0,7,similarity
+19055,differential,BG,expec-ID,1,test,2,8,similarity
+19055,differential,BG,expec-ID,8,test,93,9,similarity
+19055,differential,BG,expec-ID,3,test,0,10,similarity
+19055,differential,BG,expec-ID,9,test,70,11,similarity
+19060,differential,GB,expec-ID,11,test,100,1,linear blue
+19060,differential,GB,expec-ID,8,test,0,2,linear blue
+19060,differential,GB,expec-ID,7,test,100,3,linear blue
+19060,differential,GB,expec-ID,3,test,0,4,linear blue
+19060,differential,GB,expec-ID,1,test,0,5,linear blue
+19060,differential,GB,expec-ID,10,test,100,6,linear blue
+19060,differential,GB,expec-ID,4,test,0,7,linear blue
+19060,differential,GB,expec-ID,5,test,100,8,linear blue
+19060,differential,GB,expec-ID,9,test,100,9,linear blue
+19060,differential,GB,expec-ID,6,test,100,10,linear blue
+19060,differential,GB,expec-ID,2,test,0,11,linear blue
+19064,single,BG,expec-ID,8,test,67,1,linear green
+19064,single,BG,expec-ID,4,test,41,2,linear green
+19064,single,BG,expec-ID,3,test,62,3,linear green
+19064,single,BG,expec-ID,10,test,58,4,linear green
+19064,single,BG,expec-ID,7,test,21,5,linear green
+19064,single,BG,expec-ID,6,test,77,6,linear green
+19064,single,BG,expec-ID,2,test,76,7,linear green
+19064,single,BG,expec-ID,11,test,73,8,linear green
+19064,single,BG,expec-ID,9,test,73,9,linear green
+19064,single,BG,expec-ID,1,test,36,10,linear green
+19064,single,BG,expec-ID,5,test,67,11,linear green
+19065,differential,GB,expec-ID,6,test,14,1,linear blue
+19065,differential,GB,expec-ID,4,test,13,2,linear blue
+19065,differential,GB,expec-ID,1,test,14,3,linear blue
+19065,differential,GB,expec-ID,8,test,96,4,linear blue
+19065,differential,GB,expec-ID,10,test,91,5,linear blue
+19065,differential,GB,expec-ID,11,test,92,6,linear blue
+19065,differential,GB,expec-ID,7,test,61,7,linear blue
+19065,differential,GB,expec-ID,2,test,6,8,linear blue
+19065,differential,GB,expec-ID,9,test,76,9,linear blue
+19065,differential,GB,expec-ID,3,test,9,10,linear blue
+19065,differential,GB,expec-ID,5,test,39,11,linear blue
+19066,single,BG,expec-ID,7,test,31,1,similarity
+19066,single,BG,expec-ID,10,test,1,2,similarity
+19066,single,BG,expec-ID,1,test,50,3,similarity
+19066,single,BG,expec-ID,9,test,26,4,similarity
+19066,single,BG,expec-ID,11,test,15,5,similarity
+19066,single,BG,expec-ID,6,test,79,6,similarity
+19066,single,BG,expec-ID,5,test,50,7,similarity
+19066,single,BG,expec-ID,2,test,50,8,similarity
+19066,single,BG,expec-ID,8,test,27,9,similarity
+19066,single,BG,expec-ID,4,test,54,10,similarity
+19066,single,BG,expec-ID,3,test,56,11,similarity
+19067,single,BG,expec-ID,6,test,95,1,similarity
+19067,single,BG,expec-ID,1,test,37,2,similarity
+19067,single,BG,expec-ID,2,test,38,3,similarity
+19067,single,BG,expec-ID,9,test,69,4,similarity
+19067,single,BG,expec-ID,10,test,45,5,similarity
+19067,single,BG,expec-ID,4,test,25,6,similarity
+19067,single,BG,expec-ID,11,test,43,7,similarity
+19067,single,BG,expec-ID,5,test,99,8,similarity
+19067,single,BG,expec-ID,3,test,35,9,similarity
+19067,single,BG,expec-ID,7,test,100,10,similarity
+19067,single,BG,expec-ID,8,test,75,11,similarity
+19069,single,BG,expec-ID,9,test,66,1,linear blue
+19069,single,BG,expec-ID,7,test,41,2,linear blue
+19069,single,BG,expec-ID,6,test,92,3,linear blue
+19069,single,BG,expec-ID,4,test,74,4,linear blue
+19069,single,BG,expec-ID,8,test,32,5,linear blue
+19069,single,BG,expec-ID,1,test,73,6,linear blue
+19069,single,BG,expec-ID,10,test,32,7,linear blue
+19069,single,BG,expec-ID,11,test,25,8,linear blue
+19069,single,BG,expec-ID,3,test,76,9,linear blue
+19069,single,BG,expec-ID,5,test,67,10,linear blue
+19069,single,BG,expec-ID,2,test,83,11,linear blue
+19070,differential,GB,expec-ID,10,test,85,1,similarity
+19070,differential,GB,expec-ID,6,test,82,2,similarity
+19070,differential,GB,expec-ID,9,test,91,3,similarity
+19070,differential,GB,expec-ID,11,test,89,4,similarity
+19070,differential,GB,expec-ID,3,test,0,5,similarity
+19070,differential,GB,expec-ID,1,test,0,6,similarity
+19070,differential,GB,expec-ID,4,test,0,7,similarity
+19070,differential,GB,expec-ID,2,test,0,8,similarity
+19070,differential,GB,expec-ID,5,test,76,9,similarity
+19070,differential,GB,expec-ID,8,test,99,10,similarity
+19070,differential,GB,expec-ID,7,test,87,11,similarity
+19073,differential,GB,expec-ID,7,test,59,1,similarity
+19073,differential,GB,expec-ID,9,test,43,2,similarity
+19073,differential,GB,expec-ID,5,test,51,3,similarity
+19073,differential,GB,expec-ID,6,test,53,4,similarity
+19073,differential,GB,expec-ID,11,test,45,5,similarity
+19073,differential,GB,expec-ID,10,test,46,6,similarity
+19073,differential,GB,expec-ID,1,test,45,7,similarity
+19073,differential,GB,expec-ID,2,test,43,8,similarity
+19073,differential,GB,expec-ID,3,test,41,9,similarity
+19073,differential,GB,expec-ID,4,test,53,10,similarity
+19073,differential,GB,expec-ID,8,test,41,11,similarity
+19074,single,GB,expec-ID,11,test,51,1,similarity
+19074,single,GB,expec-ID,1,test,100,2,similarity
+19074,single,GB,expec-ID,9,test,25,3,similarity
+19074,single,GB,expec-ID,4,test,74,4,similarity
+19074,single,GB,expec-ID,6,test,70,5,similarity
+19074,single,GB,expec-ID,8,test,28,6,similarity
+19074,single,GB,expec-ID,7,test,71,7,similarity
+19074,single,GB,expec-ID,2,test,49,8,similarity
+19074,single,GB,expec-ID,10,test,32,9,similarity
+19074,single,GB,expec-ID,5,test,71,10,similarity
+19074,single,GB,expec-ID,3,test,59,11,similarity
+19080,single,GB,expec-ID,3,test,88,1,similarity
+19080,single,GB,expec-ID,2,test,86,2,similarity
+19080,single,GB,expec-ID,7,test,88,3,similarity
+19080,single,GB,expec-ID,8,test,2,4,similarity
+19080,single,GB,expec-ID,6,test,79,5,similarity
+19080,single,GB,expec-ID,9,test,15,6,similarity
+19080,single,GB,expec-ID,11,test,78,7,similarity
+19080,single,GB,expec-ID,1,test,77,8,similarity
+19080,single,GB,expec-ID,10,test,84,9,similarity
+19080,single,GB,expec-ID,5,test,75,10,similarity
+19080,single,GB,expec-ID,4,test,20,11,similarity
+19081,differential,GB,expec-ID,11,test,0,1,similarity
+19081,differential,GB,expec-ID,1,test,0,2,similarity
+19081,differential,GB,expec-ID,8,test,96,3,similarity
+19081,differential,GB,expec-ID,5,test,0,4,similarity
+19081,differential,GB,expec-ID,4,test,0,5,similarity
+19081,differential,GB,expec-ID,7,test,100,6,similarity
+19081,differential,GB,expec-ID,6,test,98,7,similarity
+19081,differential,GB,expec-ID,9,test,0,8,similarity
+19081,differential,GB,expec-ID,3,test,0,9,similarity
+19081,differential,GB,expec-ID,2,test,0,10,similarity
+19081,differential,GB,expec-ID,10,test,1,11,similarity
+19086,single,BG,expec-ID,5,test,81,1,similarity
+19086,single,BG,expec-ID,8,test,61,2,similarity
+19086,single,BG,expec-ID,3,test,96,3,similarity
+19086,single,BG,expec-ID,7,test,64,4,similarity
+19086,single,BG,expec-ID,2,test,93,5,similarity
+19086,single,BG,expec-ID,4,test,56,6,similarity
+19086,single,BG,expec-ID,6,test,36,7,similarity
+19086,single,BG,expec-ID,1,test,91,8,similarity
+19086,single,BG,expec-ID,11,test,13,9,similarity
+19086,single,BG,expec-ID,10,test,20,10,similarity
+19086,single,BG,expec-ID,9,test,41,11,similarity
+19087,single,GB,expec-ID,3,test,78,1,linear green
+19087,single,GB,expec-ID,11,test,51,2,linear green
+19087,single,GB,expec-ID,6,test,51,3,linear green
+19087,single,GB,expec-ID,9,test,52,4,linear green
+19087,single,GB,expec-ID,2,test,38,5,linear green
+19087,single,GB,expec-ID,1,test,61,6,linear green
+19087,single,GB,expec-ID,10,test,45,7,linear green
+19087,single,GB,expec-ID,4,test,56,8,linear green
+19087,single,GB,expec-ID,7,test,42,9,linear green
+19087,single,GB,expec-ID,8,test,55,10,linear green
+19087,single,GB,expec-ID,5,test,45,11,linear green
+19088,differential,BG,expec-ID,6,test,87,1,similarity
+19088,differential,BG,expec-ID,11,test,67,2,similarity
+19088,differential,BG,expec-ID,1,test,16,3,similarity
+19088,differential,BG,expec-ID,5,test,32,4,similarity
+19088,differential,BG,expec-ID,9,test,31,5,similarity
+19088,differential,BG,expec-ID,8,test,74,6,similarity
+19088,differential,BG,expec-ID,10,test,71,7,similarity
+19088,differential,BG,expec-ID,7,test,93,8,similarity
+19088,differential,BG,expec-ID,2,test,22,9,similarity
+19088,differential,BG,expec-ID,4,test,25,10,similarity
+19088,differential,BG,expec-ID,3,test,16,11,similarity
+19089,single,GB,expec-ID,10,test,82,1,linear blue
+19089,single,GB,expec-ID,3,test,13,2,linear blue
+19089,single,GB,expec-ID,5,test,66,3,linear blue
+19089,single,GB,expec-ID,1,test,37,4,linear blue
+19089,single,GB,expec-ID,7,test,100,5,linear blue
+19089,single,GB,expec-ID,4,test,37,6,linear blue
+19089,single,GB,expec-ID,8,test,82,7,linear blue
+19089,single,GB,expec-ID,9,test,9,8,linear blue
+19089,single,GB,expec-ID,11,test,100,9,linear blue
+19089,single,GB,expec-ID,6,test,34,10,linear blue
+19089,single,GB,expec-ID,2,test,0,11,linear blue
+19090,differential,GB,expec-ID,9,test,100,1,linear blue
+19090,differential,GB,expec-ID,1,test,0,2,linear blue
+19090,differential,GB,expec-ID,8,test,100,3,linear blue
+19090,differential,GB,expec-ID,2,test,0,4,linear blue
+19090,differential,GB,expec-ID,10,test,100,5,linear blue
+19090,differential,GB,expec-ID,4,test,10,6,linear blue
+19090,differential,GB,expec-ID,11,test,100,7,linear blue
+19090,differential,GB,expec-ID,6,test,40,8,linear blue
+19090,differential,GB,expec-ID,7,test,70,9,linear blue
+19090,differential,GB,expec-ID,3,test,0,10,linear blue
+19090,differential,GB,expec-ID,5,test,19,11,linear blue
+19094,single,GB,expec-ID,7,test,13,1,linear green
+19094,single,GB,expec-ID,5,test,100,2,linear green
+19094,single,GB,expec-ID,8,test,18,3,linear green
+19094,single,GB,expec-ID,11,test,19,4,linear green
+19094,single,GB,expec-ID,4,test,76,5,linear green
+19094,single,GB,expec-ID,9,test,20,6,linear green
+19094,single,GB,expec-ID,2,test,90,7,linear green
+19094,single,GB,expec-ID,1,test,70,8,linear green
+19094,single,GB,expec-ID,3,test,73,9,linear green
+19094,single,GB,expec-ID,6,test,100,10,linear green
+19094,single,GB,expec-ID,10,test,6,11,linear green
+19096,single,BG,expec-ID,1,test,69,1,similarity
+19096,single,BG,expec-ID,11,test,37,2,similarity
+19096,single,BG,expec-ID,7,test,72,3,similarity
+19096,single,BG,expec-ID,5,test,81,4,similarity
+19096,single,BG,expec-ID,8,test,81,5,similarity
+19096,single,BG,expec-ID,6,test,85,6,similarity
+19096,single,BG,expec-ID,2,test,36,7,similarity
+19096,single,BG,expec-ID,3,test,30,8,similarity
+19096,single,BG,expec-ID,10,test,85,9,similarity
+19096,single,BG,expec-ID,4,test,31,10,similarity
+19096,single,BG,expec-ID,9,test,84,11,similarity
+19098,differential,GB,expec-ID,5,test,82,1,similarity
+19098,differential,GB,expec-ID,2,test,0,2,similarity
+19098,differential,GB,expec-ID,8,test,50,3,similarity
+19098,differential,GB,expec-ID,9,test,100,4,similarity
+19098,differential,GB,expec-ID,7,test,78,5,similarity
+19098,differential,GB,expec-ID,3,test,0,6,similarity
+19098,differential,GB,expec-ID,1,test,79,7,similarity
+19098,differential,GB,expec-ID,10,test,100,8,similarity
+19098,differential,GB,expec-ID,6,test,79,9,similarity
+19098,differential,GB,expec-ID,11,test,100,10,similarity
+19098,differential,GB,expec-ID,4,test,0,11,similarity
+19100,single,GB,expec-ID,6,test,49,1,linear green
+19100,single,GB,expec-ID,8,test,56,2,linear green
+19100,single,GB,expec-ID,11,test,50,3,linear green
+19100,single,GB,expec-ID,7,test,69,4,linear green
+19100,single,GB,expec-ID,9,test,72,5,linear green
+19100,single,GB,expec-ID,10,test,20,6,linear green
+19100,single,GB,expec-ID,2,test,31,7,linear green
+19100,single,GB,expec-ID,4,test,70,8,linear green
+19100,single,GB,expec-ID,3,test,18,9,linear green
+19100,single,GB,expec-ID,1,test,50,10,linear green
+19100,single,GB,expec-ID,5,test,50,11,linear green
+19103,differential,GB,expec-ID,8,test,88,1,linear blue
+19103,differential,GB,expec-ID,10,test,99,2,linear blue
+19103,differential,GB,expec-ID,1,test,0,3,linear blue
+19103,differential,GB,expec-ID,9,test,97,4,linear blue
+19103,differential,GB,expec-ID,7,test,69,5,linear blue
+19103,differential,GB,expec-ID,2,test,2,6,linear blue
+19103,differential,GB,expec-ID,11,test,100,7,linear blue
+19103,differential,GB,expec-ID,5,test,49,8,linear blue
+19103,differential,GB,expec-ID,3,test,17,9,linear blue
+19103,differential,GB,expec-ID,4,test,47,10,linear blue
+19103,differential,GB,expec-ID,6,test,72,11,linear blue
+19104,differential,GB,expec-ID,4,test,0,1,similarity
+19104,differential,GB,expec-ID,9,test,100,2,similarity
+19104,differential,GB,expec-ID,5,test,0,3,similarity
+19104,differential,GB,expec-ID,7,test,100,4,similarity
+19104,differential,GB,expec-ID,1,test,0,5,similarity
+19104,differential,GB,expec-ID,8,test,100,6,similarity
+19104,differential,GB,expec-ID,2,test,0,7,similarity
+19104,differential,GB,expec-ID,11,test,0,8,similarity
+19104,differential,GB,expec-ID,3,test,0,9,similarity
+19104,differential,GB,expec-ID,10,test,0,10,similarity
+19104,differential,GB,expec-ID,6,test,0,11,similarity
+19107,differential,BG,expec-ID,1,test,0,1,similarity
+19107,differential,BG,expec-ID,9,test,26,2,similarity
+19107,differential,BG,expec-ID,6,test,74,3,similarity
+19107,differential,BG,expec-ID,3,test,0,4,similarity
+19107,differential,BG,expec-ID,4,test,0,5,similarity
+19107,differential,BG,expec-ID,7,test,66,6,similarity
+19107,differential,BG,expec-ID,5,test,0,7,similarity
+19107,differential,BG,expec-ID,10,test,24,8,similarity
+19107,differential,BG,expec-ID,8,test,76,9,similarity
+19107,differential,BG,expec-ID,2,test,0,10,similarity
+19107,differential,BG,expec-ID,11,test,76,11,similarity
+19108,differential,BG,expec-ID,11,test,0,1,similarity
+19108,differential,BG,expec-ID,6,test,60,2,similarity
+19108,differential,BG,expec-ID,5,test,29,3,similarity
+19108,differential,BG,expec-ID,2,test,15,4,similarity
+19108,differential,BG,expec-ID,3,test,5,5,similarity
+19108,differential,BG,expec-ID,1,test,7,6,similarity
+19108,differential,BG,expec-ID,10,test,0,7,similarity
+19108,differential,BG,expec-ID,9,test,0,8,similarity
+19108,differential,BG,expec-ID,8,test,4,9,similarity
+19108,differential,BG,expec-ID,7,test,4,10,similarity
+19108,differential,BG,expec-ID,4,test,2,11,similarity
+19109,single,GB,expec-ID,3,test,50,1,similarity
+19109,single,GB,expec-ID,11,test,29,2,similarity
+19109,single,GB,expec-ID,2,test,61,3,similarity
+19109,single,GB,expec-ID,9,test,50,4,similarity
+19109,single,GB,expec-ID,7,test,81,5,similarity
+19109,single,GB,expec-ID,1,test,42,6,similarity
+19109,single,GB,expec-ID,10,test,41,7,similarity
+19109,single,GB,expec-ID,6,test,80,8,similarity
+19109,single,GB,expec-ID,8,test,70,9,similarity
+19109,single,GB,expec-ID,5,test,66,10,similarity
+19109,single,GB,expec-ID,4,test,70,11,similarity
+19111,single,GB,expec-ID,5,test,100,1,linear blue
+19111,single,GB,expec-ID,1,test,0,2,linear blue
+19111,single,GB,expec-ID,10,test,100,3,linear blue
+19111,single,GB,expec-ID,9,test,100,4,linear blue
+19111,single,GB,expec-ID,3,test,0,5,linear blue
+19111,single,GB,expec-ID,4,test,0,6,linear blue
+19111,single,GB,expec-ID,6,test,100,7,linear blue
+19111,single,GB,expec-ID,8,test,100,8,linear blue
+19111,single,GB,expec-ID,7,test,100,9,linear blue
+19111,single,GB,expec-ID,11,test,0,10,linear blue
+19111,single,GB,expec-ID,2,test,0,11,linear blue
+19114,differential,GB,expec-ID,3,test,0,1,linear blue
+19114,differential,GB,expec-ID,6,test,66,2,linear blue
+19114,differential,GB,expec-ID,8,test,100,3,linear blue
+19114,differential,GB,expec-ID,5,test,39,4,linear blue
+19114,differential,GB,expec-ID,7,test,98,5,linear blue
+19114,differential,GB,expec-ID,2,test,0,6,linear blue
+19114,differential,GB,expec-ID,1,test,0,7,linear blue
+19114,differential,GB,expec-ID,9,test,100,8,linear blue
+19114,differential,GB,expec-ID,11,test,100,9,linear blue
+19114,differential,GB,expec-ID,4,test,37,10,linear blue
+19114,differential,GB,expec-ID,10,test,100,11,linear blue
+19115,single,GB,expec-ID,1,test,84,1,similarity
+19115,single,GB,expec-ID,6,test,94,2,similarity
+19115,single,GB,expec-ID,7,test,14,3,similarity
+19115,single,GB,expec-ID,3,test,12,4,similarity
+19115,single,GB,expec-ID,2,test,32,5,similarity
+19115,single,GB,expec-ID,10,test,10,6,similarity
+19115,single,GB,expec-ID,11,test,65,7,similarity
+19115,single,GB,expec-ID,9,test,25,8,similarity
+19115,single,GB,expec-ID,8,test,25,9,similarity
+19115,single,GB,expec-ID,5,test,88,10,similarity
+19115,single,GB,expec-ID,4,test,77,11,similarity
+19118,single,GB,expec-ID,6,test,100,1,similarity
+19118,single,GB,expec-ID,1,test,21,2,similarity
+19118,single,GB,expec-ID,8,test,64,3,similarity
+19118,single,GB,expec-ID,5,test,100,4,similarity
+19118,single,GB,expec-ID,11,test,31,5,similarity
+19118,single,GB,expec-ID,4,test,60,6,similarity
+19118,single,GB,expec-ID,2,test,55,7,similarity
+19118,single,GB,expec-ID,7,test,60,8,similarity
+19118,single,GB,expec-ID,9,test,35,9,similarity
+19118,single,GB,expec-ID,10,test,35,10,similarity
+19118,single,GB,expec-ID,3,test,90,11,similarity
+19123,differential,BG,expec-ID,6,test,90,1,similarity
+19123,differential,BG,expec-ID,7,test,79,2,similarity
+19123,differential,BG,expec-ID,2,test,0,3,similarity
+19123,differential,BG,expec-ID,9,test,56,4,similarity
+19123,differential,BG,expec-ID,3,test,0,5,similarity
+19123,differential,BG,expec-ID,1,test,12,6,similarity
+19123,differential,BG,expec-ID,5,test,76,7,similarity
+19123,differential,BG,expec-ID,4,test,10,8,similarity
+19123,differential,BG,expec-ID,10,test,65,9,similarity
+19123,differential,BG,expec-ID,11,test,63,10,similarity
+19123,differential,BG,expec-ID,8,test,81,11,similarity
+19124,single,GB,expec-ID,10,test,31,1,similarity
+19124,single,GB,expec-ID,5,test,86,2,similarity
+19124,single,GB,expec-ID,3,test,29,3,similarity
+19124,single,GB,expec-ID,8,test,28,4,similarity
+19124,single,GB,expec-ID,11,test,18,5,similarity
+19124,single,GB,expec-ID,1,test,18,6,similarity
+19124,single,GB,expec-ID,6,test,94,7,similarity
+19124,single,GB,expec-ID,9,test,15,8,similarity
+19124,single,GB,expec-ID,4,test,22,9,similarity
+19124,single,GB,expec-ID,2,test,15,10,similarity
+19124,single,GB,expec-ID,7,test,24,11,similarity
+19125,single,BG,expec-ID,4,test,80,1,linear green
+19125,single,BG,expec-ID,2,test,96,2,linear green
+19125,single,BG,expec-ID,9,test,0,3,linear green
+19125,single,BG,expec-ID,3,test,99,4,linear green
+19125,single,BG,expec-ID,10,test,91,5,linear green
+19125,single,BG,expec-ID,11,test,11,6,linear green
+19125,single,BG,expec-ID,1,test,100,7,linear green
+19125,single,BG,expec-ID,8,test,0,8,linear green
+19125,single,BG,expec-ID,5,test,13,9,linear green
+19125,single,BG,expec-ID,6,test,20,10,linear green
+19125,single,BG,expec-ID,7,test,4,11,linear green
+19129,differential,GB,expec-ID,2,test,100,1,similarity
+19129,differential,GB,expec-ID,3,test,99,2,similarity
+19129,differential,GB,expec-ID,5,test,2,3,similarity
+19129,differential,GB,expec-ID,7,test,2,4,similarity
+19129,differential,GB,expec-ID,10,test,99,5,similarity
+19129,differential,GB,expec-ID,4,test,3,6,similarity
+19129,differential,GB,expec-ID,1,test,2,7,similarity
+19129,differential,GB,expec-ID,8,test,0,8,similarity
+19129,differential,GB,expec-ID,6,test,100,9,similarity
+19129,differential,GB,expec-ID,9,test,91,10,similarity
+19129,differential,GB,expec-ID,11,test,86,11,similarity
+19135,single,BG,expec-ID,2,test,91,1,linear blue
+19135,single,BG,expec-ID,8,test,13,2,linear blue
+19135,single,BG,expec-ID,11,test,0,3,linear blue
+19135,single,BG,expec-ID,10,test,0,4,linear blue
+19135,single,BG,expec-ID,5,test,93,5,linear blue
+19135,single,BG,expec-ID,6,test,40,6,linear blue
+19135,single,BG,expec-ID,1,test,100,7,linear blue
+19135,single,BG,expec-ID,4,test,92,8,linear blue
+19135,single,BG,expec-ID,3,test,96,9,linear blue
+19135,single,BG,expec-ID,9,test,0,10,linear blue
+19135,single,BG,expec-ID,7,test,7,11,linear blue
+19137,differential,BG,expec-ID,7,test,73,1,similarity
+19137,differential,BG,expec-ID,10,test,59,2,similarity
+19137,differential,BG,expec-ID,2,test,16,3,similarity
+19137,differential,BG,expec-ID,9,test,64,4,similarity
+19137,differential,BG,expec-ID,8,test,68,5,similarity
+19137,differential,BG,expec-ID,11,test,62,6,similarity
+19137,differential,BG,expec-ID,5,test,32,7,similarity
+19137,differential,BG,expec-ID,4,test,35,8,similarity
+19137,differential,BG,expec-ID,1,test,20,9,similarity
+19137,differential,BG,expec-ID,6,test,61,10,similarity
+19137,differential,BG,expec-ID,3,test,30,11,similarity
+19140,single,GB,expec-ID,4,test,26,1,similarity
+19140,single,GB,expec-ID,6,test,86,2,similarity
+19140,single,GB,expec-ID,11,test,14,3,similarity
+19140,single,GB,expec-ID,1,test,64,4,similarity
+19140,single,GB,expec-ID,5,test,100,5,similarity
+19140,single,GB,expec-ID,8,test,41,6,similarity
+19140,single,GB,expec-ID,3,test,55,7,similarity
+19140,single,GB,expec-ID,9,test,32,8,similarity
+19140,single,GB,expec-ID,10,test,28,9,similarity
+19140,single,GB,expec-ID,7,test,58,10,similarity
+19140,single,GB,expec-ID,2,test,52,11,similarity
+19141,single,GB,expec-ID,6,test,51,1,similarity
+19141,single,GB,expec-ID,4,test,56,2,similarity
+19141,single,GB,expec-ID,1,test,59,3,similarity
+19141,single,GB,expec-ID,11,test,60,4,similarity
+19141,single,GB,expec-ID,7,test,61,5,similarity
+19141,single,GB,expec-ID,5,test,100,6,similarity
+19141,single,GB,expec-ID,2,test,96,7,similarity
+19141,single,GB,expec-ID,8,test,78,8,similarity
+19141,single,GB,expec-ID,9,test,71,9,similarity
+19141,single,GB,expec-ID,10,test,71,10,similarity
+19141,single,GB,expec-ID,3,test,69,11,similarity
+19148,differential,BG,expec-ID,6,test,99,1,linear green
+19148,differential,BG,expec-ID,11,test,98,2,linear green
+19148,differential,BG,expec-ID,7,test,100,3,linear green
+19148,differential,BG,expec-ID,3,test,0,4,linear green
+19148,differential,BG,expec-ID,8,test,0,5,linear green
+19148,differential,BG,expec-ID,10,test,0,6,linear green
+19148,differential,BG,expec-ID,9,test,0,7,linear green
+19148,differential,BG,expec-ID,5,test,64,8,linear green
+19148,differential,BG,expec-ID,1,test,0,9,linear green
+19148,differential,BG,expec-ID,4,test,0,10,linear green
+19148,differential,BG,expec-ID,2,test,2,11,linear green
+19149,single,GB,expec-ID,10,test,50,1,similarity
+19149,single,GB,expec-ID,5,test,88,2,similarity
+19149,single,GB,expec-ID,8,test,50,3,similarity
+19149,single,GB,expec-ID,9,test,33,4,similarity
+19149,single,GB,expec-ID,3,test,37,5,similarity
+19149,single,GB,expec-ID,6,test,100,6,similarity
+19149,single,GB,expec-ID,1,test,11,7,similarity
+19149,single,GB,expec-ID,11,test,24,8,similarity
+19149,single,GB,expec-ID,2,test,22,9,similarity
+19149,single,GB,expec-ID,4,test,70,10,similarity
+19149,single,GB,expec-ID,7,test,98,11,similarity
+19150,single,BG,expec-ID,11,test,4,1,linear blue
+19150,single,BG,expec-ID,3,test,91,2,linear blue
+19150,single,BG,expec-ID,9,test,9,3,linear blue
+19150,single,BG,expec-ID,2,test,93,4,linear blue
+19150,single,BG,expec-ID,8,test,94,5,linear blue
+19150,single,BG,expec-ID,4,test,94,6,linear blue
+19150,single,BG,expec-ID,6,test,92,7,linear blue
+19150,single,BG,expec-ID,1,test,94,8,linear blue
+19150,single,BG,expec-ID,7,test,8,9,linear blue
+19150,single,BG,expec-ID,10,test,92,10,linear blue
+19150,single,BG,expec-ID,5,test,95,11,linear blue
+19152,single,GB,expec-ID,7,test,0,1,similarity
+19152,single,GB,expec-ID,5,test,100,2,similarity
+19152,single,GB,expec-ID,10,test,0,3,similarity
+19152,single,GB,expec-ID,8,test,0,4,similarity
+19152,single,GB,expec-ID,4,test,100,5,similarity
+19152,single,GB,expec-ID,3,test,0,6,similarity
+19152,single,GB,expec-ID,6,test,100,7,similarity
+19152,single,GB,expec-ID,2,test,0,8,similarity
+19152,single,GB,expec-ID,9,test,0,9,similarity
+19152,single,GB,expec-ID,11,test,0,10,similarity
+19152,single,GB,expec-ID,1,test,0,11,similarity
+19154,differential,BG,expec-ID,4,test,0,1,similarity
+19154,differential,BG,expec-ID,1,test,97,2,similarity
+19154,differential,BG,expec-ID,5,test,100,3,similarity
+19154,differential,BG,expec-ID,7,test,94,4,similarity
+19154,differential,BG,expec-ID,11,test,57,5,similarity
+19154,differential,BG,expec-ID,6,test,100,6,similarity
+19154,differential,BG,expec-ID,9,test,49,7,similarity
+19154,differential,BG,expec-ID,2,test,0,8,similarity
+19154,differential,BG,expec-ID,8,test,90,9,similarity
+19154,differential,BG,expec-ID,10,test,50,10,similarity
+19154,differential,BG,expec-ID,3,test,3,11,similarity
+19155,differential,GB,expec-ID,9,test,78,1,linear blue
+19155,differential,GB,expec-ID,10,test,84,2,linear blue
+19155,differential,GB,expec-ID,6,test,100,3,linear blue
+19155,differential,GB,expec-ID,4,test,0,4,linear blue
+19155,differential,GB,expec-ID,11,test,82,5,linear blue
+19155,differential,GB,expec-ID,5,test,0,6,linear blue
+19155,differential,GB,expec-ID,8,test,81,7,linear blue
+19155,differential,GB,expec-ID,2,test,0,8,linear blue
+19155,differential,GB,expec-ID,7,test,100,9,linear blue
+19155,differential,GB,expec-ID,1,test,0,10,linear blue
+19155,differential,GB,expec-ID,3,test,0,11,linear blue
+19159,single,GB,expec-ID,4,test,86,1,linear green
+19159,single,GB,expec-ID,10,test,50,2,linear green
+19159,single,GB,expec-ID,3,test,87,3,linear green
+19159,single,GB,expec-ID,5,test,87,4,linear green
+19159,single,GB,expec-ID,11,test,50,5,linear green
+19159,single,GB,expec-ID,7,test,50,6,linear green
+19159,single,GB,expec-ID,6,test,87,7,linear green
+19159,single,GB,expec-ID,8,test,50,8,linear green
+19159,single,GB,expec-ID,2,test,83,9,linear green
+19159,single,GB,expec-ID,1,test,84,10,linear green
+19159,single,GB,expec-ID,9,test,50,11,linear green
+19162,single,BG,expec-ID,6,test,80,1,similarity
+19162,single,BG,expec-ID,11,test,50,2,similarity
+19162,single,BG,expec-ID,1,test,50,3,similarity
+19162,single,BG,expec-ID,8,test,88,4,similarity
+19162,single,BG,expec-ID,9,test,53,5,similarity
+19162,single,BG,expec-ID,5,test,55,6,similarity
+19162,single,BG,expec-ID,3,test,50,7,similarity
+19162,single,BG,expec-ID,7,test,90,8,similarity
+19162,single,BG,expec-ID,4,test,50,9,similarity
+19162,single,BG,expec-ID,2,test,50,10,similarity
+19162,single,BG,expec-ID,10,test,50,11,similarity
+19166,differential,BG,expec-ID,1,test,0,1,similarity
+19166,differential,BG,expec-ID,6,test,100,2,similarity
+19166,differential,BG,expec-ID,5,test,100,3,similarity
+19166,differential,BG,expec-ID,4,test,0,4,similarity
+19166,differential,BG,expec-ID,3,test,0,5,similarity
+19166,differential,BG,expec-ID,8,test,51,6,similarity
+19166,differential,BG,expec-ID,2,test,0,7,similarity
+19166,differential,BG,expec-ID,10,test,100,8,similarity
+19166,differential,BG,expec-ID,9,test,100,9,similarity
+19166,differential,BG,expec-ID,7,test,100,10,similarity
+19166,differential,BG,expec-ID,11,test,100,11,similarity
+19168,differential,GB,expec-ID,5,test,97,1,similarity
+19168,differential,GB,expec-ID,10,test,0,2,similarity
+19168,differential,GB,expec-ID,11,test,1,3,similarity
+19168,differential,GB,expec-ID,1,test,93,4,similarity
+19168,differential,GB,expec-ID,6,test,80,5,similarity
+19168,differential,GB,expec-ID,4,test,0,6,similarity
+19168,differential,GB,expec-ID,9,test,95,7,similarity
+19168,differential,GB,expec-ID,3,test,13,8,similarity
+19168,differential,GB,expec-ID,7,test,95,9,similarity
+19168,differential,GB,expec-ID,2,test,6,10,similarity
+19168,differential,GB,expec-ID,8,test,88,11,similarity
+19170,differential,BG,expec-ID,1,test,2,1,similarity
+19170,differential,BG,expec-ID,2,test,15,2,similarity
+19170,differential,BG,expec-ID,7,test,85,3,similarity
+19170,differential,BG,expec-ID,5,test,73,4,similarity
+19170,differential,BG,expec-ID,3,test,9,5,similarity
+19170,differential,BG,expec-ID,4,test,3,6,similarity
+19170,differential,BG,expec-ID,9,test,48,7,similarity
+19170,differential,BG,expec-ID,11,test,42,8,similarity
+19170,differential,BG,expec-ID,10,test,47,9,similarity
+19170,differential,BG,expec-ID,6,test,91,10,similarity
+19170,differential,BG,expec-ID,8,test,20,11,similarity
+19171,single,GB,expec-ID,4,test,57,1,linear blue
+19171,single,GB,expec-ID,6,test,85,2,linear blue
+19171,single,GB,expec-ID,9,test,73,3,linear blue
+19171,single,GB,expec-ID,5,test,61,4,linear blue
+19171,single,GB,expec-ID,8,test,65,5,linear blue
+19171,single,GB,expec-ID,3,test,81,6,linear blue
+19171,single,GB,expec-ID,2,test,78,7,linear blue
+19171,single,GB,expec-ID,10,test,72,8,linear blue
+19171,single,GB,expec-ID,11,test,61,9,linear blue
+19171,single,GB,expec-ID,1,test,73,10,linear blue
+19171,single,GB,expec-ID,7,test,74,11,linear blue
+19173,differential,BG,expec-ID,2,test,11,1,similarity
+19173,differential,BG,expec-ID,3,test,11,2,similarity
+19173,differential,BG,expec-ID,9,test,75,3,similarity
+19173,differential,BG,expec-ID,10,test,78,4,similarity
+19173,differential,BG,expec-ID,11,test,75,5,similarity
+19173,differential,BG,expec-ID,5,test,80,6,similarity
+19173,differential,BG,expec-ID,6,test,74,7,similarity
+19173,differential,BG,expec-ID,4,test,16,8,similarity
+19173,differential,BG,expec-ID,8,test,68,9,similarity
+19173,differential,BG,expec-ID,7,test,71,10,similarity
+19173,differential,BG,expec-ID,1,test,16,11,similarity
+19174,differential,BG,expec-ID,8,test,100,1,linear green
+19174,differential,BG,expec-ID,2,test,1,2,linear green
+19174,differential,BG,expec-ID,11,test,100,3,linear green
+19174,differential,BG,expec-ID,7,test,50,4,linear green
+19174,differential,BG,expec-ID,3,test,0,5,linear green
+19174,differential,BG,expec-ID,5,test,25,6,linear green
+19174,differential,BG,expec-ID,10,test,100,7,linear green
+19174,differential,BG,expec-ID,4,test,6,8,linear green
+19174,differential,BG,expec-ID,1,test,0,9,linear green
+19174,differential,BG,expec-ID,6,test,69,10,linear green
+19174,differential,BG,expec-ID,9,test,100,11,linear green
+19175,differential,GB,expec-ID,9,test,72,1,linear blue
+19175,differential,GB,expec-ID,5,test,27,2,linear blue
+19175,differential,GB,expec-ID,8,test,67,3,linear blue
+19175,differential,GB,expec-ID,3,test,6,4,linear blue
+19175,differential,GB,expec-ID,2,test,14,5,linear blue
+19175,differential,GB,expec-ID,1,test,14,6,linear blue
+19175,differential,GB,expec-ID,11,test,84,7,linear blue
+19175,differential,GB,expec-ID,7,test,62,8,linear blue
+19175,differential,GB,expec-ID,10,test,72,9,linear blue
+19175,differential,GB,expec-ID,4,test,26,10,linear blue
+19175,differential,GB,expec-ID,6,test,52,11,linear blue
+19176,differential,BG,expec-ID,11,test,43,1,similarity
+19176,differential,BG,expec-ID,8,test,17,2,similarity
+19176,differential,BG,expec-ID,2,test,7,3,similarity
+19176,differential,BG,expec-ID,7,test,62,4,similarity
+19176,differential,BG,expec-ID,3,test,15,5,similarity
+19176,differential,BG,expec-ID,6,test,80,6,similarity
+19176,differential,BG,expec-ID,10,test,22,7,similarity
+19176,differential,BG,expec-ID,4,test,20,8,similarity
+19176,differential,BG,expec-ID,5,test,18,9,similarity
+19176,differential,BG,expec-ID,1,test,6,10,similarity
+19176,differential,BG,expec-ID,9,test,20,11,similarity
+19177,single,BG,expec-ID,9,test,22,1,linear green
+19177,single,BG,expec-ID,10,test,74,2,linear green
+19177,single,BG,expec-ID,5,test,91,3,linear green
+19177,single,BG,expec-ID,6,test,92,4,linear green
+19177,single,BG,expec-ID,8,test,27,5,linear green
+19177,single,BG,expec-ID,7,test,76,6,linear green
+19177,single,BG,expec-ID,1,test,12,7,linear green
+19177,single,BG,expec-ID,11,test,61,8,linear green
+19177,single,BG,expec-ID,3,test,21,9,linear green
+19177,single,BG,expec-ID,2,test,27,10,linear green
+19177,single,BG,expec-ID,4,test,74,11,linear green
+19181,single,BG,expec-ID,7,test,100,1,similarity
+19181,single,BG,expec-ID,9,test,12,2,similarity
+19181,single,BG,expec-ID,10,test,9,3,similarity
+19181,single,BG,expec-ID,4,test,65,4,similarity
+19181,single,BG,expec-ID,8,test,34,5,similarity
+19181,single,BG,expec-ID,3,test,73,6,similarity
+19181,single,BG,expec-ID,6,test,96,7,similarity
+19181,single,BG,expec-ID,5,test,67,8,similarity
+19181,single,BG,expec-ID,2,test,52,9,similarity
+19181,single,BG,expec-ID,1,test,57,10,similarity
+19181,single,BG,expec-ID,11,test,37,11,similarity
+19184,single,GB,expec-ID,9,test,72,1,linear blue
+19184,single,GB,expec-ID,5,test,24,2,linear blue
+19184,single,GB,expec-ID,4,test,65,3,linear blue
+19184,single,GB,expec-ID,3,test,17,4,linear blue
+19184,single,GB,expec-ID,10,test,93,5,linear blue
+19184,single,GB,expec-ID,11,test,8,6,linear blue
+19184,single,GB,expec-ID,8,test,67,7,linear blue
+19184,single,GB,expec-ID,7,test,33,8,linear blue
+19184,single,GB,expec-ID,1,test,62,9,linear blue
+19184,single,GB,expec-ID,6,test,73,10,linear blue
+19184,single,GB,expec-ID,2,test,25,11,linear blue
+19188,differential,BG,expec-ID,5,test,76,1,similarity
+19188,differential,BG,expec-ID,4,test,17,2,similarity
+19188,differential,BG,expec-ID,6,test,88,3,similarity
+19188,differential,BG,expec-ID,9,test,51,4,similarity
+19188,differential,BG,expec-ID,8,test,50,5,similarity
+19188,differential,BG,expec-ID,1,test,6,6,similarity
+19188,differential,BG,expec-ID,11,test,23,7,similarity
+19188,differential,BG,expec-ID,10,test,23,8,similarity
+19188,differential,BG,expec-ID,7,test,80,9,similarity
+19188,differential,BG,expec-ID,3,test,17,10,similarity
+19188,differential,BG,expec-ID,2,test,19,11,similarity
+19192,single,BG,expec-ID,1,test,63,1,similarity
+19192,single,BG,expec-ID,11,test,41,2,similarity
+19192,single,BG,expec-ID,3,test,61,3,similarity
+19192,single,BG,expec-ID,4,test,59,4,similarity
+19192,single,BG,expec-ID,10,test,42,5,similarity
+19192,single,BG,expec-ID,8,test,73,6,similarity
+19192,single,BG,expec-ID,9,test,46,7,similarity
+19192,single,BG,expec-ID,6,test,74,8,similarity
+19192,single,BG,expec-ID,5,test,77,9,similarity
+19192,single,BG,expec-ID,7,test,64,10,similarity
+19192,single,BG,expec-ID,2,test,58,11,similarity
+19201,single,GB,expec-ID,10,test,16,1,similarity
+19201,single,GB,expec-ID,5,test,82,2,similarity
+19201,single,GB,expec-ID,6,test,82,3,similarity
+19201,single,GB,expec-ID,4,test,59,4,similarity
+19201,single,GB,expec-ID,1,test,13,5,similarity
+19201,single,GB,expec-ID,3,test,68,6,similarity
+19201,single,GB,expec-ID,11,test,8,7,similarity
+19201,single,GB,expec-ID,9,test,9,8,similarity
+19201,single,GB,expec-ID,2,test,16,9,similarity
+19201,single,GB,expec-ID,7,test,7,10,similarity
+19201,single,GB,expec-ID,8,test,5,11,similarity
+19204,single,GB,expec-ID,5,test,81,1,similarity
+19204,single,GB,expec-ID,9,test,15,2,similarity
+19204,single,GB,expec-ID,7,test,78,3,similarity
+19204,single,GB,expec-ID,8,test,13,4,similarity
+19204,single,GB,expec-ID,10,test,11,5,similarity
+19204,single,GB,expec-ID,6,test,89,6,similarity
+19204,single,GB,expec-ID,2,test,15,7,similarity
+19204,single,GB,expec-ID,11,test,15,8,similarity
+19204,single,GB,expec-ID,3,test,17,9,similarity
+19204,single,GB,expec-ID,4,test,87,10,similarity
+19204,single,GB,expec-ID,1,test,11,11,similarity
+19205,differential,GB,expec-ID,7,test,77,1,linear blue
+19205,differential,GB,expec-ID,8,test,99,2,linear blue
+19205,differential,GB,expec-ID,2,test,1,3,linear blue
+19205,differential,GB,expec-ID,9,test,99,4,linear blue
+19205,differential,GB,expec-ID,6,test,66,5,linear blue
+19205,differential,GB,expec-ID,3,test,5,6,linear blue
+19205,differential,GB,expec-ID,1,test,2,7,linear blue
+19205,differential,GB,expec-ID,5,test,26,8,linear blue
+19205,differential,GB,expec-ID,4,test,7,9,linear blue
+19205,differential,GB,expec-ID,10,test,99,10,linear blue
+19205,differential,GB,expec-ID,11,test,99,11,linear blue
+19207,single,GB,expec-ID,6,test,67,1,linear blue
+19207,single,GB,expec-ID,3,test,36,2,linear blue
+19207,single,GB,expec-ID,8,test,81,3,linear blue
+19207,single,GB,expec-ID,9,test,84,4,linear blue
+19207,single,GB,expec-ID,10,test,90,5,linear blue
+19207,single,GB,expec-ID,7,test,44,6,linear blue
+19207,single,GB,expec-ID,1,test,22,7,linear blue
+19207,single,GB,expec-ID,4,test,25,8,linear blue
+19207,single,GB,expec-ID,2,test,41,9,linear blue
+19207,single,GB,expec-ID,11,test,79,10,linear blue
+19207,single,GB,expec-ID,5,test,28,11,linear blue
+19208,single,GB,expec-ID,3,test,72,1,linear blue
+19208,single,GB,expec-ID,2,test,30,2,linear blue
+19208,single,GB,expec-ID,7,test,57,3,linear blue
+19208,single,GB,expec-ID,10,test,84,4,linear blue
+19208,single,GB,expec-ID,1,test,38,5,linear blue
+19208,single,GB,expec-ID,11,test,61,6,linear blue
+19208,single,GB,expec-ID,9,test,78,7,linear blue
+19208,single,GB,expec-ID,5,test,23,8,linear blue
+19208,single,GB,expec-ID,8,test,74,9,linear blue
+19208,single,GB,expec-ID,6,test,36,10,linear blue
+19208,single,GB,expec-ID,4,test,44,11,linear blue
+19212,single,GB,expec-ID,1,test,19,1,similarity
+19212,single,GB,expec-ID,8,test,1,2,similarity
+19212,single,GB,expec-ID,7,test,54,3,similarity
+19212,single,GB,expec-ID,2,test,82,4,similarity
+19212,single,GB,expec-ID,5,test,94,5,similarity
+19212,single,GB,expec-ID,3,test,71,6,similarity
+19212,single,GB,expec-ID,9,test,1,7,similarity
+19212,single,GB,expec-ID,11,test,0,8,similarity
+19212,single,GB,expec-ID,6,test,97,9,similarity
+19212,single,GB,expec-ID,10,test,9,10,similarity
+19212,single,GB,expec-ID,4,test,61,11,similarity
+19218,single,GB,expec-ID,5,test,80,1,similarity
+19218,single,GB,expec-ID,9,test,28,2,similarity
+19218,single,GB,expec-ID,3,test,62,3,similarity
+19218,single,GB,expec-ID,7,test,16,4,similarity
+19218,single,GB,expec-ID,6,test,82,5,similarity
+19218,single,GB,expec-ID,11,test,8,6,similarity
+19218,single,GB,expec-ID,8,test,13,7,similarity
+19218,single,GB,expec-ID,1,test,39,8,similarity
+19218,single,GB,expec-ID,2,test,31,9,similarity
+19218,single,GB,expec-ID,10,test,21,10,similarity
+19218,single,GB,expec-ID,4,test,82,11,similarity
+19219,single,BG,expec-ID,5,test,67,1,linear green
+19219,single,BG,expec-ID,4,test,70,2,linear green
+19219,single,BG,expec-ID,1,test,62,3,linear green
+19219,single,BG,expec-ID,11,test,64,4,linear green
+19219,single,BG,expec-ID,8,test,63,5,linear green
+19219,single,BG,expec-ID,3,test,60,6,linear green
+19219,single,BG,expec-ID,10,test,62,7,linear green
+19219,single,BG,expec-ID,2,test,69,8,linear green
+19219,single,BG,expec-ID,9,test,63,9,linear green
+19219,single,BG,expec-ID,7,test,63,10,linear green
+19219,single,BG,expec-ID,6,test,65,11,linear green
+19221,differential,GB,expec-ID,11,test,96,1,linear blue
+19221,differential,GB,expec-ID,9,test,67,2,linear blue
+19221,differential,GB,expec-ID,3,test,6,3,linear blue
+19221,differential,GB,expec-ID,8,test,83,4,linear blue
+19221,differential,GB,expec-ID,2,test,15,5,linear blue
+19221,differential,GB,expec-ID,5,test,38,6,linear blue
+19221,differential,GB,expec-ID,1,test,9,7,linear blue
+19221,differential,GB,expec-ID,10,test,92,8,linear blue
+19221,differential,GB,expec-ID,4,test,34,9,linear blue
+19221,differential,GB,expec-ID,6,test,67,10,linear blue
+19221,differential,GB,expec-ID,7,test,86,11,linear blue
+19224,single,BG,expec-ID,5,test,85,1,linear blue
+19224,single,BG,expec-ID,4,test,79,2,linear blue
+19224,single,BG,expec-ID,2,test,15,3,linear blue
+19224,single,BG,expec-ID,6,test,71,4,linear blue
+19224,single,BG,expec-ID,10,test,0,5,linear blue
+19224,single,BG,expec-ID,9,test,31,6,linear blue
+19224,single,BG,expec-ID,8,test,40,7,linear blue
+19224,single,BG,expec-ID,1,test,99,8,linear blue
+19224,single,BG,expec-ID,7,test,51,9,linear blue
+19224,single,BG,expec-ID,11,test,31,10,linear blue
+19224,single,BG,expec-ID,3,test,67,11,linear blue
+19226,differential,BG,expec-ID,8,test,88,1,similarity
+19226,differential,BG,expec-ID,9,test,73,2,similarity
+19226,differential,BG,expec-ID,10,test,31,3,similarity
+19226,differential,BG,expec-ID,3,test,0,4,similarity
+19226,differential,BG,expec-ID,4,test,42,5,similarity
+19226,differential,BG,expec-ID,2,test,0,6,similarity
+19226,differential,BG,expec-ID,6,test,90,7,similarity
+19226,differential,BG,expec-ID,11,test,60,8,similarity
+19226,differential,BG,expec-ID,1,test,0,9,similarity
+19226,differential,BG,expec-ID,7,test,91,10,similarity
+19226,differential,BG,expec-ID,5,test,60,11,similarity
+19227,single,BG,expec-ID,2,test,67,1,similarity
+19227,single,BG,expec-ID,6,test,90,2,similarity
+19227,single,BG,expec-ID,7,test,85,3,similarity
+19227,single,BG,expec-ID,9,test,12,4,similarity
+19227,single,BG,expec-ID,4,test,46,5,similarity
+19227,single,BG,expec-ID,11,test,19,6,similarity
+19227,single,BG,expec-ID,1,test,60,7,similarity
+19227,single,BG,expec-ID,8,test,17,8,similarity
+19227,single,BG,expec-ID,3,test,56,9,similarity
+19227,single,BG,expec-ID,5,test,42,10,similarity
+19227,single,BG,expec-ID,10,test,22,11,similarity
+19228,single,BG,expec-ID,10,test,2,1,similarity
+19228,single,BG,expec-ID,6,test,100,2,similarity
+19228,single,BG,expec-ID,9,test,2,3,similarity
+19228,single,BG,expec-ID,1,test,21,4,similarity
+19228,single,BG,expec-ID,3,test,21,5,similarity
+19228,single,BG,expec-ID,8,test,62,6,similarity
+19228,single,BG,expec-ID,11,test,31,7,similarity
+19228,single,BG,expec-ID,2,test,8,8,similarity
+19228,single,BG,expec-ID,4,test,9,9,similarity
+19228,single,BG,expec-ID,5,test,94,10,similarity
+19228,single,BG,expec-ID,7,test,100,11,similarity
+19237,differential,GB,expec-ID,9,test,26,1,linear blue
+19237,differential,GB,expec-ID,11,test,39,2,linear blue
+19237,differential,GB,expec-ID,2,test,54,3,linear blue
+19237,differential,GB,expec-ID,4,test,0,4,linear blue
+19237,differential,GB,expec-ID,1,test,44,5,linear blue
+19237,differential,GB,expec-ID,5,test,0,6,linear blue
+19237,differential,GB,expec-ID,6,test,83,7,linear blue
+19237,differential,GB,expec-ID,3,test,43,8,linear blue
+19237,differential,GB,expec-ID,7,test,30,9,linear blue
+19237,differential,GB,expec-ID,8,test,75,10,linear blue
+19237,differential,GB,expec-ID,10,test,68,11,linear blue
+19238,single,GB,expec-ID,8,test,35,1,linear blue
+19238,single,GB,expec-ID,6,test,68,2,linear blue
+19238,single,GB,expec-ID,11,test,71,3,linear blue
+19238,single,GB,expec-ID,3,test,18,4,linear blue
+19238,single,GB,expec-ID,4,test,19,5,linear blue
+19238,single,GB,expec-ID,5,test,17,6,linear blue
+19238,single,GB,expec-ID,10,test,77,7,linear blue
+19238,single,GB,expec-ID,2,test,18,8,linear blue
+19238,single,GB,expec-ID,7,test,68,9,linear blue
+19238,single,GB,expec-ID,9,test,76,10,linear blue
+19238,single,GB,expec-ID,1,test,20,11,linear blue
+19240,differential,GB,expec-ID,11,test,100,1,linear blue
+19240,differential,GB,expec-ID,10,test,100,2,linear blue
+19240,differential,GB,expec-ID,8,test,100,3,linear blue
+19240,differential,GB,expec-ID,7,test,100,4,linear blue
+19240,differential,GB,expec-ID,9,test,100,5,linear blue
+19240,differential,GB,expec-ID,1,test,8,6,linear blue
+19240,differential,GB,expec-ID,3,test,0,7,linear blue
+19240,differential,GB,expec-ID,2,test,4,8,linear blue
+19240,differential,GB,expec-ID,4,test,0,9,linear blue
+19240,differential,GB,expec-ID,6,test,93,10,linear blue
+19240,differential,GB,expec-ID,5,test,87,11,linear blue
+19242,differential,BG,expec-ID,11,test,66,1,similarity
+19242,differential,BG,expec-ID,3,test,0,2,similarity
+19242,differential,BG,expec-ID,4,test,0,3,similarity
+19242,differential,BG,expec-ID,7,test,100,4,similarity
+19242,differential,BG,expec-ID,2,test,0,5,similarity
+19242,differential,BG,expec-ID,10,test,66,6,similarity
+19242,differential,BG,expec-ID,6,test,100,7,similarity
+19242,differential,BG,expec-ID,8,test,100,8,similarity
+19242,differential,BG,expec-ID,1,test,0,9,similarity
+19242,differential,BG,expec-ID,5,test,99,10,similarity
+19242,differential,BG,expec-ID,9,test,65,11,similarity
+19244,differential,GB,expec-ID,8,test,100,1,linear blue
+19244,differential,GB,expec-ID,10,test,100,2,linear blue
+19244,differential,GB,expec-ID,3,test,0,3,linear blue
+19244,differential,GB,expec-ID,7,test,100,4,linear blue
+19244,differential,GB,expec-ID,4,test,0,5,linear blue
+19244,differential,GB,expec-ID,11,test,100,6,linear blue
+19244,differential,GB,expec-ID,6,test,50,7,linear blue
+19244,differential,GB,expec-ID,1,test,0,8,linear blue
+19244,differential,GB,expec-ID,2,test,0,9,linear blue
+19244,differential,GB,expec-ID,9,test,100,10,linear blue
+19244,differential,GB,expec-ID,5,test,0,11,linear blue
+19245,single,GB,expec-ID,6,test,86,1,similarity
+19245,single,GB,expec-ID,1,test,16,2,similarity
+19245,single,GB,expec-ID,9,test,26,3,similarity
+19245,single,GB,expec-ID,8,test,60,4,similarity
+19245,single,GB,expec-ID,11,test,29,5,similarity
+19245,single,GB,expec-ID,2,test,36,6,similarity
+19245,single,GB,expec-ID,4,test,83,7,similarity
+19245,single,GB,expec-ID,7,test,61,8,similarity
+19245,single,GB,expec-ID,3,test,36,9,similarity
+19245,single,GB,expec-ID,10,test,36,10,similarity
+19245,single,GB,expec-ID,5,test,100,11,similarity
+19246,single,BG,expec-ID,5,test,73,1,linear blue
+19246,single,BG,expec-ID,11,test,27,2,linear blue
+19246,single,BG,expec-ID,4,test,81,3,linear blue
+19246,single,BG,expec-ID,10,test,30,4,linear blue
+19246,single,BG,expec-ID,3,test,78,5,linear blue
+19246,single,BG,expec-ID,1,test,91,6,linear blue
+19246,single,BG,expec-ID,8,test,38,7,linear blue
+19246,single,BG,expec-ID,7,test,40,8,linear blue
+19246,single,BG,expec-ID,2,test,71,9,linear blue
+19246,single,BG,expec-ID,6,test,38,10,linear blue
+19246,single,BG,expec-ID,9,test,24,11,linear blue
+19247,single,BG,expec-ID,1,test,67,1,similarity
+19247,single,BG,expec-ID,9,test,86,2,similarity
+19247,single,BG,expec-ID,2,test,59,3,similarity
+19247,single,BG,expec-ID,6,test,89,4,similarity
+19247,single,BG,expec-ID,3,test,63,5,similarity
+19247,single,BG,expec-ID,5,test,95,6,similarity
+19247,single,BG,expec-ID,8,test,80,7,similarity
+19247,single,BG,expec-ID,4,test,64,8,similarity
+19247,single,BG,expec-ID,7,test,88,9,similarity
+19247,single,BG,expec-ID,11,test,77,10,similarity
+19247,single,BG,expec-ID,10,test,73,11,similarity
+19250,differential,BG,expec-ID,8,test,84,1,similarity
+19250,differential,BG,expec-ID,5,test,5,2,similarity
+19250,differential,BG,expec-ID,7,test,91,3,similarity
+19250,differential,BG,expec-ID,11,test,58,4,similarity
+19250,differential,BG,expec-ID,6,test,80,5,similarity
+19250,differential,BG,expec-ID,4,test,0,6,similarity
+19250,differential,BG,expec-ID,10,test,53,7,similarity
+19250,differential,BG,expec-ID,3,test,0,8,similarity
+19250,differential,BG,expec-ID,9,test,74,9,similarity
+19250,differential,BG,expec-ID,2,test,0,10,similarity
+19250,differential,BG,expec-ID,1,test,0,11,similarity
+19251,single,BG,expec-ID,1,test,50,1,similarity
+19251,single,BG,expec-ID,5,test,84,2,similarity
+19251,single,BG,expec-ID,9,test,50,3,similarity
+19251,single,BG,expec-ID,10,test,50,4,similarity
+19251,single,BG,expec-ID,3,test,50,5,similarity
+19251,single,BG,expec-ID,7,test,82,6,similarity
+19251,single,BG,expec-ID,6,test,83,7,similarity
+19251,single,BG,expec-ID,8,test,50,8,similarity
+19251,single,BG,expec-ID,11,test,50,9,similarity
+19251,single,BG,expec-ID,2,test,50,10,similarity
+19251,single,BG,expec-ID,4,test,50,11,similarity
+19252,differential,GB,expec-ID,4,test,8,1,linear blue
+19252,differential,GB,expec-ID,7,test,83,2,linear blue
+19252,differential,GB,expec-ID,1,test,29,3,linear blue
+19252,differential,GB,expec-ID,8,test,75,4,linear blue
+19252,differential,GB,expec-ID,11,test,62,5,linear blue
+19252,differential,GB,expec-ID,3,test,25,6,linear blue
+19252,differential,GB,expec-ID,5,test,44,7,linear blue
+19252,differential,GB,expec-ID,2,test,32,8,linear blue
+19252,differential,GB,expec-ID,10,test,65,9,linear blue
+19252,differential,GB,expec-ID,9,test,74,10,linear blue
+19252,differential,GB,expec-ID,6,test,67,11,linear blue
+19253,differential,GB,expec-ID,11,test,65,1,linear blue
+19253,differential,GB,expec-ID,2,test,24,2,linear blue
+19253,differential,GB,expec-ID,10,test,79,3,linear blue
+19253,differential,GB,expec-ID,8,test,100,4,linear blue
+19253,differential,GB,expec-ID,5,test,0,5,linear blue
+19253,differential,GB,expec-ID,4,test,0,6,linear blue
+19253,differential,GB,expec-ID,1,test,20,7,linear blue
+19253,differential,GB,expec-ID,9,test,91,8,linear blue
+19253,differential,GB,expec-ID,6,test,78,9,linear blue
+19253,differential,GB,expec-ID,7,test,73,10,linear blue
+19253,differential,GB,expec-ID,3,test,0,11,linear blue
+19254,single,BG,expec-ID,2,test,28,1,linear blue
+19254,single,BG,expec-ID,3,test,70,2,linear blue
+19254,single,BG,expec-ID,10,test,70,3,linear blue
+19254,single,BG,expec-ID,6,test,74,4,linear blue
+19254,single,BG,expec-ID,8,test,28,5,linear blue
+19254,single,BG,expec-ID,5,test,26,6,linear blue
+19254,single,BG,expec-ID,11,test,30,7,linear blue
+19254,single,BG,expec-ID,9,test,68,8,linear blue
+19254,single,BG,expec-ID,7,test,25,9,linear blue
+19254,single,BG,expec-ID,1,test,73,10,linear blue
+19254,single,BG,expec-ID,4,test,76,11,linear blue
+19255,differential,BG,expec-ID,4,test,2,1,similarity
+19255,differential,BG,expec-ID,11,test,50,2,similarity
+19255,differential,BG,expec-ID,7,test,88,3,similarity
+19255,differential,BG,expec-ID,3,test,5,4,similarity
+19255,differential,BG,expec-ID,2,test,50,5,similarity
+19255,differential,BG,expec-ID,9,test,50,6,similarity
+19255,differential,BG,expec-ID,5,test,91,7,similarity
+19255,differential,BG,expec-ID,10,test,50,8,similarity
+19255,differential,BG,expec-ID,1,test,50,9,similarity
+19255,differential,BG,expec-ID,8,test,50,10,similarity
+19255,differential,BG,expec-ID,6,test,90,11,similarity
+19257,single,GB,expec-ID,10,test,87,1,similarity
+19257,single,GB,expec-ID,5,test,83,2,similarity
+19257,single,GB,expec-ID,9,test,24,3,similarity
+19257,single,GB,expec-ID,3,test,84,4,similarity
+19257,single,GB,expec-ID,6,test,83,5,similarity
+19257,single,GB,expec-ID,7,test,32,6,similarity
+19257,single,GB,expec-ID,4,test,82,7,similarity
+19257,single,GB,expec-ID,2,test,59,8,similarity
+19257,single,GB,expec-ID,8,test,24,9,similarity
+19257,single,GB,expec-ID,1,test,57,10,similarity
+19257,single,GB,expec-ID,11,test,10,11,similarity
+19266,differential,BG,expec-ID,4,test,1,1,similarity
+19266,differential,BG,expec-ID,10,test,54,2,similarity
+19266,differential,BG,expec-ID,8,test,60,3,similarity
+19266,differential,BG,expec-ID,9,test,62,4,similarity
+19266,differential,BG,expec-ID,11,test,62,5,similarity
+19266,differential,BG,expec-ID,2,test,6,6,similarity
+19266,differential,BG,expec-ID,3,test,7,7,similarity
+19266,differential,BG,expec-ID,7,test,100,8,similarity
+19266,differential,BG,expec-ID,5,test,0,9,similarity
+19266,differential,BG,expec-ID,6,test,76,10,similarity
+19266,differential,BG,expec-ID,1,test,36,11,similarity
+19269,single,GB,expec-ID,9,test,75,1,linear blue
+19269,single,GB,expec-ID,8,test,81,2,linear blue
+19269,single,GB,expec-ID,2,test,14,3,linear blue
+19269,single,GB,expec-ID,1,test,12,4,linear blue
+19269,single,GB,expec-ID,4,test,49,5,linear blue
+19269,single,GB,expec-ID,3,test,46,6,linear blue
+19269,single,GB,expec-ID,10,test,91,7,linear blue
+19269,single,GB,expec-ID,5,test,46,8,linear blue
+19269,single,GB,expec-ID,6,test,47,9,linear blue
+19269,single,GB,expec-ID,11,test,91,10,linear blue
+19269,single,GB,expec-ID,7,test,48,11,linear blue
+19270,differential,GB,expec-ID,2,test,17,1,linear blue
+19270,differential,GB,expec-ID,4,test,11,2,linear blue
+19270,differential,GB,expec-ID,9,test,47,3,linear blue
+19270,differential,GB,expec-ID,1,test,25,4,linear blue
+19270,differential,GB,expec-ID,3,test,17,5,linear blue
+19270,differential,GB,expec-ID,8,test,54,6,linear blue
+19270,differential,GB,expec-ID,10,test,34,7,linear blue
+19270,differential,GB,expec-ID,5,test,84,8,linear blue
+19270,differential,GB,expec-ID,11,test,29,9,linear blue
+19270,differential,GB,expec-ID,6,test,90,10,linear blue
+19270,differential,GB,expec-ID,7,test,94,11,linear blue
+19271,single,GB,expec-ID,10,test,81,1,linear blue
+19271,single,GB,expec-ID,6,test,74,2,linear blue
+19271,single,GB,expec-ID,11,test,67,3,linear blue
+19271,single,GB,expec-ID,8,test,66,4,linear blue
+19271,single,GB,expec-ID,9,test,68,5,linear blue
+19271,single,GB,expec-ID,2,test,84,6,linear blue
+19271,single,GB,expec-ID,4,test,87,7,linear blue
+19271,single,GB,expec-ID,7,test,77,8,linear blue
+19271,single,GB,expec-ID,3,test,59,9,linear blue
+19271,single,GB,expec-ID,5,test,48,10,linear blue
+19271,single,GB,expec-ID,1,test,91,11,linear blue
+19272,single,BG,expec-ID,9,test,100,1,linear green
+19272,single,BG,expec-ID,6,test,0,2,linear green
+19272,single,BG,expec-ID,11,test,100,3,linear green
+19272,single,BG,expec-ID,8,test,0,4,linear green
+19272,single,BG,expec-ID,10,test,100,5,linear green
+19272,single,BG,expec-ID,7,test,0,6,linear green
+19272,single,BG,expec-ID,1,test,100,7,linear green
+19272,single,BG,expec-ID,2,test,100,8,linear green
+19272,single,BG,expec-ID,4,test,0,9,linear green
+19272,single,BG,expec-ID,5,test,0,10,linear green
+19272,single,BG,expec-ID,3,test,100,11,linear green
+19274,single,GB,expec-ID,5,test,95,1,linear blue
+19274,single,GB,expec-ID,7,test,100,2,linear blue
+19274,single,GB,expec-ID,6,test,20,3,linear blue
+19274,single,GB,expec-ID,1,test,7,4,linear blue
+19274,single,GB,expec-ID,8,test,76,5,linear blue
+19274,single,GB,expec-ID,10,test,17,6,linear blue
+19274,single,GB,expec-ID,9,test,25,7,linear blue
+19274,single,GB,expec-ID,2,test,74,8,linear blue
+19274,single,GB,expec-ID,4,test,82,9,linear blue
+19274,single,GB,expec-ID,11,test,22,10,linear blue
+19274,single,GB,expec-ID,3,test,81,11,linear blue
+19275,differential,BG,expec-ID,4,test,0,1,linear green
+19275,differential,BG,expec-ID,5,test,78,2,linear green
+19275,differential,BG,expec-ID,2,test,18,3,linear green
+19275,differential,BG,expec-ID,9,test,51,4,linear green
+19275,differential,BG,expec-ID,11,test,18,5,linear green
+19275,differential,BG,expec-ID,10,test,39,6,linear green
+19275,differential,BG,expec-ID,8,test,58,7,linear green
+19275,differential,BG,expec-ID,1,test,11,8,linear green
+19275,differential,BG,expec-ID,7,test,53,9,linear green
+19275,differential,BG,expec-ID,6,test,100,10,linear green
+19275,differential,BG,expec-ID,3,test,4,11,linear green
+19277,single,BG,expec-ID,8,test,21,1,similarity
+19277,single,BG,expec-ID,3,test,71,2,similarity
+19277,single,BG,expec-ID,5,test,21,3,similarity
+19277,single,BG,expec-ID,1,test,79,4,similarity
+19277,single,BG,expec-ID,2,test,62,5,similarity
+19277,single,BG,expec-ID,10,test,26,6,similarity
+19277,single,BG,expec-ID,6,test,71,7,similarity
+19277,single,BG,expec-ID,4,test,64,8,similarity
+19277,single,BG,expec-ID,11,test,28,9,similarity
+19277,single,BG,expec-ID,7,test,63,10,similarity
+19277,single,BG,expec-ID,9,test,31,11,similarity
+19279,single,GB,expec-ID,7,test,86,1,similarity
+19279,single,GB,expec-ID,10,test,17,2,similarity
+19279,single,GB,expec-ID,11,test,88,3,similarity
+19279,single,GB,expec-ID,4,test,94,4,similarity
+19279,single,GB,expec-ID,9,test,28,5,similarity
+19279,single,GB,expec-ID,1,test,78,6,similarity
+19279,single,GB,expec-ID,2,test,40,7,similarity
+19279,single,GB,expec-ID,8,test,67,8,similarity
+19279,single,GB,expec-ID,6,test,81,9,similarity
+19279,single,GB,expec-ID,3,test,68,10,similarity
+19279,single,GB,expec-ID,5,test,36,11,similarity
+19284,differential,BG,expec-ID,11,test,0,1,linear green
+19284,differential,BG,expec-ID,1,test,28,2,linear green
+19284,differential,BG,expec-ID,9,test,72,3,linear green
+19284,differential,BG,expec-ID,3,test,24,4,linear green
+19284,differential,BG,expec-ID,8,test,78,5,linear green
+19284,differential,BG,expec-ID,6,test,89,6,linear green
+19284,differential,BG,expec-ID,4,test,21,7,linear green
+19284,differential,BG,expec-ID,2,test,0,8,linear green
+19284,differential,BG,expec-ID,5,test,34,9,linear green
+19284,differential,BG,expec-ID,10,test,87,10,linear green
+19284,differential,BG,expec-ID,7,test,40,11,linear green
+19285,differential,BG,expec-ID,4,test,0,1,similarity
+19285,differential,BG,expec-ID,9,test,50,2,similarity
+19285,differential,BG,expec-ID,11,test,50,3,similarity
+19285,differential,BG,expec-ID,10,test,50,4,similarity
+19285,differential,BG,expec-ID,2,test,25,5,similarity
+19285,differential,BG,expec-ID,6,test,76,6,similarity
+19285,differential,BG,expec-ID,8,test,50,7,similarity
+19285,differential,BG,expec-ID,5,test,50,8,similarity
+19285,differential,BG,expec-ID,1,test,22,9,similarity
+19285,differential,BG,expec-ID,7,test,56,10,similarity
+19285,differential,BG,expec-ID,3,test,41,11,similarity
+19286,differential,BG,expec-ID,10,test,67,1,similarity
+19286,differential,BG,expec-ID,7,test,100,2,similarity
+19286,differential,BG,expec-ID,9,test,0,3,similarity
+19286,differential,BG,expec-ID,11,test,76,4,similarity
+19286,differential,BG,expec-ID,6,test,0,5,similarity
+19286,differential,BG,expec-ID,8,test,100,6,similarity
+19286,differential,BG,expec-ID,5,test,0,7,similarity
+19286,differential,BG,expec-ID,3,test,0,8,similarity
+19286,differential,BG,expec-ID,2,test,0,9,similarity
+19286,differential,BG,expec-ID,1,test,0,10,similarity
+19286,differential,BG,expec-ID,4,test,11,11,similarity
+19287,differential,BG,expec-ID,3,test,4,1,linear blue
+19287,differential,BG,expec-ID,8,test,68,2,linear blue
+19287,differential,BG,expec-ID,9,test,55,3,linear blue
+19287,differential,BG,expec-ID,10,test,58,4,linear blue
+19287,differential,BG,expec-ID,11,test,59,5,linear blue
+19287,differential,BG,expec-ID,6,test,82,6,linear blue
+19287,differential,BG,expec-ID,2,test,20,7,linear blue
+19287,differential,BG,expec-ID,1,test,25,8,linear blue
+19287,differential,BG,expec-ID,7,test,91,9,linear blue
+19287,differential,BG,expec-ID,5,test,43,10,linear blue
+19287,differential,BG,expec-ID,4,test,11,11,linear blue
+19289,single,GB,expec-ID,7,test,59,1,similarity
+19289,single,GB,expec-ID,11,test,63,2,similarity
+19289,single,GB,expec-ID,10,test,66,3,similarity
+19289,single,GB,expec-ID,9,test,66,4,similarity
+19289,single,GB,expec-ID,2,test,82,5,similarity
+19289,single,GB,expec-ID,5,test,79,6,similarity
+19289,single,GB,expec-ID,8,test,44,7,similarity
+19289,single,GB,expec-ID,3,test,60,8,similarity
+19289,single,GB,expec-ID,1,test,61,9,similarity
+19289,single,GB,expec-ID,6,test,74,10,similarity
+19289,single,GB,expec-ID,4,test,81,11,similarity
+19291,differential,GB,expec-ID,11,test,29,1,similarity
+19291,differential,GB,expec-ID,4,test,6,2,similarity
+19291,differential,GB,expec-ID,8,test,50,3,similarity
+19291,differential,GB,expec-ID,5,test,26,4,similarity
+19291,differential,GB,expec-ID,6,test,78,5,similarity
+19291,differential,GB,expec-ID,2,test,50,6,similarity
+19291,differential,GB,expec-ID,10,test,50,7,similarity
+19291,differential,GB,expec-ID,7,test,66,8,similarity
+19291,differential,GB,expec-ID,3,test,37,9,similarity
+19291,differential,GB,expec-ID,1,test,50,10,similarity
+19291,differential,GB,expec-ID,9,test,50,11,similarity
+19292,differential,GB,expec-ID,1,test,12,1,linear blue
+19292,differential,GB,expec-ID,3,test,0,2,linear blue
+19292,differential,GB,expec-ID,6,test,49,3,linear blue
+19292,differential,GB,expec-ID,8,test,61,4,linear blue
+19292,differential,GB,expec-ID,5,test,61,5,linear blue
+19292,differential,GB,expec-ID,2,test,0,6,linear blue
+19292,differential,GB,expec-ID,9,test,100,7,linear blue
+19292,differential,GB,expec-ID,7,test,72,8,linear blue
+19292,differential,GB,expec-ID,11,test,100,9,linear blue
+19292,differential,GB,expec-ID,10,test,100,10,linear blue
+19292,differential,GB,expec-ID,4,test,7,11,linear blue
+19293,single,BG,expec-ID,9,test,30,1,similarity
+19293,single,BG,expec-ID,10,test,32,2,similarity
+19293,single,BG,expec-ID,6,test,82,3,similarity
+19293,single,BG,expec-ID,8,test,41,4,similarity
+19293,single,BG,expec-ID,4,test,50,5,similarity
+19293,single,BG,expec-ID,1,test,35,6,similarity
+19293,single,BG,expec-ID,11,test,33,7,similarity
+19293,single,BG,expec-ID,3,test,50,8,similarity
+19293,single,BG,expec-ID,7,test,76,9,similarity
+19293,single,BG,expec-ID,2,test,43,10,similarity
+19293,single,BG,expec-ID,5,test,74,11,similarity
+19297,differential,GB,expec-ID,11,test,80,1,linear green
+19297,differential,GB,expec-ID,10,test,80,2,linear green
+19297,differential,GB,expec-ID,5,test,0,3,linear green
+19297,differential,GB,expec-ID,4,test,0,4,linear green
+19297,differential,GB,expec-ID,3,test,0,5,linear green
+19297,differential,GB,expec-ID,2,test,0,6,linear green
+19297,differential,GB,expec-ID,1,test,50,7,linear green
+19297,differential,GB,expec-ID,9,test,80,8,linear green
+19297,differential,GB,expec-ID,8,test,80,9,linear green
+19297,differential,GB,expec-ID,6,test,0,10,linear green
+19297,differential,GB,expec-ID,7,test,79,11,linear green
+19301,differential,GB,expec-ID,11,test,85,1,linear blue
+19301,differential,GB,expec-ID,7,test,60,2,linear blue
+19301,differential,GB,expec-ID,3,test,6,3,linear blue
+19301,differential,GB,expec-ID,2,test,12,4,linear blue
+19301,differential,GB,expec-ID,5,test,53,5,linear blue
+19301,differential,GB,expec-ID,9,test,90,6,linear blue
+19301,differential,GB,expec-ID,10,test,93,7,linear blue
+19301,differential,GB,expec-ID,6,test,42,8,linear blue
+19301,differential,GB,expec-ID,4,test,18,9,linear blue
+19301,differential,GB,expec-ID,8,test,89,10,linear blue
+19301,differential,GB,expec-ID,1,test,12,11,linear blue
+19302,differential,GB,expec-ID,6,test,82,1,linear blue
+19302,differential,GB,expec-ID,8,test,100,2,linear blue
+19302,differential,GB,expec-ID,1,test,0,3,linear blue
+19302,differential,GB,expec-ID,11,test,93,4,linear blue
+19302,differential,GB,expec-ID,4,test,0,5,linear blue
+19302,differential,GB,expec-ID,5,test,12,6,linear blue
+19302,differential,GB,expec-ID,10,test,93,7,linear blue
+19302,differential,GB,expec-ID,2,test,0,8,linear blue
+19302,differential,GB,expec-ID,3,test,5,9,linear blue
+19302,differential,GB,expec-ID,9,test,91,10,linear blue
+19302,differential,GB,expec-ID,7,test,77,11,linear blue
+19309,single,GB,expec-ID,5,test,95,1,similarity
+19309,single,GB,expec-ID,1,test,22,2,similarity
+19309,single,GB,expec-ID,10,test,75,3,similarity
+19309,single,GB,expec-ID,4,test,95,4,similarity
+19309,single,GB,expec-ID,2,test,16,5,similarity
+19309,single,GB,expec-ID,8,test,64,6,similarity
+19309,single,GB,expec-ID,7,test,64,7,similarity
+19309,single,GB,expec-ID,11,test,70,8,similarity
+19309,single,GB,expec-ID,3,test,68,9,similarity
+19309,single,GB,expec-ID,6,test,86,10,similarity
+19309,single,GB,expec-ID,9,test,66,11,similarity
+19312,differential,GB,expec-ID,7,test,87,1,linear blue
+19312,differential,GB,expec-ID,1,test,7,2,linear blue
+19312,differential,GB,expec-ID,5,test,10,3,linear blue
+19312,differential,GB,expec-ID,6,test,92,4,linear blue
+19312,differential,GB,expec-ID,3,test,4,5,linear blue
+19312,differential,GB,expec-ID,8,test,91,6,linear blue
+19312,differential,GB,expec-ID,9,test,95,7,linear blue
+19312,differential,GB,expec-ID,4,test,3,8,linear blue
+19312,differential,GB,expec-ID,11,test,98,9,linear blue
+19312,differential,GB,expec-ID,10,test,97,10,linear blue
+19312,differential,GB,expec-ID,2,test,2,11,linear blue
+19314,single,BG,expec-ID,9,test,13,1,similarity
+19314,single,BG,expec-ID,7,test,73,2,similarity
+19314,single,BG,expec-ID,6,test,88,3,similarity
+19314,single,BG,expec-ID,8,test,29,4,similarity
+19314,single,BG,expec-ID,3,test,45,5,similarity
+19314,single,BG,expec-ID,11,test,19,6,similarity
+19314,single,BG,expec-ID,2,test,33,7,similarity
+19314,single,BG,expec-ID,1,test,30,8,similarity
+19314,single,BG,expec-ID,5,test,38,9,similarity
+19314,single,BG,expec-ID,10,test,24,10,similarity
+19314,single,BG,expec-ID,4,test,57,11,similarity
+19317,single,BG,expec-ID,1,test,0,1,similarity
+19317,single,BG,expec-ID,4,test,39,2,similarity
+19317,single,BG,expec-ID,7,test,81,3,similarity
+19317,single,BG,expec-ID,9,test,0,4,similarity
+19317,single,BG,expec-ID,3,test,22,5,similarity
+19317,single,BG,expec-ID,2,test,28,6,similarity
+19317,single,BG,expec-ID,8,test,80,7,similarity
+19317,single,BG,expec-ID,5,test,97,8,similarity
+19317,single,BG,expec-ID,6,test,24,9,similarity
+19317,single,BG,expec-ID,10,test,0,10,similarity
+19317,single,BG,expec-ID,11,test,0,11,similarity
+19320,differential,BG,expec-ID,4,test,0,1,linear green
+19320,differential,BG,expec-ID,2,test,50,2,linear green
+19320,differential,BG,expec-ID,7,test,100,3,linear green
+19320,differential,BG,expec-ID,9,test,50,4,linear green
+19320,differential,BG,expec-ID,10,test,50,5,linear green
+19320,differential,BG,expec-ID,5,test,20,6,linear green
+19320,differential,BG,expec-ID,6,test,99,7,linear green
+19320,differential,BG,expec-ID,8,test,50,8,linear green
+19320,differential,BG,expec-ID,3,test,50,9,linear green
+19320,differential,BG,expec-ID,1,test,50,10,linear green
+19320,differential,BG,expec-ID,11,test,50,11,linear green
+19322,differential,GB,expec-ID,10,test,63,1,similarity
+19322,differential,GB,expec-ID,1,test,0,2,similarity
+19322,differential,GB,expec-ID,8,test,78,3,similarity
+19322,differential,GB,expec-ID,5,test,99,4,similarity
+19322,differential,GB,expec-ID,2,test,30,5,similarity
+19322,differential,GB,expec-ID,3,test,35,6,similarity
+19322,differential,GB,expec-ID,4,test,61,7,similarity
+19322,differential,GB,expec-ID,6,test,82,8,similarity
+19322,differential,GB,expec-ID,11,test,29,9,similarity
+19322,differential,GB,expec-ID,7,test,91,10,similarity
+19322,differential,GB,expec-ID,9,test,34,11,similarity
+19323,single,BG,expec-ID,1,test,16,1,similarity
+19323,single,BG,expec-ID,9,test,71,2,similarity
+19323,single,BG,expec-ID,6,test,24,3,similarity
+19323,single,BG,expec-ID,10,test,67,4,similarity
+19323,single,BG,expec-ID,5,test,30,5,similarity
+19323,single,BG,expec-ID,8,test,64,6,similarity
+19323,single,BG,expec-ID,2,test,25,7,similarity
+19323,single,BG,expec-ID,11,test,78,8,similarity
+19323,single,BG,expec-ID,7,test,27,9,similarity
+19323,single,BG,expec-ID,3,test,26,10,similarity
+19323,single,BG,expec-ID,4,test,63,11,similarity
+19326,differential,GB,expec-ID,11,test,100,1,similarity
+19326,differential,GB,expec-ID,9,test,100,2,similarity
+19326,differential,GB,expec-ID,3,test,0,3,similarity
+19326,differential,GB,expec-ID,7,test,60,4,similarity
+19326,differential,GB,expec-ID,5,test,0,5,similarity
+19326,differential,GB,expec-ID,2,test,0,6,similarity
+19326,differential,GB,expec-ID,6,test,51,7,similarity
+19326,differential,GB,expec-ID,10,test,100,8,similarity
+19326,differential,GB,expec-ID,8,test,84,9,similarity
+19326,differential,GB,expec-ID,4,test,0,10,similarity
+19326,differential,GB,expec-ID,1,test,0,11,similarity
+19332,single,BG,expec-ID,9,test,33,1,similarity
+19332,single,BG,expec-ID,6,test,78,2,similarity
+19332,single,BG,expec-ID,5,test,70,3,similarity
+19332,single,BG,expec-ID,2,test,35,4,similarity
+19332,single,BG,expec-ID,8,test,79,5,similarity
+19332,single,BG,expec-ID,4,test,48,6,similarity
+19332,single,BG,expec-ID,7,test,74,7,similarity
+19332,single,BG,expec-ID,1,test,45,8,similarity
+19332,single,BG,expec-ID,10,test,38,9,similarity
+19332,single,BG,expec-ID,3,test,49,10,similarity
+19332,single,BG,expec-ID,11,test,36,11,similarity
+19333,single,GB,expec-ID,6,test,86,1,similarity
+19333,single,GB,expec-ID,7,test,86,2,similarity
+19333,single,GB,expec-ID,11,test,50,3,similarity
+19333,single,GB,expec-ID,9,test,50,4,similarity
+19333,single,GB,expec-ID,2,test,86,5,similarity
+19333,single,GB,expec-ID,5,test,33,6,similarity
+19333,single,GB,expec-ID,3,test,32,7,similarity
+19333,single,GB,expec-ID,1,test,56,8,similarity
+19333,single,GB,expec-ID,4,test,50,9,similarity
+19333,single,GB,expec-ID,10,test,29,10,similarity
+19333,single,GB,expec-ID,8,test,22,11,similarity
+19336,single,GB,expec-ID,3,test,98,1,similarity
+19336,single,GB,expec-ID,4,test,79,2,similarity
+19336,single,GB,expec-ID,9,test,78,3,similarity
+19336,single,GB,expec-ID,6,test,25,4,similarity
+19336,single,GB,expec-ID,2,test,76,5,similarity
+19336,single,GB,expec-ID,5,test,73,6,similarity
+19336,single,GB,expec-ID,1,test,80,7,similarity
+19336,single,GB,expec-ID,11,test,81,8,similarity
+19336,single,GB,expec-ID,10,test,73,9,similarity
+19336,single,GB,expec-ID,7,test,36,10,similarity
+19336,single,GB,expec-ID,8,test,74,11,similarity
+19337,single,GB,expec-ID,1,test,50,1,similarity
+19337,single,GB,expec-ID,3,test,50,2,similarity
+19337,single,GB,expec-ID,8,test,50,3,similarity
+19337,single,GB,expec-ID,6,test,83,4,similarity
+19337,single,GB,expec-ID,5,test,84,5,similarity
+19337,single,GB,expec-ID,9,test,50,6,similarity
+19337,single,GB,expec-ID,2,test,50,7,similarity
+19337,single,GB,expec-ID,11,test,50,8,similarity
+19337,single,GB,expec-ID,7,test,86,9,similarity
+19337,single,GB,expec-ID,10,test,50,10,similarity
+19337,single,GB,expec-ID,4,test,74,11,similarity
+19338,single,GB,expec-ID,1,test,65,1,similarity
+19338,single,GB,expec-ID,9,test,34,2,similarity
+19338,single,GB,expec-ID,5,test,75,3,similarity
+19338,single,GB,expec-ID,2,test,40,4,similarity
+19338,single,GB,expec-ID,3,test,21,5,similarity
+19338,single,GB,expec-ID,10,test,61,6,similarity
+19338,single,GB,expec-ID,8,test,89,7,similarity
+19338,single,GB,expec-ID,6,test,77,8,similarity
+19338,single,GB,expec-ID,7,test,31,9,similarity
+19338,single,GB,expec-ID,11,test,91,10,similarity
+19338,single,GB,expec-ID,4,test,11,11,similarity
+19344,differential,GB,expec-ID,7,test,88,1,linear blue
+19344,differential,GB,expec-ID,11,test,99,2,linear blue
+19344,differential,GB,expec-ID,8,test,87,3,linear blue
+19344,differential,GB,expec-ID,3,test,9,4,linear blue
+19344,differential,GB,expec-ID,2,test,16,5,linear blue
+19344,differential,GB,expec-ID,9,test,89,6,linear blue
+19344,differential,GB,expec-ID,5,test,55,7,linear blue
+19344,differential,GB,expec-ID,6,test,63,8,linear blue
+19344,differential,GB,expec-ID,4,test,39,9,linear blue
+19344,differential,GB,expec-ID,1,test,20,10,linear blue
+19344,differential,GB,expec-ID,10,test,98,11,linear blue
+19349,differential,GB,expec-ID,8,test,47,1,linear blue
+19349,differential,GB,expec-ID,4,test,0,2,linear blue
+19349,differential,GB,expec-ID,6,test,100,3,linear blue
+19349,differential,GB,expec-ID,2,test,3,4,linear blue
+19349,differential,GB,expec-ID,1,test,3,5,linear blue
+19349,differential,GB,expec-ID,11,test,89,6,linear blue
+19349,differential,GB,expec-ID,9,test,92,7,linear blue
+19349,differential,GB,expec-ID,3,test,5,8,linear blue
+19349,differential,GB,expec-ID,5,test,99,9,linear blue
+19349,differential,GB,expec-ID,7,test,100,10,linear blue
+19349,differential,GB,expec-ID,10,test,86,11,linear blue
+19354,differential,GB,expec-ID,3,test,0,1,linear blue
+19354,differential,GB,expec-ID,9,test,100,2,linear blue
+19354,differential,GB,expec-ID,7,test,100,3,linear blue
+19354,differential,GB,expec-ID,1,test,0,4,linear blue
+19354,differential,GB,expec-ID,4,test,1,5,linear blue
+19354,differential,GB,expec-ID,5,test,74,6,linear blue
+19354,differential,GB,expec-ID,8,test,100,7,linear blue
+19354,differential,GB,expec-ID,6,test,100,8,linear blue
+19354,differential,GB,expec-ID,2,test,0,9,linear blue
+19354,differential,GB,expec-ID,11,test,100,10,linear blue
+19354,differential,GB,expec-ID,10,test,100,11,linear blue
+19356,differential,GB,expec-ID,8,test,65,1,similarity
+19356,differential,GB,expec-ID,10,test,82,2,similarity
+19356,differential,GB,expec-ID,4,test,8,3,similarity
+19356,differential,GB,expec-ID,6,test,60,4,similarity
+19356,differential,GB,expec-ID,5,test,26,5,similarity
+19356,differential,GB,expec-ID,1,test,11,6,similarity
+19356,differential,GB,expec-ID,9,test,74,7,similarity
+19356,differential,GB,expec-ID,3,test,11,8,similarity
+19356,differential,GB,expec-ID,7,test,60,9,similarity
+19356,differential,GB,expec-ID,11,test,75,10,similarity
+19356,differential,GB,expec-ID,2,test,10,11,similarity
+19359,differential,GB,expec-ID,3,test,0,1,linear blue
+19359,differential,GB,expec-ID,2,test,50,2,linear blue
+19359,differential,GB,expec-ID,11,test,100,3,linear blue
+19359,differential,GB,expec-ID,6,test,0,4,linear blue
+19359,differential,GB,expec-ID,9,test,100,5,linear blue
+19359,differential,GB,expec-ID,4,test,0,6,linear blue
+19359,differential,GB,expec-ID,7,test,0,7,linear blue
+19359,differential,GB,expec-ID,10,test,100,8,linear blue
+19359,differential,GB,expec-ID,5,test,0,9,linear blue
+19359,differential,GB,expec-ID,8,test,0,10,linear blue
+19359,differential,GB,expec-ID,1,test,50,11,linear blue
+19360,single,GB,expec-ID,7,test,79,1,similarity
+19360,single,GB,expec-ID,4,test,37,2,similarity
+19360,single,GB,expec-ID,5,test,79,3,similarity
+19360,single,GB,expec-ID,10,test,30,4,similarity
+19360,single,GB,expec-ID,9,test,71,5,similarity
+19360,single,GB,expec-ID,1,test,25,6,similarity
+19360,single,GB,expec-ID,6,test,78,7,similarity
+19360,single,GB,expec-ID,11,test,76,8,similarity
+19360,single,GB,expec-ID,3,test,72,9,similarity
+19360,single,GB,expec-ID,2,test,25,10,similarity
+19360,single,GB,expec-ID,8,test,83,11,similarity
+19361,differential,BG,expec-ID,9,test,37,1,linear blue
+19361,differential,BG,expec-ID,7,test,64,2,linear blue
+19361,differential,BG,expec-ID,11,test,24,3,linear blue
+19361,differential,BG,expec-ID,6,test,89,4,linear blue
+19361,differential,BG,expec-ID,10,test,22,5,linear blue
+19361,differential,BG,expec-ID,8,test,55,6,linear blue
+19361,differential,BG,expec-ID,1,test,32,7,linear blue
+19361,differential,BG,expec-ID,3,test,62,8,linear blue
+19361,differential,BG,expec-ID,2,test,60,9,linear blue
+19361,differential,BG,expec-ID,5,test,22,10,linear blue
+19361,differential,BG,expec-ID,4,test,76,11,linear blue
+19362,differential,BG,expec-ID,4,test,100,1,linear green
+19362,differential,BG,expec-ID,3,test,0,2,linear green
+19362,differential,BG,expec-ID,2,test,0,3,linear green
+19362,differential,BG,expec-ID,11,test,100,4,linear green
+19362,differential,BG,expec-ID,6,test,83,5,linear green
+19362,differential,BG,expec-ID,7,test,38,6,linear green
+19362,differential,BG,expec-ID,9,test,68,7,linear green
+19362,differential,BG,expec-ID,1,test,0,8,linear green
+19362,differential,BG,expec-ID,8,test,92,9,linear green
+19362,differential,BG,expec-ID,5,test,35,10,linear green
+19362,differential,BG,expec-ID,10,test,100,11,linear green
+19366,differential,GB,expec-ID,10,test,65,1,linear blue
+19366,differential,GB,expec-ID,5,test,0,2,linear blue
+19366,differential,GB,expec-ID,8,test,39,3,linear blue
+19366,differential,GB,expec-ID,6,test,3,4,linear blue
+19366,differential,GB,expec-ID,2,test,22,5,linear blue
+19366,differential,GB,expec-ID,4,test,1,6,linear blue
+19366,differential,GB,expec-ID,3,test,31,7,linear blue
+19366,differential,GB,expec-ID,11,test,78,8,linear blue
+19366,differential,GB,expec-ID,7,test,100,9,linear blue
+19366,differential,GB,expec-ID,1,test,33,10,linear blue
+19366,differential,GB,expec-ID,9,test,73,11,linear blue
+19369,differential,BG,expec-ID,11,test,10,1,similarity
+19369,differential,BG,expec-ID,2,test,1,2,similarity
+19369,differential,BG,expec-ID,8,test,95,3,similarity
+19369,differential,BG,expec-ID,4,test,0,4,similarity
+19369,differential,BG,expec-ID,1,test,0,5,similarity
+19369,differential,BG,expec-ID,5,test,17,6,similarity
+19369,differential,BG,expec-ID,9,test,37,7,similarity
+19369,differential,BG,expec-ID,10,test,41,8,similarity
+19369,differential,BG,expec-ID,6,test,69,9,similarity
+19369,differential,BG,expec-ID,7,test,96,10,similarity
+19369,differential,BG,expec-ID,3,test,0,11,similarity
+19370,differential,BG,expec-ID,6,test,10,1,similarity
+19370,differential,BG,expec-ID,3,test,95,2,similarity
+19370,differential,BG,expec-ID,8,test,50,3,similarity
+19370,differential,BG,expec-ID,5,test,62,4,similarity
+19370,differential,BG,expec-ID,9,test,28,5,similarity
+19370,differential,BG,expec-ID,2,test,91,6,similarity
+19370,differential,BG,expec-ID,10,test,13,7,similarity
+19370,differential,BG,expec-ID,11,test,18,8,similarity
+19370,differential,BG,expec-ID,4,test,84,9,similarity
+19370,differential,BG,expec-ID,7,test,25,10,similarity
+19370,differential,BG,expec-ID,1,test,96,11,similarity
+19373,differential,GB,expec-ID,11,test,50,1,similarity
+19373,differential,GB,expec-ID,8,test,67,2,similarity
+19373,differential,GB,expec-ID,7,test,50,3,similarity
+19373,differential,GB,expec-ID,6,test,59,4,similarity
+19373,differential,GB,expec-ID,2,test,0,5,similarity
+19373,differential,GB,expec-ID,10,test,74,6,similarity
+19373,differential,GB,expec-ID,9,test,59,7,similarity
+19373,differential,GB,expec-ID,4,test,0,8,similarity
+19373,differential,GB,expec-ID,3,test,0,9,similarity
+19373,differential,GB,expec-ID,1,test,28,10,similarity
+19373,differential,GB,expec-ID,5,test,77,11,similarity
+19376,differential,GB,expec-ID,5,test,8,1,linear blue
+19376,differential,GB,expec-ID,11,test,34,2,linear blue
+19376,differential,GB,expec-ID,3,test,4,3,linear blue
+19376,differential,GB,expec-ID,2,test,22,4,linear blue
+19376,differential,GB,expec-ID,10,test,44,5,linear blue
+19376,differential,GB,expec-ID,6,test,74,6,linear blue
+19376,differential,GB,expec-ID,4,test,29,7,linear blue
+19376,differential,GB,expec-ID,7,test,86,8,linear blue
+19376,differential,GB,expec-ID,8,test,65,9,linear blue
+19376,differential,GB,expec-ID,1,test,4,10,linear blue
+19376,differential,GB,expec-ID,9,test,61,11,linear blue
+19377,differential,BG,expec-ID,10,test,35,1,similarity
+19377,differential,BG,expec-ID,1,test,11,2,similarity
+19377,differential,BG,expec-ID,3,test,37,3,similarity
+19377,differential,BG,expec-ID,5,test,80,4,similarity
+19377,differential,BG,expec-ID,2,test,6,5,similarity
+19377,differential,BG,expec-ID,6,test,85,6,similarity
+19377,differential,BG,expec-ID,7,test,71,7,similarity
+19377,differential,BG,expec-ID,11,test,39,8,similarity
+19377,differential,BG,expec-ID,8,test,24,9,similarity
+19377,differential,BG,expec-ID,9,test,19,10,similarity
+19377,differential,BG,expec-ID,4,test,11,11,similarity
+19378,differential,GB,expec-ID,8,test,96,1,similarity
+19378,differential,GB,expec-ID,10,test,98,2,similarity
+19378,differential,GB,expec-ID,9,test,99,3,similarity
+19378,differential,GB,expec-ID,2,test,1,4,similarity
+19378,differential,GB,expec-ID,11,test,98,5,similarity
+19378,differential,GB,expec-ID,3,test,1,6,similarity
+19378,differential,GB,expec-ID,1,test,1,7,similarity
+19378,differential,GB,expec-ID,7,test,84,8,similarity
+19378,differential,GB,expec-ID,6,test,82,9,similarity
+19378,differential,GB,expec-ID,5,test,51,10,similarity
+19378,differential,GB,expec-ID,4,test,20,11,similarity
+19381,single,BG,expec-ID,6,test,79,1,linear blue
+19381,single,BG,expec-ID,5,test,78,2,linear blue
+19381,single,BG,expec-ID,11,test,68,3,linear blue
+19381,single,BG,expec-ID,4,test,57,4,linear blue
+19381,single,BG,expec-ID,10,test,66,5,linear blue
+19381,single,BG,expec-ID,9,test,73,6,linear blue
+19381,single,BG,expec-ID,1,test,82,7,linear blue
+19381,single,BG,expec-ID,8,test,34,8,linear blue
+19381,single,BG,expec-ID,7,test,27,9,linear blue
+19381,single,BG,expec-ID,3,test,77,10,linear blue
+19381,single,BG,expec-ID,2,test,62,11,linear blue
+19382,single,GB,expec-ID,7,test,3,1,linear blue
+19382,single,GB,expec-ID,2,test,5,2,linear blue
+19382,single,GB,expec-ID,10,test,98,3,linear blue
+19382,single,GB,expec-ID,1,test,0,4,linear blue
+19382,single,GB,expec-ID,11,test,100,5,linear blue
+19382,single,GB,expec-ID,3,test,3,6,linear blue
+19382,single,GB,expec-ID,6,test,100,7,linear blue
+19382,single,GB,expec-ID,5,test,3,8,linear blue
+19382,single,GB,expec-ID,9,test,98,9,linear blue
+19382,single,GB,expec-ID,8,test,100,10,linear blue
+19382,single,GB,expec-ID,4,test,0,11,linear blue
+19383,differential,GB,expec-ID,8,test,100,1,linear blue
+19383,differential,GB,expec-ID,1,test,50,2,linear blue
+19383,differential,GB,expec-ID,7,test,0,3,linear blue
+19383,differential,GB,expec-ID,9,test,1,4,linear blue
+19383,differential,GB,expec-ID,3,test,0,5,linear blue
+19383,differential,GB,expec-ID,6,test,100,6,linear blue
+19383,differential,GB,expec-ID,11,test,100,7,linear blue
+19383,differential,GB,expec-ID,5,test,0,8,linear blue
+19383,differential,GB,expec-ID,10,test,100,9,linear blue
+19383,differential,GB,expec-ID,4,test,50,10,linear blue
+19383,differential,GB,expec-ID,2,test,100,11,linear blue
+19384,differential,BG,expec-ID,7,test,100,1,linear green
+19384,differential,BG,expec-ID,10,test,50,2,linear green
+19384,differential,BG,expec-ID,1,test,0,3,linear green
+19384,differential,BG,expec-ID,6,test,100,4,linear green
+19384,differential,BG,expec-ID,8,test,100,5,linear green
+19384,differential,BG,expec-ID,3,test,0,6,linear green
+19384,differential,BG,expec-ID,11,test,50,7,linear green
+19384,differential,BG,expec-ID,5,test,0,8,linear green
+19384,differential,BG,expec-ID,9,test,49,9,linear green
+19384,differential,BG,expec-ID,4,test,0,10,linear green
+19384,differential,BG,expec-ID,2,test,0,11,linear green
+19386,single,BG,expec-ID,4,test,17,1,similarity
+19386,single,BG,expec-ID,2,test,20,2,similarity
+19386,single,BG,expec-ID,3,test,17,3,similarity
+19386,single,BG,expec-ID,6,test,77,4,similarity
+19386,single,BG,expec-ID,9,test,29,5,similarity
+19386,single,BG,expec-ID,1,test,10,6,similarity
+19386,single,BG,expec-ID,11,test,19,7,similarity
+19386,single,BG,expec-ID,10,test,53,8,similarity
+19386,single,BG,expec-ID,7,test,77,9,similarity
+19386,single,BG,expec-ID,8,test,53,10,similarity
+19386,single,BG,expec-ID,5,test,69,11,similarity
+19387,differential,BG,expec-ID,8,test,43,1,similarity
+19387,differential,BG,expec-ID,6,test,65,2,similarity
+19387,differential,BG,expec-ID,3,test,25,3,similarity
+19387,differential,BG,expec-ID,5,test,38,4,similarity
+19387,differential,BG,expec-ID,4,test,34,5,similarity
+19387,differential,BG,expec-ID,11,test,11,6,similarity
+19387,differential,BG,expec-ID,10,test,18,7,similarity
+19387,differential,BG,expec-ID,1,test,7,8,similarity
+19387,differential,BG,expec-ID,7,test,59,9,similarity
+19387,differential,BG,expec-ID,9,test,18,10,similarity
+19387,differential,BG,expec-ID,2,test,19,11,similarity
+19389,differential,BG,expec-ID,11,test,2,1,similarity
+19389,differential,BG,expec-ID,1,test,2,2,similarity
+19389,differential,BG,expec-ID,4,test,24,3,similarity
+19389,differential,BG,expec-ID,3,test,20,4,similarity
+19389,differential,BG,expec-ID,10,test,1,5,similarity
+19389,differential,BG,expec-ID,8,test,8,6,similarity
+19389,differential,BG,expec-ID,7,test,30,7,similarity
+19389,differential,BG,expec-ID,2,test,19,8,similarity
+19389,differential,BG,expec-ID,6,test,28,9,similarity
+19389,differential,BG,expec-ID,5,test,21,10,similarity
+19389,differential,BG,expec-ID,9,test,12,11,similarity
+19392,differential,GB,expec-ID,1,test,0,1,similarity
+19392,differential,GB,expec-ID,8,test,58,2,similarity
+19392,differential,GB,expec-ID,2,test,4,3,similarity
+19392,differential,GB,expec-ID,9,test,53,4,similarity
+19392,differential,GB,expec-ID,6,test,68,5,similarity
+19392,differential,GB,expec-ID,7,test,100,6,similarity
+19392,differential,GB,expec-ID,5,test,14,7,similarity
+19392,differential,GB,expec-ID,3,test,0,8,similarity
+19392,differential,GB,expec-ID,10,test,55,9,similarity
+19392,differential,GB,expec-ID,4,test,11,10,similarity
+19392,differential,GB,expec-ID,11,test,50,11,similarity
+19393,differential,BG,expec-ID,5,test,5,1,similarity
+19393,differential,BG,expec-ID,11,test,80,2,similarity
+19393,differential,BG,expec-ID,1,test,96,3,similarity
+19393,differential,BG,expec-ID,6,test,7,4,similarity
+19393,differential,BG,expec-ID,4,test,99,5,similarity
+19393,differential,BG,expec-ID,10,test,80,6,similarity
+19393,differential,BG,expec-ID,3,test,95,7,similarity
+19393,differential,BG,expec-ID,7,test,11,8,similarity
+19393,differential,BG,expec-ID,2,test,97,9,similarity
+19393,differential,BG,expec-ID,8,test,8,10,similarity
+19393,differential,BG,expec-ID,9,test,94,11,similarity
+19397,differential,BG,expec-ID,1,test,19,1,similarity
+19397,differential,BG,expec-ID,8,test,65,2,similarity
+19397,differential,BG,expec-ID,10,test,73,3,similarity
+19397,differential,BG,expec-ID,4,test,26,4,similarity
+19397,differential,BG,expec-ID,3,test,14,5,similarity
+19397,differential,BG,expec-ID,11,test,79,6,similarity
+19397,differential,BG,expec-ID,9,test,72,7,similarity
+19397,differential,BG,expec-ID,6,test,64,8,similarity
+19397,differential,BG,expec-ID,7,test,63,9,similarity
+19397,differential,BG,expec-ID,2,test,15,10,similarity
+19397,differential,BG,expec-ID,5,test,42,11,similarity
+19398,differential,GB,expec-ID,5,test,14,1,linear blue
+19398,differential,GB,expec-ID,10,test,91,2,linear blue
+19398,differential,GB,expec-ID,1,test,50,3,linear blue
+19398,differential,GB,expec-ID,7,test,84,4,linear blue
+19398,differential,GB,expec-ID,11,test,86,5,linear blue
+19398,differential,GB,expec-ID,3,test,79,6,linear blue
+19398,differential,GB,expec-ID,6,test,51,7,linear blue
+19398,differential,GB,expec-ID,4,test,19,8,linear blue
+19398,differential,GB,expec-ID,8,test,77,9,linear blue
+19398,differential,GB,expec-ID,9,test,87,10,linear blue
+19398,differential,GB,expec-ID,2,test,50,11,linear blue
+19400,differential,BG,expec-ID,9,test,48,1,linear green
+19400,differential,BG,expec-ID,4,test,0,2,linear green
+19400,differential,BG,expec-ID,11,test,57,3,linear green
+19400,differential,BG,expec-ID,6,test,54,4,linear green
+19400,differential,BG,expec-ID,5,test,0,5,linear green
+19400,differential,BG,expec-ID,3,test,36,6,linear green
+19400,differential,BG,expec-ID,7,test,54,7,linear green
+19400,differential,BG,expec-ID,1,test,38,8,linear green
+19400,differential,BG,expec-ID,2,test,27,9,linear green
+19400,differential,BG,expec-ID,8,test,52,10,linear green
+19400,differential,BG,expec-ID,10,test,62,11,linear green
