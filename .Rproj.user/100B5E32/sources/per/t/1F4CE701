@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575512855699.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2280052653",
+    "id" : "1F4CE701",
+    "lastKnownWriteTime" : 1575511398,
+    "last_content_update" : 1575511398,
+    "path" : "E:/projects/2018-mix_rules/modeling/mix_experts_model/R/functionsOLD.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "54,39",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,681 @@
+#-------------------------------------------------------------------------------
+#                                   Functions
+#-------------------------------------------------------------------------------
+
+# # build model strings
+# 
+# CreateModelString <- function(modelName, nExperts, 
+#                               modelType=c("hier", "group", "ind")) {
+# 
+#   # load the skeleton of the model
+#   modelString <- paste0(read_lines("./models/skeleton.stan"), collapse = "\n")
+# 
+#   # functions
+#   modelString <- str_replace_all(modelString, "INS_FUNCS", "hello")
+# 
+#   # write_lines(x, path, sep = "\n", na = "NA", append = FALSE)
+#   return(modelString)
+# 
+# }
+#_______________________________________________________________________________
+# build stan model
+
+
+#_______________________________________________________________________________
+# calculate mode
+
+Calc_Mode <- function(x) {
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+
+#_______________________________________________________________________________
+
+# create random expert weights
+Rand_Weights <- function(nSubj) {
+  rand_sim_beliefs <- round(runif(nSubj, 0, 1), digits = 2)
+  rand_rel_beliefs <- round(runif(nSubj, 0, 1), digits = 2)
+  rand_guess <- (1-rand_sim_beliefs) * (1-rand_rel_beliefs)
+  sum <- rowSums(cbind(rand_sim_beliefs, rand_rel_beliefs, rand_guess))
+  rand_sim_beliefs <- rand_sim_beliefs/sum
+  rand_rel_beliefs <- rand_rel_beliefs/sum
+  rand_guess <- rand_guess/sum
+  return(rbind(rand_sim_beliefs, rand_rel_beliefs, rand_guess))
+}
+
+#_______________________________________________________________________________
+
+# sample from posterior predictives and return facetted figure
+
+Posterior_Preds <- function(samples, responses, modelName, gradients,
+                            nSubj, subjList, nStim = n_stim, nExperts) {
+  
+  post_preds <- matrix(NA, nrow = nSubj*nStim*n_samp, ncol = 4)
+  post_preds <- as.data.frame(post_preds)
+  colnames(post_preds) <- c("subj", "dim", "samp", "pred")
+  post_preds$subj <- rep(subjList, each=n_samp*nStim)
+  post_preds$dim <- rep(rep(1:nStim, each = n_samp), times = nSubj)
+  post_preds$samp <- rep(1:n_samp, times = nSubj*nStim)
+  for (subj in 1:nSubj) {
+    for (dim in 1:nStim) {
+      temp <- sample(samples$predR[, subj, dim], size = n_samp) 
+      for (samp in 1:n_samp) {
+        start <- (subj-1) * nStim * n_samp+(dim-1) * n_samp + 1
+        end <- (subj-1) * nStim * n_samp + (dim-1) * n_samp + n_samp
+        post_preds$pred[start:end] <- temp
+      }
+    }
+  }
+  
+  # add responses
+  post_preds$response <- NA
+  post_preds$response <- rep(responses, each=n_samp)
+  
+  # plot empirical gradients alone
+  fig <- ggplot(post_preds, aes(y = response, x = dim, colour = fig_cols[1])) + 
+    grad_layers
+  if (nExperts == 1) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = rule, x = 6, y = 115),  size = 3, colour = "black")
+  } else if (nExperts == 2) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = label2, x = 6, y = 115),  size = 3, colour = "black")
+  } else if (nExperts == 3) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = label, x = 6, y = 115),  size = 3, colour = "black")
+  }
+  ggsave(file = paste0(file_name_root, modelName,  "-Gradients", graph_file_type), 
+         plot = fig + facet_wrap(~ subj, nrow = n_row),
+         width = grid_width, height = grid_height, units = "cm")
+  
+  # plot empirical gradients with posterior samples overlayed
+  fig <- ggplot(post_preds, aes(y = response, x = dim, colour = fig_cols[1])) + 
+    grad_layers +
+    geom_point(aes(y = pred, x = dim), colour = scat_col, size = scat_size, 
+               shape = scat_shape)
+  if (nExperts == 1) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = rule, x = 6, y = 115),  size = 3, colour = "black")
+  } else if (nExperts == 2) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = label2, x = 6, y = 115),  size = 3, colour = "black")
+  } else if (nExperts == 3) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = label, x = 6, y = 115),  size = 3, colour = "black")
+  }
+  ggsave(file = paste0(file_name_root, modelName, "-PostPreds", graph_file_type), 
+         plot = fig + facet_wrap(~ subj, nrow = n_row),
+         width = grid_width, height = grid_height, units = "cm")
+  return(fig)
+}
+
+
+#_______________________________________________________________________________
+
+# sample from prior predictives and return facetted figure
+
+Prior_Preds <- function(samples, responses, modelName, gradients,
+                            nSubj, subjList, nStim = n_stim, nExperts) {
+  
+  prior_preds <- matrix(NA, nrow = nSubj*nStim*n_samp, ncol = 4)
+  prior_preds <- as.data.frame(prior_preds)
+  colnames(prior_preds) <- c("subj", "dim", "samp", "pred")
+  prior_preds$subj <- rep(subjList, each=n_samp*nStim)
+  prior_preds$dim <- rep(rep(1:nStim, each = n_samp), times = nSubj)
+  prior_preds$samp <- rep(1:n_samp, times = nSubj*nStim)
+  for (subj in 1:nSubj) {
+    for (dim in 1:nStim) {
+      temp <- sample(samples$priorR[, subj, dim], size = n_samp) 
+      for (samp in 1:n_samp) {
+        start <- (subj-1) * nStim * n_samp+(dim-1) * n_samp + 1
+        end <- (subj-1) * nStim * n_samp + (dim-1) * n_samp + n_samp
+        prior_preds$pred[start:end] <- temp
+      }
+    }
+  }
+  
+  # add responses
+  prior_preds$response <- NA
+  prior_preds$response <- rep(responses, each=n_samp)
+  
+  # plot empirical gradients alone
+  fig <- ggplot(prior_preds, aes(y = response, x = dim, colour = fig_cols[1])) + 
+    grad_layers
+  if (nExperts == 1) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = rule, x = 6, y = 115),  size = 3, colour = "black")
+  } else if (nExperts == 2) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = label2, x = 6, y = 115),  size = 3, colour = "black")
+  } else if (nExperts == 3) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = label, x = 6, y = 115),  size = 3, colour = "black")
+  }
+  # ggsave(file = paste0(file_name_root, modelName,  "-Gradients", graph_file_type), 
+  #        plot = fig + facet_wrap(~ subj, nrow = n_row),
+  #        width = grid_width, height = grid_height, units = "cm")
+  
+  # plot empirical gradients with prior samples overlayed
+  fig <- ggplot(prior_preds, aes(y = response, x = dim, colour = fig_cols[1])) + 
+    grad_layers +
+    geom_point(aes(y = pred, x = dim), colour = scat_col, size = scat_size, 
+               shape = scat_shape)
+  if (nExperts == 1) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = rule, x = 6, y = 115),  size = 3, colour = "black")
+  } else if (nExperts == 2) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = label2, x = 6, y = 115),  size = 3, colour = "black")
+  } else if (nExperts == 3) {
+    fig <- fig +
+      geom_text(data = gradients, mapping = aes(label = label, x = 6, y = 115),  size = 3, colour = "black")
+  }
+  ggsave(file = paste0(file_name_root, modelName, "-PriorPreds", graph_file_type), 
+         plot = fig + facet_wrap(~ subj, nrow = n_row),
+         width = grid_width, height = grid_height, units = "cm")
+  return(fig)
+}
+
+#_______________________________________________________________________________
+# posterior expert functions 
+
+# get posterior samples from chains, plot density, plot expert functions using
+# mean parameter estimates
+Expert_Preds <- function(samples, modelName, nSubj, subjList, nStim = n_stim) {
+  
+  # point estimates for expert function parameters
+  # M <- apply(samples$M, 2, Calc_Mode) 
+  # SD <- apply(samples$SD, 2, Calc_Mode)
+  # height <- apply(samples$height, 2, Calc_Mode)
+  # loc <- apply(samples$loc, 2, Calc_Mode)
+  # scale <- apply(samples$scale, 2, Calc_Mode)
+  # relHeight <- apply(samples$relHeight, 2, Calc_Mode)
+  # noise <- apply(samples$noise, 2, Calc_Mode)
+  M <- samples$M
+  SD <- samples$SD
+  height <- samples$height
+  loc <- samples$loc
+  scale <- samples$scale
+  relHeight <- samples$relHeight
+  noise <- samples$noise
+  params <- data.frame(cbind(M, SD, height, loc, scale, relHeight, noise))
+  
+  write.csv(params, file = paste0(file_name_root, modelName, "-ExpertParams", ".csv"),
+            row.names = FALSE)
+  
+  # plot density
+  temp <- gather(select(params, -noise), params, estimate, factor_key = TRUE)
+  density_fig <- ggplot(temp, aes(estimate)) + 
+    # geom_density(fill = "grey") + 
+    geom_histogram(bins=1000) +
+    theme_classic() +
+    facet_wrap(~ params, scales = "free")
+  ggsave(file = paste0(file_name_root, modelName, "-Posterior", graph_file_type), 
+         plot = density_fig, width = 15, height = 10, units = "cm")
+  
+  # plot expert functions using mean estimates
+  # similarity <- dnorm(xs, mean(M), mean(SD)) 
+  # similarity <- similarity/max(similarity) * mean(height)
+  similarity <- mean(height) * exp(1)^-((xs - mean(M))^2 / (2 * mean(SD)^2))
+  relational <- mean(relHeight)/(1+exp(mean(scale))^-(xs-mean(loc)))
+  guess <- rep(50, length(xs))
+  temp <- gather(data.frame(cbind(similarity, relational, guess)),
+                 expert, pred, factor_key = TRUE)
+  temp$dim <- rep(1:n_stim, times = 3)
+  expert_fig <- ggplot(temp, aes(y = pred, x = dim, group = expert, colour = expert,
+                                 shape = expert)) +
+    expert_layers
+  ggsave(file = paste0(file_name_root, modelName, "-Experts", graph_file_type),
+         plot = expert_fig, width = 12, height = 10, units = "cm")
+  
+  # # plot averaged expert functions
+  # similarity <- matrix(NA, nrow = nSubj, ncol = nStim)
+  # relational <- matrix(NA, nrow = nSubj, ncol = nStim)
+  # guess <- matrix(NA, nrow = nSubj, ncol = nStim)
+  # for (i in 1:nSubj) {
+  #   similarity[i,] <- dnorm(xs, M[i], SD[i]) * height[i]
+  #   # similarity[i,] <- similarity[i,] / max(similarity[i,]) * height[i]
+  #   relational[i,] <- mean(relHeight[i])/(1+exp(mean(scale[i]))^-(xs-mean(loc[i])))
+  #   guess[i,] <- 50
+  # }
+  # similarity <- apply(similarity, 2, mean)
+  # relational <- apply(relational, 2, mean)
+  # guess <- apply(guess, 2, mean)
+  # temp <- gather(data.frame(cbind(similarity, relational, guess)), 
+  #                expert, pred, factor_key = TRUE)
+  # temp$dim <- rep(1:n_stim, times = 3)
+  # expert_fig <- ggplot(temp, aes(y = pred, x = dim, group = expert, colour = expert,
+  #                                shape = expert)) +
+  #   expert_layers
+  # ggsave(file = paste0(file_name_root, modelName, "-Experts", graph_file_type), 
+  #        plot = expert_fig, width = 12, height = 10, units = "cm")
+  
+  
+  
+  return(list(params, density_fig, expert_fig))
+}
+#_______________________________________________________________________________
+# calculate mean probability of using each expert across dimension
+
+CalcPExpert <- function(exSample, subjList, stimList = stim_list, nStim = n_stim,
+                        nSamp = 100) {
+  
+  pRule <- data.frame(subj=subjList, stim=rep(stimList, length(unique(exSample$subj))),
+                      pSim=NA, pRel=NA, pGuess=NA)
+  
+  for (s in subjList) {
+    for (stim in 1:nStim) {
+      counts <- plyr::count(
+        exSample$expert[exSample$stim==stimList[stim] & exSample$subj==s])
+      if (expert_names[1] %in% counts$x) {
+        pRule$pSim[pRule$subj==s & pRule$stim==stimList[stim]] <- counts$freq[counts$x==expert_names[1]]
+      } else {
+        pRule$pSim[pRule$subj==s & pRule$stim==stimList[stim]] <- 0
+      }
+      if (expert_names[2] %in% counts$x) {
+        pRule$pRel[pRule$subj==s & pRule$stim==stimList[stim]] <- counts$freq[counts$x==expert_names[2]]              } else {
+          pRule$pRel[pRule$subj==s & pRule$stim==stimList[stim]] <- 0
+        }
+      if (expert_names[3] %in% counts$x) {
+        pRule$pGuess[pRule$subj==s & pRule$stim==stimList[stim]] <- counts$freq[counts$x==expert_names[3]]
+      } else {
+        pRule$pGuess[pRule$subj==s & pRule$stim==stimList[stim]] <- 0
+      }
+    }
+  }
+  
+  # convert to long format
+  pRule <- gather(pRule, key = expert, value="nSamp", pSim:pGuess)
+  pRule$nSamp <- pRule$nSamp/nSamp
+  pRule$stim <- factor(pRule$stim, levels=stimList)
+  meanPRule <- aggregate(pRule$nSamp, list(pRule$stim, pRule$expert), mean)
+  colnames(meanPRule) <- c("stim", "expert", "prob")
+  meanPRule$expert <- factor(meanPRule$expert, levels=c("pSim", "pRel", "pGuess")) # reorder factor level
+  
+  return(meanPRule)
+}
+
+#_______________________________________________________________________________
+# calculate mean probability of using each expert across trials
+
+CalcPExpertTrial <- function(exSample, subjList, stimList = stim_list, nStim = n_stim,
+                             nSamp = 100) {
+  
+  pRule <- data.frame(subj=subjList, pSim=NA, pRel=NA, pGuess=NA,
+                      trial_num=rep(c(1:nStim), length(unique(exSample$subj))))
+  
+  for (s in subjList) {
+    for (trial in 1:nStim) {
+      counts <- plyr::count(
+        exSample$expert[exSample$trial_num==trial & exSample$subj==s])
+      if (expert_names[1] %in% counts$x) {
+        pRule$pSim[pRule$subj==s & pRule$trial_num==trial] <- counts$freq[counts$x==expert_names[1]]
+      } else {
+        pRule$pSim[pRule$subj==s & pRule$trial_num==trial] <- 0
+      }
+      if (expert_names[2] %in% counts$x) {
+        pRule$pRel[pRule$subj==s & pRule$trial_num==trial] <- counts$freq[counts$x==expert_names[2]]              } else {
+          pRule$pRel[pRule$subj==s & pRule$trial_num==trial] <- 0
+        }
+      if (expert_names[3] %in% counts$x) {
+        pRule$pGuess[pRule$subj==s & pRule$trial_num==trial] <- counts$freq[counts$x==expert_names[3]]
+      } else {
+        pRule$pGuess[pRule$subj==s & pRule$trial_num==trial] <- 0
+      }
+    }
+  }
+  
+  # convert to long format
+  pRule <- gather(pRule, key = expert, value="nSamp", pSim:pGuess)
+  pRule$nSamp <- pRule$nSamp/nSamp
+  pRule$trial_num <- factor(pRule$trial_num, levels=c(1:nStim))
+  meanPRule <- aggregate(pRule$nSamp, list(pRule$trial_num, pRule$expert), mean)
+  colnames(meanPRule) <- c("trial_num", "expert", "prob")
+  meanPRule$expert <- factor(meanPRule$expert, levels=c("pSim", "pRel", "pGuess")) # reorder factor level
+  
+  return(meanPRule)
+}
+
+
+#_______________________________________________________________________________
+# sample expert choices across dimension and trials
+
+Sample_Experts <- function(samples, gradients, nSubj, subjList, nSamp = 100,
+                           modelName, nStim = n_stim) {
+  
+  exSample <- data.frame(subj=rep(subjList, each=nSamp), 
+                         S1=NA, S2=NA, S3=NA, S4=NA, S5=NA, S6=NA, S7=NA, S8=NA, 
+                         S9=NA, S10=NA, S11=NA)
+  
+  for (subj in 1:length(subjList)) {
+    for (samp in 1:nSamp) {
+      for (stim in 1:nStim) {
+        exSample[(subj-1)*nSamp+samp,stim+1] <- sample(
+          samples$expertChoice[, subj, stim], size = 1) 
+      }
+    }
+  }
+  
+  exSample[exSample==1] <- expert_names[1]
+  exSample[exSample==2] <- expert_names[2]
+  exSample[exSample==3] <- expert_names[3]
+  
+  # convert to long format
+  exSample <- gather(exSample, key = stim, value = "expert", 2:12)
+  exSample$expert <- as.factor(exSample$expert)
+  exSample$expert <- factor(exSample$expert, levels = expert_names) # reorder factor level
+  label <- gradients %>%
+    group_by(subj) %>%
+    dplyr::summarise(label = unique(label))
+  exSample$label <- rep(rep(label$label, each = nSamp), times = nStim)
+  temp <- gradients %>%
+    arrange(dim_val, subj)
+  exSample$trial_num <- as.factor(rep(temp$trial_num, each = nSamp))
+  
+  # plot expert samples across dimension
+  ex_dim_fig <- ggplot(exSample, aes(x = stim, fill = expert)) + 
+    ex_samp_layers +
+    geom_text(data = exSample, mapping = aes(label = label, x = 6, y = 115),  
+              size = 3, colour = "black")
+  ggsave(file = paste0(file_name_root, modelName, "-ExSampDim", graph_file_type),
+         plot = ex_dim_fig + facet_wrap(~ subj, nrow = n_row),
+         width = grid_width, height = grid_height, units = "cm")
+  
+  # plot probability of each expert across the dimension
+  pExpert <- CalcPExpert(exSample, subjList = subjList)
+  p_ex_fig <- ggplot(pExpert, aes(y = prob, x = stim, group = expert, 
+                                  shape = expert, colour = expert)) + 
+    p_ex_layers
+  ggsave(file = paste0(file_name_root, modelName, "-pRuleDim", graph_file_type),
+         plot = p_ex_fig, width = 12, height = 10, units = "cm")
+  
+  # plot expert samples across trial number
+  ex_trial_fig <- ggplot(exSample, aes(x = trial_num, fill = expert)) + 
+    ex_samp_layers +
+    geom_text(data = exSample, mapping = aes(label = label, x = 6, y = 115),  
+              size = 3, colour = "black") +
+    scale_x_discrete(labels = c(1:11)) +
+    labs(title = "", x = "trial number", y = "count")
+  ggsave(file = paste0(file_name_root, modelName, "-ExSampTrial", graph_file_type),
+         plot = ex_trial_fig + facet_wrap(~ subj, nrow = n_row),
+         width = grid_width, height = grid_height, units = "cm")
+  
+  # plot probability of each expert across trial number
+  pExpert_trial <- CalcPExpertTrial(exSample, subjList = subjList)
+  p_ex_trial_fig <- ggplot(pExpert_trial, aes(y = prob, x = trial_num, group = expert, 
+                                              shape = expert, colour = expert)) + 
+    p_ex_layers +
+    scale_x_discrete(labels = c(1:11)) +
+    labs(title = "", x = "trial number", y = "probability")
+  ggsave(file = paste0(file_name_root, modelName, "-pRuleTrial", graph_file_type),
+         plot = p_ex_trial_fig, width = 12, height = 10, units = "cm")
+  
+  return(list(ex_dim_fig, p_ex_fig, pExpert, ex_trial_fig, p_ex_trial_fig,
+              pExpert_trial))
+  
+}
+
+#_______________________________________________________________________________
+# model comparisons
+
+Model_Comps <- function(models, Subj) {
+  
+  bridge <- list()
+  waics <- list()
+  for (i in 1:length(models)) {
+    bridge[i] <- list(models[[i]][["bridge"]])
+    waics[i] <- models[[i]][["waic"]]$estimates[3,1]
+  }
+  
+  BFs <- matrix(NA, nrow = length(models), ncol = length(models))
+  rownames(BFs) <- colnames(BFs) <- names(models)
+  for (row in 1:length(models)) {
+    for (col in 1:length(models)) {
+      BFs[row, col] <- bf(bridge[[row]], bridge[[col]])[["bf"]]
+    }
+  }
+  
+  waics <- data.frame(t(c(unlist(waics))))
+  colnames(waics) <- names(models)
+  write.csv(waics, file = paste0(file_name_root, Subj, "_WAICs", ".csv"), row.names = FALSE)
+  write.csv(BFs, file = paste0(file_name_root, Subj, "_BFs", ".csv"))
+  
+  return(list(waics, BFs))
+}
+
+#_______________________________________________________________________________
+# read data and return datalists for stan
+
+nsw17DataLists <- function(data_17, Subj) {
+  
+  exp_root <- "NSW17-"
+  file_name_root <- paste0("output/", exp_root)
+  n_test_blocks <- 1 # number of repetitions per test stimulus
+  
+  # prep data
+  df_17 <- filter(data_17, phase == "test")
+  subj_list_17 <- unique(df_17$subj)
+  n_subj_17 <- length(subj_list_17)
+  df_17 <- select(df_17, subj, trial_num, dim_val, response, sim_belief, 
+                  rel_belief, incon_belief, rule)
+  df_17 <- df_17 %>% mutate(dim = dim_val - 6) # centre dimension on CS+ (S6)
+  
+  # forced-choice expert
+  df_17 <- df_17 %>%
+    mutate(exFC = case_when(df_17$rule == "similarity" ~ 1,
+                            df_17$rule == "relational" ~ 2))
+  
+  # expert weights
+  df_17 <- df_17 %>%
+    mutate(sim_belief100 = sim_belief,   # keep original ratings/100
+           rel_belief100 = rel_belief,
+           incon_belief100 = incon_belief,
+           sim_belief = sim_belief/100,  # scale to 0-1
+           rel_belief = rel_belief/100,
+           incon_belief = incon_belief/100,
+           # calculate guessing
+           guess = (1-sim_belief)*(1-rel_belief)) %>% 
+    # normalize
+    mutate(sim_beliefnoG = sim_belief/(sim_belief + rel_belief), # excluding guessing
+           rel_beliefnoG = rel_belief/(sim_belief + rel_belief),
+           sim_beliefG = sim_belief/(sim_belief + rel_belief + guess), # including guessing
+           rel_beliefG = rel_belief/(sim_belief + rel_belief + guess),
+           guess = guess/(sim_belief + rel_belief + guess))
+  
+  # create random beliefs
+  rand_bels <- Rand_Weights(nSubj = 1)
+  df_17$rand_sim_belief <- rand_bels[1,1]
+  df_17$rand_rel_belief <- rand_bels[2,1]
+  df_17$rand_guess <- rand_bels[3,1]
+
+  # prep empirical gradients for figures
+  gradients_17 <- gather(df_17, key = "type", value = "pred", response, factor_key = TRUE)
+  gradients_17 <- gradients_17 %>%
+    mutate(label = paste0("Sim:", round(gradients_17$sim_beliefG, digits = 2), # including guessing
+                          " Rel:", round(gradients_17$rel_beliefG, digits = 2), 
+                          " G:", round(gradients_17$guess, digits = 2)),
+           label2 = paste0("Sim:", round(gradients_17$sim_beliefnoG, digits = 2), # excluding guessing
+                           " Rel:", round(gradients_17$rel_beliefnoG, digits = 2)),
+           label_rand = paste0("Sim:", round(gradients_17$rand_sim_belief, digits = 2), # excluding guessing
+                               " Rel:", round(gradients_17$rand_rel_belief, digits = 2)))
+  
+  #_______________________________________________________________________________
+  # get data into a list for Stan
+  
+  # all participants
+  temp <- df_17 %>% 
+    arrange(subj, dim_val) %>%
+    filter(subj == Subj)
+  responses_17 <- temp$response
+  resp_mtx_17 <- matrix(temp$response, ncol = n_stim, byrow = TRUE) 
+  temp <- df_17 %>%
+    # group_by(subj) %>%
+    filter(subj == Subj) %>%
+    dplyr::summarise(sim_belief = unique(sim_beliefnoG),
+                     rel_belief = unique(rel_beliefnoG),
+                     sim_beliefG = unique(sim_beliefG),
+                     rel_beliefG = unique(rel_beliefG),
+                     guess = unique(guess),
+                     exFC = unique(exFC),
+                     rand_sim_belief = unique(rand_sim_belief),
+                     rand_rel_belief = unique(rand_rel_belief),
+                     rand_guess = unique(rand_guess))#  %>%
+    # arrange(subj)
+  
+  data_list_17_3ex <- list(responses = resp_mtx_17,
+                           simBelG = temp$sim_beliefG,
+                           relBelG = temp$rel_beliefG,
+                           guess = temp$guess,
+                           nSubj = 1,
+                           nStim = n_stim,
+                           xs = c(-.5,-.4,-.3,-.2,-.1,0,.1,.2,.3,.4,.5),
+                           nExperts = 3)
+  
+  data_list_17_2ex <- list(responses = resp_mtx_17,
+                           simBel = temp$sim_belief,
+                           relBel = temp$rel_belief,
+                           exFC = temp$exFC,
+                           nSubj = 1,
+                           nStim = n_stim,
+                           xs = c(-.5,-.4,-.3,-.2,-.1,0,.1,.2,.3,.4,.5),
+                           nExperts = 2)
+  
+  data_list_17_1ex <- list(responses = resp_mtx_17,
+                           exFC = temp$exFC,
+                           nSubj = 1,
+                           nStim = n_stim,
+                           xs = c(-.5,-.4,-.3,-.2,-.1,0,.1,.2,.3,.4,.5))
+  
+  data_list_17_rand <- list(responses = resp_mtx_17,
+                            simBelG = temp$rand_sim_belief,
+                            relBelG = temp$rand_rel_belief,
+                            guess = temp$rand_guess,
+                            nSubj = 1,
+                            nStim = n_stim,
+                            xs = c(-.5,-.4,-.3,-.2,-.1,0,.1,.2,.3,.4,.5),
+                            nExperts = 3)
+  out <- list(data_list_17_3ex, data_list_17_2ex, data_list_17_1ex,
+              data_list_17_rand, gradients_17)
+  names(out) <- c("data_list_3ex", "data_list_2ex", "data_list_1ex",
+                  "data_list_rand", "gradients")
+  return(out)
+}
+
+#_______________________________________________________________________________
+# peak shift calculations
+
+# # define function that returns probability of all possible peak shift vectors
+# # note: this is currently only being calculated using mean rule functions
+# calcPS <- function(simProb, relProb, guessProb) {
+#   # SL L, SG, SG, SG
+#   p <- (simProb+relProb) * relProb * (simProb+guessProb)^3
+#   return(p)
+# }
+# 
+# # define function that calculates average magnitude of PS rise (CS+ to S7)
+# calcPSmag <- function(simProb, relProb, guessProb) {
+#   csplus <- (simFunc[6] * simProb + relFunc[6] * relProb + guessFunc[6] * guessProb)
+#   S7 <- (simFunc[7] * simProb + relFunc[7] * relProb + guessFunc[7] * guessProb)
+#   rise <- S7-csplus
+#   S11 <- (simFunc[11] * simProb + relFunc[11] * relProb + guessFunc[11] * guessProb)
+#   fall <- S7-S11
+#   psmags <- c(rise,fall)
+#   return(psmags)
+# }
+# #_______________________________________________________________________________
+# # plot posteriors of expert function parameters
+# 
+# PlotPosteriors <- function(M, SD, height, loc, scale, max) {
+#   saveFig(graphName="indPosteriors", width=30, height=20, x=2, y=3)
+#   # Similarity: mean
+#   plot(density(M), lwd=2, # xaxt="n", xlim=c(-.05,.05), ylim=c(0,10),
+#        main="Mean of Similarity Function", xlab="Estimate")
+#   polygon(density(M), col="grey")
+#   # axis(1, at=c(-.01, 0, .01))
+#   # Similarity: SD
+#   plot(density(SD), lwd=2, # xaxt="n", xlim=c(0,.6), ylim=c(0,10), 
+#        main="SD of Similarity Function", xlab="Estimate")
+#   polygon(density(SD), col="grey")
+#   # axis(1, at=c(0, .2, .4, .6))
+#   # Similarity: height
+#   plot(density(height), lwd=2, # xaxt="n", xlim=c(50,100), ylim=c(0,.3), 
+#        main="Height of Similarity Function", xlab="Estimate")
+#   polygon(density(height), col="grey")
+#   # axis(1, at=c(50,60,70,80,90,100))
+#   # Linear: loc
+#   plot(density(loc), lwd=2, # xaxt="n", xlim=c(-.2,.2), ylim=c(0,20),
+#        main="Midpoint of Linear Function", xlab="Estimate")
+#   polygon(density(loc), col="grey")
+#   # axis(1, at=c(-.2, -.1, 0, .1, .2))
+#   # Linear: scale
+#   plot(density(scale), lwd=2, # xaxt="n", xlim=c(0,50), ylim=c(0,1), 
+#        main="Scale of Linear Function", xlab="Estimate")
+#   polygon(density(scale), col="grey")
+#   # axis(1, at=c(0,10,20,30,40,50))
+#   # Linear: max
+#   plot(density(max), lwd=2, # xaxt="n", xlim=c(50,100), ylim=c(0,.2), 
+#        main="Maximum of Linear Function", xlab="Estimate")
+#   polygon(density(max), col="grey")
+#   # axis(1, at=c(50,60,70,80,90,100))
+#   dev.off()
+# }
+
+#_______________________________________________________________________________
+
+
+MakeModelString <- function(condition, opt) {
+  
+  # load the skeleton of the model
+  jagsmodelstring <- paste0(
+    readLines(
+      paste0("./models/condition_",condition,".bug")
+    ), 
+    collapse="\n"
+  )
+  
+  # insert code specifying the prior
+  jagsmodelstring  <- gsub(
+    "PRIORHERE",
+    paste0(
+      readLines("./jags/model_prior.bug"), 
+      collapse="\n"
+    ),
+    jagsmodelstring,
+    fixed=TRUE
+  )
+  
+  # insert code specifying the likelihood
+  jagsmodelstring <- gsub(
+    "LIKELIHOODHERE",
+    paste0(
+      readLines("./jags/model_likelihood.bug"),
+      collapse="\n"
+    ),
+    jagsmodelstring,
+    fixed=TRUE
+  )
+  
+  # insert code specifying the relevance model
+  if (opt$relevance_type == "learned") {
+    relevance_file <- "./jags/relevance_learned.bug"
+  } else {
+    relevance_file <- "./jags/relevance_fixed.bug"
+  }
+  jagsmodelstring <- gsub(
+    "RELEVANCEHERE",
+    paste0(
+      readLines(relevance_file),
+      collapse="\n"
+    ),
+    jagsmodelstring,
+    fixed=TRUE
+  )
+  
+  return(jagsmodelstring)
+  
+}
+#_______________________________________________________________________________
+
+
+
+#_______________________________________________________________________________

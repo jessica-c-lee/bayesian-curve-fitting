@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562648256982.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2719850023",
+    "id" : "B970A4F3",
+    "lastKnownWriteTime" : 1575520504,
+    "last_content_update" : 1575520502849,
+    "path" : "C:/Users/jclee/Google Drive/JESS/Academic/projects/2016_postdoc_unsw/2017-gen_analysis/project/code/index.R",
+    "project_path" : "index.R",
+    "properties" : {
+        "cursorPosition" : "39,0",
+        "scrollLine" : "33"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
