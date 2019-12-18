@@ -33,21 +33,28 @@ dpi = 600
 n_row <- 5
 density_cols <- c("darkblue", "orange") 
 dim_vals <- seq(-.5, +.5, .1)
+cat_dim_vals <- seq(0, .6, .1)
 
 # source
 source("R/functions.R")
 source("models/models.R")
 
 # ------------------------------ GROUP ANALYSIS --------------------------------
-out <- Read_Trial_Gen_Data("data/LiveseyMcLaren2019.csv", dim_vals, "variable", "fixed")
+
+
+#LiveseyMcLaren2019
+out <- Read_Gen_Data("data/LiveseyMcLaren2019.csv", cat_dim_vals, "variable", "fixed")
 data_list_1 <- out[[1]][[1]]
 data_list_2 <- out[[1]][[2]]
 
 # 2. fit models for each group
-mcmc_out_1 <- Run_Aug_Gaussian_Logis_Mod(data_list_1, modelName = "variable")
+mcmc_out_1 <- Run_Aug_Gaussian_Mod(data_list_1, modelName = "variable")
 samples_1 <- mcmc_out_1[["samples"]]
-mcmc_out_2 <- Run_Aug_Gaussian_Logis_Mod(data_list_2, modelName = "fixed")
+mcmc_out_2 <- Run_Aug_Gaussian_Mod(data_list_2, modelName = "fixed")
 samples_2 <- mcmc_out_2[["samples"]]
+
+
+
 
 
 

@@ -69,48 +69,95 @@ Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
   
   return(list(out, groupNames))
 }
-
 #_______________________________________________________________________________
 
-Read_Trial_Gen_Data <- function(fileName, dimVals, groupName1, groupName2, nTrials) {
+Run_Aug_Gaussian_Mod <- function(dataList, modelName) {
   
-  # This function reads data and prepares the data list to be inputted to stan.
-  # The stimulus dimension column must be named "x", responses as "y", group as
-  # "group", subject ID as "subj", trial number as "trial"
+  write("
+    data {
+      int<lower=1> nSubj;
+      int<lower=1> nStim;
+      real xs[nStim];
+      real<lower=0,upper=100> responses[nSubj,nStim];
+    }
+    
+    parameters {
+      real<lower=-.5,upper=.5> M[nSubj];
+      real<lower=0,upper=1> SDPlus[nSubj];
+      real<lower=0,upper=1> SDMinus[nSubj];
+      real<lower=0,upper=100> height[nSubj];
+      real<lower=0> noise;
+      real predR[nSubj,nStim];
+    }
+    
+    transformed parameters {
+      matrix[nSubj,nStim] simFuncMinus;
+      matrix[nSubj,nStim] simFuncPlus;
+      matrix[nSubj,nStim] simFunc;
+    
+      for (subj in 1:nSubj) {
+        for (stim in 1:nStim) {
+          if (xs[stim] > M[subj])
+             simFunc[subj,stim] = height[subj] * exp(1)^-(square(xs[stim]-M[subj])/(2*square(SDPlus[subj])));
+          else
+            simFunc[subj,stim] = height[subj] * exp(1)^-(square(xs[stim]-M[subj])/(2*square(SDMinus[subj])));
+        }
+      }
+    }
+    
+    model {
+    
+      // likelihood
+      for (subj in 1:nSubj) {
+        for (stim in 1:nStim) {
+        responses[subj,stim] ~ normal(simFunc[subj,stim], noise);
+        predR[subj,stim] ~ normal(simFunc[subj,stim], noise);
+      }
+      
+      // priors
+      M[subj] ~ normal(0,.1)T[-.5,.5];
+      SDPlus[subj] ~ gamma(1.5, 1.5)T[0,1]; // normal(0,.1)T[0,1];
+      SDMinus[subj] ~ gamma(1.5, 1.5)T[0,1]; // normal(0,.1)T[0,1];
+      height[subj] ~ normal(75, 10)T[1,100];
+      noise ~ normal(0,5)T[0,]; // gamma(1,1);
+      }
+    }
+    
+    generated quantities {
+      real log_lik[nSubj,nStim];
+      for (subj in 1:nSubj) {
+        for (stim in 1:nStim) {
+          log_lik[subj,stim] = normal_lpdf(responses[subj,stim] | simFunc[subj,stim], noise);
+        }
+      }
+    }
+    ", file = "models/gausA.stan")
   
-  # Note that the "x" column must match the "dimVals" argument in this function. 
-  # For example, if you have 11 stimuli (S1-S11) and the CS+ is the middle 
-  # stimulus (S6), then the position of the CS+ should be 0 in the xs argument, 
-  # and range between -.5 to +.5.
+  stanfit <- stan(file = "models/gausA.stan",
+                  data = dataList, 
+                  pars = c("M", "SDPlus", "SDMinus", "height", "noise", "predR", "log_lik"),
+                  iter = n_iter, 
+                  warmup = n_burnin, 
+                  thin = n_thin, 
+                  chains = n_chains, 
+                  init = "random",
+                  algorithm = "NUTS",
+                  cores = 1)
   
-  # Note that the range of the xs argument can be changed if needed, but then 
-  # the parameters of the prior distributions must also be changed accordingly
-  # in stan.
+  diag <- rstan::get_sampler_params(stanfit, inc_warmup = FALSE)
+  samples <- rstan::extract(stanfit)
   
-  data <- read.csv(fileName, header = TRUE)
+  summary <- rstan::summary(stanfit, probs = c(0.025, 0.50, 0.975))$summary
+  write.csv(summary, file = paste0(file_name_root, modelName, "-summary.csv"), row.names = TRUE)
   
-  # groupNames <- unique(data$group)
-  groupNames <- c(groupName1, groupName2)
+  # calculate waic
+  loglik <- loo::extract_log_lik(stanfit)
+  waic <- loo::waic(loglik)
   
-  out <- vector("list", 2)
-  
-  for (i in 1:length(groupNames)) {
-    subset_data <- data %>% 
-      filter(group == groupNames[i]) %>%
-      arrange(subj, x, trial)
-    nSubj <- n_distinct(subset_data[["subj"]])
-    out[[i]] <- list(subj = rep(1:nSubj, each = length(subset_data[["subj"]])/nSubj),
-                     responses = subset_data[["y"]],
-                     stim = subset_data[["x"]],
-                     trial = subset_data[["trial"]],
-                     nSubj = n_distinct(subset_data[["subj"]]),
-                     nStim = length(dimVals),
-                     nTotal = length(subset_data[["subj"]]),
-                     xs = dimVals)
-  }
-  
-  
-  return(list(out, groupNames))
+  # output
+  out <- list(stanfit, diag, samples, summary, waic)
+  names(out) <- c("stanfit", "diag", "samples", "summary", "waic")
+  return(out)
 }
 
 #_______________________________________________________________________________
