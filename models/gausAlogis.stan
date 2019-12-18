@@ -17,7 +17,6 @@
       real<lower=0,upper=100> height[nSubj];
       real<lower=0> noise;
       real predR[nTotal];
-      real mu[nTotal];
     }
     
     transformed parameters {
@@ -39,9 +38,8 @@
     
       // likelihood
       for (i in 1:nTotal) {
-        responses[i] ~ bernoulli_logit(mu[i]);
-        mu[i] ~ normal(simFunc[subj[i],stim[i]], noise));
-        predR[i] ~ normal(simFunc[subj[i],stim[i]], noise);
+        responses[i] ~ bernoulli_logit(simFunc[subj[i],stim[i]]);
+        //predR[i] ~ bernoulli_logit(simFunc[subj[i],stim[i]]);
       }
       
       // priors
@@ -56,8 +54,9 @@
     
     generated quantities {
       real log_lik[nTotal];
+      
       for (i in 1:nTotal) {
-        log_lik[i] = bernouilli_logit_lpdf(normal_lpdf(responses[subj[i],stim[i]] | simFunc[subj[i],stim[i]], noise));
+        log_lik[i] = bernoulli_logit_lpmf(responses[i] | simFunc[subj[i],stim[i]]);
       }
     }
     
