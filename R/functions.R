@@ -61,8 +61,51 @@ Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
     out[[i]] <- list(subj = subset_data[["subj"]],
                      responses = matrix(subset_data[["y"]], ncol = length(dimVals), 
                                         byrow = TRUE),
-                     nSubj = length(unique(subset_data[["subj"]])),
+                     nSubj = n_distinct(subset_data[["subj"]]),
                      nStim = length(dimVals),
+                     xs = dimVals)
+  }
+  
+  
+  return(list(out, groupNames))
+}
+
+#_______________________________________________________________________________
+
+Read_Trial_Gen_Data <- function(fileName, dimVals, groupName1, groupName2, nTrials) {
+  
+  # This function reads data and prepares the data list to be inputted to stan.
+  # The stimulus dimension column must be named "x", responses as "y", group as
+  # "group", subject ID as "subj", trial number as "trial"
+  
+  # Note that the "x" column must match the "dimVals" argument in this function. 
+  # For example, if you have 11 stimuli (S1-S11) and the CS+ is the middle 
+  # stimulus (S6), then the position of the CS+ should be 0 in the xs argument, 
+  # and range between -.5 to +.5.
+  
+  # Note that the range of the xs argument can be changed if needed, but then 
+  # the parameters of the prior distributions must also be changed accordingly
+  # in stan.
+  
+  data <- read.csv(fileName, header = TRUE)
+  
+  # groupNames <- unique(data$group)
+  groupNames <- c(groupName1, groupName2)
+  
+  out <- vector("list", 2)
+  
+  for (i in 1:length(groupNames)) {
+    subset_data <- data %>% 
+      filter(group == groupNames[i]) %>%
+      arrange(subj, x, trial)
+    nSubj <- n_distinct(subset_data[["subj"]])
+    out[[i]] <- list(subj = rep(1:nSubj, each = length(subset_data[["subj"]])/nSubj),
+                     responses = subset_data[["y"]],
+                     stim = subset_data[["x"]],
+                     trial = subset_data[["trial"]],
+                     nSubj = n_distinct(subset_data[["subj"]]),
+                     nStim = length(dimVals),
+                     nTotal = length(subset_data[["subj"]]),
                      xs = dimVals)
   }
   
@@ -235,9 +278,9 @@ Run_Analysis <- function(fileName, dimVals, nRow = c(6,6), figMult, graphName,
   # groupNames <- out[2][[1]]
   
   # 2. fit models for each group
-  mcmc_out_1 <- Run_GaussianA_Mod(data_list_1, modelName = groupName1)
+  mcmc_out_1 <- Run_Aug_Gaussian_Mod(data_list_1, modelName = groupName1)
   samples_1 <- mcmc_out_1[["samples"]]
-  mcmc_out_2 <- Run_GaussianA_Mod(data_list_2, modelName = groupName2)
+  mcmc_out_2 <- Run_Aug_Gaussian_Mod(data_list_2, modelName = groupName2)
   samples_2 <- mcmc_out_2[["samples"]]
   
   # 3. plot posterior predictives
