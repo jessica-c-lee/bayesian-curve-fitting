@@ -37,7 +37,7 @@ model {
         predR[subj,stim] ~ normal(simFunc[subj,stim], noise);
       }
    // priors
-      M[subj] ~ normal(0,.1)T[-.5,.5];
+      M[subj] ~ normal(0,.25)T[-.6,.6];
       SDPlus[subj] ~ gamma(1.5, 1.5)T[0,1]; 
       SDMinus[subj] ~ gamma(1.5, 1.5)T[0,1];
       height[subj] ~ normal(75, 10)T[1,100];

@@ -258,7 +258,7 @@ Run_Analysis <- function(fileName, dimVals, nRow = c(6,6), figMult, graphName,
   # Handler that calls functions to run analysis and save output
   # Note that groupName1 and groupName2 must match those in the data files
   
-  file_name_root <- paste0(file_name_root, "-", analysisName, "-")
+  file_name_root <- paste0(file_name_root, analysisName, "-")
   
   # 1. read data
   out <- Read_Gen_Data(fileName, dimVals, groupName1, groupName2)
