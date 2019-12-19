@@ -2,36 +2,6 @@
 #                                 Functions
 #-------------------------------------------------------------------------------
 
-# Simulate_Data <- function(M, SD, simHeight, noise, nSubj, dimVals) {
-#   # This function simulates Gaussian gradients
-#   # M, SD, simHeight are all vectors of length nSubj
-#   # dimVals must range between -.5 and +.5
-#   
-#   simData <- matrix(nrow = nSubj, ncol = length(dimVals))
-#   for (i in 1:nSubj) {
-#     simData[i,] <- simHeight[i] * exp(1)^-(((dimVals-M[i])^2) / (2 * SD[i]^2)) + rnorm(length(dimVals), 0, noise)
-#   }
-#   subj <- rep(1:nSubj, each = length(dimVals))
-#   x <- rep(dimVals, times = nSubj)
-#   y <- as.vector(t(simData))
-#   y[y > 100] <- 100
-#   y[y < 0] <- 0
-#   toyData <- data.frame(cbind(subj, x, y))
-#   fig <- ggplot(toyData, aes(x = x, y = y)) +
-#     geom_line(alpha = .5) + 
-#     geom_vline(xintercept = 0, linetype = "dotted", colour = "black") +
-#     scale_x_continuous(limits = c(min(dimVals), max(dimVals)), 
-#                        breaks = c(min(dimVals), 0, max(dimVals))) +
-#     scale_y_continuous(limits = c(0, 120), breaks = c(0, 50, 100)) +
-#     theme_classic() +
-#     facet_wrap(~ subj, nrow = n_row) 
-#   out <- list(toyData, fig)
-#   names(out) <- c("data", "fig")
-#   return(out)
-# }
-# 
-#_______________________________________________________________________________
-
 Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
   
   # This function reads data and prepares the data list to be inputted to stan.
@@ -71,9 +41,9 @@ Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
 }
 #_______________________________________________________________________________
 
-Run_Aug_Gaussian_Mod <- function(dataList, modelName) {
+Run_Aug_Gaussian_Mod <- function(dataList, modelName, modelFile) {
   
-  stanfit <- stan(file = "models/gausA.stan",
+  stanfit <- stan(file = modelFile,
                   data = dataList, 
                   pars = c("M", "SDPlus", "SDMinus", "height", "noise", "predR", "log_lik"),
                   iter = n_iter, 
@@ -253,12 +223,10 @@ Compare_Groups <- function(samples1, samples2, groupName1, groupName2, graphName
 #_______________________________________________________________________________
 
 Run_Analysis <- function(fileName, dimVals, nRow = c(6,6), figMult, graphName,
-                         paramNames, groupName1, groupName2, analysisName) {
+                         paramNames, groupName1, groupName2, modelFile) {
   
   # Handler that calls functions to run analysis and save output
   # Note that groupName1 and groupName2 must match those in the data files
-  
-  file_name_root <- paste0(file_name_root, analysisName, "-")
   
   # 1. read data
   out <- Read_Gen_Data(fileName, dimVals, groupName1, groupName2)
@@ -267,9 +235,9 @@ Run_Analysis <- function(fileName, dimVals, nRow = c(6,6), figMult, graphName,
   # groupNames <- out[2][[1]]
   
   # 2. fit models for each group
-  mcmc_out_1 <- Run_Aug_Gaussian_Mod(data_list_1, modelName = groupName1)
+  mcmc_out_1 <- Run_Aug_Gaussian_Mod(data_list_1, modelName = groupName1, modelFile)
   samples_1 <- mcmc_out_1[["samples"]]
-  mcmc_out_2 <- Run_Aug_Gaussian_Mod(data_list_2, modelName = groupName2)
+  mcmc_out_2 <- Run_Aug_Gaussian_Mod(data_list_2, modelName = groupName2, modelFile)
   samples_2 <- mcmc_out_2[["samples"]]
   
   # 3. plot posterior predictives

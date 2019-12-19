@@ -41,24 +41,8 @@ mod_prior <- "// priors
       noise ~ normal(0,5)T[0,];
       }"
 
-mod_prior_cat <- "// priors
-      M[subj] ~ normal(0,.25)T[-.6,.6];
-      SDPlus[subj] ~ gamma(1.5, 1.5)T[0,1]; 
-      SDMinus[subj] ~ gamma(1.5, 1.5)T[0,1];
-      height[subj] ~ normal(75, 10)T[1,100];
-      noise ~ normal(0,5)T[0,];
-      }"
-
 mod_flat_prior <- "// priors 
       M[subj] ~ uniform(-.5,.5);
-      SDPlus[subj] ~ uniform(0,1); 
-      SDMinus[subj] ~ uniform(0,1); 
-      height[subj] ~ uniform(1,100)
-      noise ~ normal(0,5)T[0,];
-      }"
-
-mod_flat_cat_prior <- "// priors 
-      M[subj] ~ uniform(0,.6);
       SDPlus[subj] ~ uniform(0,1); 
       SDMinus[subj] ~ uniform(0,1); 
       height[subj] ~ uniform(1,100)
@@ -90,6 +74,6 @@ write(Build_Model(data = mod_data,
                   params = mod_params, 
                   tParams = mod_tParams, 
                   likelihood = mod_likelihood,
-                  prior = mod_prior_cat, 
+                  prior = mod_prior, 
                   quants = mod_quants), file = paste0("models/", "gausA", ".stan"))
 #_______________________________________________________________________________

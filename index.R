@@ -40,39 +40,29 @@ cat_dim_vals <- seq(0, .6, .1)
 source("models/models.R")
 source("R/functions.R")
 
-# # set this to analysis name
-# analysis_name <- "Livesey2019Spat"
-# file_name_root <- paste0("output/", analysis_name, "-")
-
 # --------------------------------- ANALYSES -----------------------------------
 
 # single cue vs. differential (Lovibond, Lee, & Hayes, 2019)
-nsw19out <- Run_Analysis(fileName = "data/NSW19-Data.csv", analysisName = "NSW19",
+file_name_root <- paste0("output/", "NSW19", "-")
+nsw19out <- Run_Analysis(fileName = "data/NSW19-Data.csv", 
+                         modelFile = "models/gausA.stan",
                          dimVals = dim_vals, nRow = c(10,10), figMult = 4, 
                          graphName = "SingDiff-", paramNames = param_names, 
                          groupName1 = "single", groupName2 = "differential")
 
 # similarity vs. linear (Lee, Hayes, & Lovibond, 2018)
-nsw02out <- Run_Analysis(fileName = "data/NSW02-Data-Diff.csv", analysisName = "NSW02", 
+file_name_root <- paste0("output/", "NSW02", "-")
+nsw02out <- Run_Analysis(fileName = "data/NSW02-Data-Diff.csv", 
+                         modelFile = "models/gausA.stan",
                          dimVals = dim_vals, nRow = c(5,5), figMult = 2, 
                          graphName = "SimLin-", paramNames = param_names,
                          groupName1 = "similarity", groupName2 = "linear")
 
 # single vs. distant neg (Lee, Lovibond, Hayes, & Navarro, 2019)
-nsw09out <- Run_Analysis(fileName = "data/NSW09-Data.csv", analysisName = "NSW09", 
+file_name_root <- paste0("output/", "NSW09", "-")
+nsw09out <- Run_Analysis(fileName = "data/NSW09-Data.csv", 
+                         modelFile = "models/gausA.stan",
                          dimVals = dim_vals, nRow = c(7,7), figMult = 2.5, 
                          graphName = "SingDist-", paramNames = param_names,
                          groupName1 = "single pos", groupName2 = "distant neg")
-
-# spatially variable vs. fixed stimuli (Livesey & McLaren 2019)
-liv2019spat <- Run_Analysis(fileName = "data/Livesey2019Spat.csv", analysisName = "Liv2019Spat", 
-                            dimVals = cat_dim_vals, nRow = c(7,7), figMult = 2.5, 
-                            graphName = "SpatVarFixed-", paramNames = param_names,
-                            groupName1 = "variable", groupName2 = "fixed")
-
-# frequency variable vs. fixed stimuli (Livesey & McLaren 2019)
-liv2019freq <- Run_Analysis(fileName = "data/Livesey2019Freq.csv", analysisName = "Liv2019Freq",
-                            dimVals = cat_dim_vals, nRow = c(7,7), figMult = 2.5, 
-                            graphName = "FreqVarFixed-", paramNames = param_names,
-                            groupName1 = "variable", groupName2 = "fixed")
 #_______________________________________________________________________________
