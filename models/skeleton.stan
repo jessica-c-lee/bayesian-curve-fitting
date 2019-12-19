@@ -1,7 +1,3 @@
-functions {
-  INS_FUNCS
-}
-
 data {
   INS_DATA
 }
