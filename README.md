@@ -1,23 +1,21 @@
 # bayesian-curve-fitting
- R code to fit augmented Gaussians to individual gradients in a hierarchical Bayesian model
+R code to fit augmented Gaussians to individual generalization gradients in a hierarchical Bayesian model. The model estimates the posteriors for 4 parameters of the augmented Gaussian:
+* mean: the location of the gradient peak
+* width-: the width (SD) of the left side of the gradient
+* width+: the width (SD) of the right side of the gradient
+* height: the height (value at the peak) of the gradient
+
+Accompanies the paper Lee, Mills, & Livesey (under review). Provides a re-analysis of results from 3 studies:
+* Experiment 1 of Lovibond, Lee, & Hayes (2019): single cue vs. differential training groups
+* Experiment 2 of Lee, Hayes, & Lovibond (2018): similarity vs. linear rule subgroups
+* Experiment 2 of Lee, Lovibond, Hayes, & Navarro (2019): single pos vs. distant neg training groups.
  
-## index.R
-Code that fits Gaussian and logistic functions to generalisation gradients in separate hierarchical Bayesian models.
+## How to use
+Run the index.R file. Note that the code is set up to compare gradients between two groups.
 
-##  R/functions.R
-See R script for details on each function.
-
-## models/models.R
-Code for the Gaussian model and the Logistic model, implemented in stan (rstan R package).
-
-## data/demo.csv
-Demo data from an experiment with partial reinforcement (75%) differential training, and generalization testing along the blue-green dimension (see Lee, Hayes, & Lovibond, 2018).
-
-## output
-* Data.jpeg - mean generalisation gradient.
-* WAICs.csv - Widely Applicable Information Criterions for the Gaussian and Logistic models.
-* BFs.csv - Bayes Factors comparing Gaussian and Logistic models calculated using the "bridgesampling" R package.
-* Gaus_Summary.csv - descriptive statistics for the posteriors from the Gaussian model.
-* Logis_Summary.csv - descriptive statistics for the posteriors from the Logistic model.
-* Guassian-PostPreds.jpeg - posterior predictives (100 samples from the posterior) for each participant for the Gaussian model.
-* Logistic-PostPreds.jpeg - posterior predictives (100 samples from the posterior) for each participant for the Logistic model.
+## Output generated
+* summary.csv: 
+* gradients.jpeg: plots the empirical gradients facetted by subject
+* postpreds.jpeg: plots the empirical gradients facetted by subject with posterior predictives overlayed
+* HDIs.csv: 95% Highest Density Intervals (HDIs) for each parameter for each group
+* group_diff_HDIs.csv: 95% HDIs for the group difference for each parameter

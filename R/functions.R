@@ -245,7 +245,8 @@ Run_Analysis <- function(fileName, dimVals, nRow = c(6,6), figMult, graphName,
   # 4. compare posteriors between groups
   Plot_Densities(samples_1, samples_2, groupName1 = groupName1, groupName2 = groupName2, 
                  graphName = graphName, paramNames = paramNames, dimVals = dimVals)
-  # HDIs
+  
+  # 5. calculate HDIs for posterior estimates
   hdi_m1 <- bayestestR::hdi(as.vector(samples_1$M_group), ci = hdi_limit) 
   hdi_m2 <- bayestestR::hdi(as.vector(samples_2$M_group), ci = hdi_limit) 
   hdi_sdplus1 <- bayestestR::hdi(as.vector(samples_1$SDPlus_group), ci = hdi_limit) 
@@ -262,7 +263,7 @@ Run_Analysis <- function(fileName, dimVals, nRow = c(6,6), figMult, graphName,
                            rep(c("1", "1", "2", "2"), times = 4), rep(c("_low", "_high"), times = 8))
   write_csv(temp, paste0(file_name_root, "HDIs.csv"))
   
-  # 5. calculate HDI and ROPE for difference scores
+  # 6. calculate HDIs and ROPE for group difference scores
   # M
   diff_m <- as.vector(samples_1$M_group) - c(as.vector(samples_2$M_group))
   hdi_m <- bayestestR::hdi(diff_m, ci = hdi_limit) 
@@ -280,11 +281,13 @@ Run_Analysis <- function(fileName, dimVals, nRow = c(6,6), figMult, graphName,
   hdi_h <- bayestestR::hdi(diff_h, ci = hdi_limit) 
   rope_h <- bayestestR::rope(diff_h)
   
-  cat("---------- 95% HDIs for group differences ----------",  "\n",
-      "M lower: ", hdi_m$CI_low, " // M upper: ", hdi_m$CI_high, "\n",
-      "W+ lower: ", hdi_wplus$CI_low, " // W+ upper: ", hdi_wplus$CI_high, "\n",
-      "W- lower: ", hdi_wminus$CI_low, " // W- upper: ", hdi_wminus$CI_high, "\n",
-      "H lower: ", hdi_h$CI_low, " // H upper: ", hdi_h$CI_high, "\n")
+  temp <- as.data.frame(t(c(hdi_m$CI_low, hdi_m$CI_high, 
+                            hdi_wplus$CI_low, hdi_wplus$CI_high, 
+                            hdi_wminus$CI_low, hdi_wminus$CI_high,
+                            hdi_h$CI_low, hdi_h$CI_high)))
+  colnames(temp) <- paste0(rep(c("m", "sdplus", "sdminus", "h"), each = 2),
+                           rep(c("_low", "_high"), times = 4))
+  write_csv(temp, paste0(file_name_root, "group_diff_HDIs.csv"))
   
   out <- list(data_list_1, data_list_2, mcmc_out_1, mcmc_out_2, 
               samples_1, samples_2, diff_m, hdi_m, rope_m, diff_wplus, 

@@ -4,4 +4,5 @@
 .Ruserdata
 .Rproj.user/
 output/
+.DS_Store
 

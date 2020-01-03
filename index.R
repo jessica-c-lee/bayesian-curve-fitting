@@ -43,14 +43,6 @@ source("R/functions.R")
 
 # --------------------------------- ANALYSES -----------------------------------
 
-# single cue vs. differential (Lovibond, Lee, & Hayes, 2019)
-file_name_root <- paste0("output/", "NSW19", "-")
-nsw19out <- Run_Analysis(fileName = "data/NSW19-Data.csv", 
-                         modelFile = "models/gausAhier.stan", params = params,
-                         dimVals = dim_vals, nRow = c(10,10), figMult = 4, 
-                         graphName = "SingDiff-", paramNames = param_names, 
-                         groupName1 = "single", groupName2 = "differential")
-
 # similarity vs. linear (Lee, Hayes, & Lovibond, 2018)
 file_name_root <- paste0("output/", "NSW02", "-")
 nsw02out <- Run_Analysis(fileName = "data/NSW02-Data-Diff.csv", 
@@ -66,4 +58,12 @@ nsw09out <- Run_Analysis(fileName = "data/NSW09-Data.csv",
                          dimVals = dim_vals, nRow = c(7,7), figMult = 2.5, 
                          graphName = "SingDist-", paramNames = param_names,
                          groupName1 = "single pos", groupName2 = "distant neg")
+
+# single cue vs. differential (Lovibond, Lee, & Hayes, 2019)
+file_name_root <- paste0("output/", "NSW19", "-")
+nsw19out <- Run_Analysis(fileName = "data/NSW19-Data.csv", 
+                         modelFile = "models/gausAhier.stan", params = params,
+                         dimVals = dim_vals, nRow = c(10,10), figMult = 4, 
+                         graphName = "SingDiff-", paramNames = param_names, 
+                         groupName1 = "single", groupName2 = "differential")
 #_______________________________________________________________________________
