@@ -23,7 +23,7 @@ Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
   
   for (i in 1:length(groupNames)) {
     subset_data <- data %>% 
-      filter(group == groupNames[i]) %>%
+      dplyr::filter(group == groupNames[i]) %>%
       arrange(subj, x)
     out[[i]] <- list(subj = subset_data[["subj"]],
                      responses = matrix(subset_data[["y"]], ncol = length(dimVals), 
