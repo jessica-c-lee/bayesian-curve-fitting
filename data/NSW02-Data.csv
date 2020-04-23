@@ -1,782 +1,353 @@
-subj,group,cb,trialNum,phase,x,rule,y
-2057,single cue,1,1,2,3,Other rule,38.30769231
-2057,single cue,1,2,2,10,Other rule,58.88111888
-2057,single cue,1,3,2,11,Other rule,90.67132867
-2057,single cue,1,4,2,8,Other rule,28.39160839
-2057,single cue,1,5,2,6,Other rule,48.90909091
-2057,single cue,1,6,2,7,Other rule,58.74125874
-2057,single cue,1,7,2,4,Other rule,90.72727273
-2057,single cue,1,8,2,1,Other rule,8.643356643
-2057,single cue,1,9,2,9,Other rule,37.76223776
-2057,single cue,1,10,2,2,Other rule,70.29370629
-2057,single cue,1,11,2,5,Other rule,28.20979021
-2058,differential,2,1,2,11,Linear,100
-2058,differential,2,2,2,6,Linear,0
-2058,differential,2,3,2,8,Linear,100
-2058,differential,2,4,2,1,Linear,48.16826856
-2058,differential,2,5,2,7,Linear,100
-2058,differential,2,6,2,9,Linear,99.95821145
-2058,differential,2,7,2,10,Linear,76.4869759
-2058,differential,2,8,2,3,Linear,41.41245299
-2058,differential,2,9,2,4,Linear,0.362167433
-2058,differential,2,10,2,2,Linear,48.53043599
-2058,differential,2,11,2,5,Linear,3.217718345
-2060,differential,1,1,2,10,Similarity,48.48315392
-2060,differential,1,2,2,5,Similarity,80.21809031
-2060,differential,1,3,2,6,Similarity,80.58157416
-2060,differential,1,4,2,1,Similarity,48.52509437
-2060,differential,1,5,2,8,Similarity,80.35789179
-2060,differential,1,6,2,2,Similarity,48.2454914
-2060,differential,1,7,2,7,Similarity,80.39983224
-2060,differential,1,8,2,3,Similarity,0.181741926
-2060,differential,1,9,2,4,Similarity,0.405424297
-2060,differential,1,10,2,11,Similarity,48.2454914
-2060,differential,1,11,2,9,Similarity,48.42723333
-2061,single cue,1,1,2,3,Linear,90.6254353
-2061,single cue,1,2,2,5,Linear,99.95821145
-2061,single cue,1,3,2,4,Linear,91.08510935
-2061,single cue,1,4,2,2,Linear,0
-2061,single cue,1,5,2,10,Linear,80.79119655
-2061,single cue,1,6,2,7,Linear,59.04722106
-2061,single cue,1,7,2,8,Linear,0
-2061,single cue,1,8,2,9,Linear,69.2854158
-2061,single cue,1,9,2,1,Linear,90.1239727
-2061,single cue,1,10,2,6,Linear,58.54575846
-2061,single cue,1,11,2,11,Linear,80.10865023
-2062,differential,2,1,2,4,Linear,0.046511628
-2062,differential,2,2,2,11,Linear,90.67906977
-2062,differential,2,3,2,1,Linear,28.20465116
-2062,differential,2,4,2,9,Linear,100
-2062,differential,2,5,2,2,Linear,18.7627907
-2062,differential,2,6,2,5,Linear,0
-2062,differential,2,7,2,7,Linear,99.95348837
-2062,differential,2,8,2,8,Linear,99.95348837
-2062,differential,2,9,2,10,Linear,100
-2062,differential,2,10,2,6,Linear,0
-2062,differential,2,11,2,3,Linear,9.088372093
-2063,single cue,2,1,2,9,No relationship,0
-2063,single cue,2,2,2,8,No relationship,0
-2063,single cue,2,3,2,11,No relationship,99.85827664
-2063,single cue,2,4,2,1,No relationship,100
-2063,single cue,2,5,2,4,No relationship,0
-2063,single cue,2,6,2,2,No relationship,99.85827664
-2063,single cue,2,7,2,5,No relationship,0
-2063,single cue,2,8,2,10,No relationship,99.90551776
-2063,single cue,2,9,2,3,No relationship,0
-2063,single cue,2,10,2,6,No relationship,0
-2063,single cue,2,11,2,7,No relationship,0
-2064,differential,1,1,2,2,Similarity,28.40070955
-2064,differential,1,2,2,11,Similarity,70.20819718
-2064,differential,1,3,2,6,Similarity,93.93147232
-2064,differential,1,4,2,7,Similarity,96.25618523
-2064,differential,1,5,2,3,Similarity,5.751097003
-2064,differential,1,6,2,5,Similarity,75.22173467
-2064,differential,1,7,2,8,Similarity,80.42199608
-2064,differential,1,8,2,10,Similarity,80.42199608
-2064,differential,1,9,2,4,Similarity,4.42535711
-2064,differential,1,10,2,9,Similarity,80.69274578
-2064,differential,1,11,2,1,Similarity,9.21482588
-2065,single cue,1,1,2,10,Linear,69.55834496
-2065,single cue,1,2,2,7,Linear,38.36355184
-2065,single cue,1,3,2,1,Linear,18.88423989
-2065,single cue,1,4,2,8,Linear,48.26592283
-2065,single cue,1,5,2,5,Linear,58.56810786
-2065,single cue,1,6,2,4,Linear,28.42398884
-2065,single cue,1,7,2,6,Linear,28.33100883
-2065,single cue,1,8,2,3,Linear,38.59600186
-2065,single cue,1,9,2,2,Linear,58.75406788
-2065,single cue,1,10,2,11,Linear,80.26964203
-2065,single cue,1,11,2,9,Linear,48.80520688
-2066,differential,2,1,2,5,Linear,9.809390981
-2066,differential,2,2,2,8,Linear,69.51185495
-2066,differential,2,3,2,10,Linear,38.72617387
-2066,differential,2,4,2,11,Linear,38.72617387
-2066,differential,2,5,2,6,Linear,0.278940028
-2066,differential,2,6,2,1,Linear,49.13063691
-2066,differential,2,7,2,7,Linear,58.70757787
-2066,differential,2,8,2,2,Linear,29.05625291
-2066,differential,2,9,2,9,Linear,38.59600186
-2066,differential,2,10,2,3,Linear,28.74012087
-2066,differential,2,11,2,4,Linear,28.74012087
-2067,single cue,2,1,2,5,Similarity,99.95340168
-2067,single cue,2,2,2,7,Similarity,0.950605778
-2067,single cue,2,3,2,3,Similarity,0.223671948
-2067,single cue,2,4,2,8,Similarity,0.633737185
-2067,single cue,2,5,2,11,Similarity,0.904007456
-2067,single cue,2,6,2,2,Similarity,0.45666356
-2067,single cue,2,7,2,1,Similarity,0.866728798
-2067,single cue,2,8,2,10,Similarity,0.223671948
-2067,single cue,2,9,2,9,Similarity,9.282385834
-2067,single cue,2,10,2,6,Similarity,99.90680336
-2067,single cue,2,11,2,4,Similarity,49.45945946
-2068,differential,1,1,2,6,Similarity,100
-2068,differential,1,2,2,5,Similarity,100
-2068,differential,1,3,2,9,Similarity,48.78026071
-2068,differential,1,4,2,1,Similarity,0
-2068,differential,1,5,2,11,Similarity,48.37057728
-2068,differential,1,6,2,4,Similarity,60.51210428
-2068,differential,1,7,2,2,Similarity,0.996275605
-2068,differential,1,8,2,8,Similarity,48.51024209
-2068,differential,1,9,2,7,Similarity,69.42271881
-2068,differential,1,10,2,3,Similarity,0.09310987
-2068,differential,1,11,2,10,Similarity,47.87709497
-2069,single cue,1,1,2,7,No relationship,100
-2069,single cue,1,2,2,6,No relationship,38.32839689
-2069,single cue,1,3,2,1,No relationship,0.499814883
-2069,single cue,1,4,2,11,No relationship,70.10366531
-2069,single cue,1,5,2,3,No relationship,100
-2069,single cue,1,6,2,8,No relationship,80.72010367
-2069,single cue,1,7,2,10,No relationship,49.36134765
-2069,single cue,1,8,2,9,No relationship,49.5834876
-2069,single cue,1,9,2,2,No relationship,0.638652351
-2069,single cue,1,10,2,5,No relationship,100
-2069,single cue,1,11,2,4,No relationship,69.60385043
-2070,differential,2,1,2,4,Linear,0
-2070,differential,2,2,2,10,Linear,0
-2070,differential,2,3,2,11,Linear,48.60335196
-2070,differential,2,4,2,5,Linear,1.229050279
-2070,differential,2,5,2,7,Linear,99.95344507
-2070,differential,2,6,2,6,Linear,90.57728119
-2070,differential,2,7,2,8,Linear,90.62383613
-2070,differential,2,8,2,3,Linear,0
-2070,differential,2,9,2,2,Linear,0.223463687
-2070,differential,2,10,2,9,Linear,48.55679702
-2070,differential,2,11,2,1,Linear,0.176908752
-2077,single cue,1,1,2,5,No relationship,49.68882415
-2077,single cue,1,2,2,1,No relationship,71.1996822
-2077,single cue,1,3,2,2,No relationship,29.71398305
-2077,single cue,1,4,2,8,No relationship,70.42505297
-2077,single cue,1,5,2,3,No relationship,20.14036017
-2077,single cue,1,6,2,7,No relationship,39.43988347
-2077,single cue,1,7,2,4,No relationship,30.29661017
-2077,single cue,1,8,2,10,No relationship,39.31408898
-2077,single cue,1,9,2,6,No relationship,20.92161017
-2077,single cue,1,10,2,11,No relationship,0
-2077,single cue,1,11,2,9,No relationship,8.924788136
-2078,differential,2,1,2,6,Linear,70.35688274
-2078,differential,2,2,2,5,Linear,28.28577104
-2078,differential,2,3,2,8,Linear,90.55154605
-2078,differential,2,4,2,3,Linear,0.125802821
-2078,differential,2,5,2,11,Linear,80.32179037
-2078,differential,2,6,2,10,Linear,81.48712176
-2078,differential,2,7,2,7,Linear,49.30146329
-2078,differential,2,8,2,4,Linear,0.026484804
-2078,differential,2,9,2,1,Linear,0.092696815
-2078,differential,2,10,2,9,Linear,80.58001722
-2078,differential,2,11,2,2,Linear,0.05959081
-2080,differential,1,1,2,5,Linear,2.068327496
-2080,differential,1,2,2,2,Linear,0
-2080,differential,1,3,2,9,Linear,100
-2080,differential,1,4,2,8,Linear,92.28176832
-2080,differential,1,5,2,7,Linear,77.87616467
-2080,differential,1,6,2,3,Linear,2.874512654
-2080,differential,1,7,2,10,Linear,76.45542853
-2080,differential,1,8,2,6,Linear,52.82495209
-2080,differential,1,9,2,11,Linear,100
-2080,differential,1,10,2,1,Linear,1.585938016
-2080,differential,1,11,2,4,Linear,20.07533206
-2081,single cue,1,1,2,8,Similarity,100
-2081,single cue,1,2,2,3,Similarity,80.76338902
-2081,single cue,1,3,2,6,Similarity,18.51020273
-2081,single cue,1,4,2,11,Similarity,69.75500231
-2081,single cue,1,5,2,9,Similarity,69.43802417
-2081,single cue,1,6,2,1,Similarity,48.9202932
-2081,single cue,1,7,2,2,Similarity,58.75321931
-2081,single cue,1,8,2,4,Similarity,80.21528099
-2081,single cue,1,9,2,5,Similarity,70.21065839
-2081,single cue,1,10,2,10,Similarity,37.69398402
-2081,single cue,1,11,2,7,Similarity,70.01915076
-2083,single cue,2,1,2,11,No relationship,70.42892402
-2083,single cue,2,2,2,5,No relationship,80.89520379
-2083,single cue,2,3,2,7,No relationship,80.70175439
-2083,single cue,2,4,2,6,No relationship,69.58174905
-2083,single cue,2,5,2,10,No relationship,49.44299913
-2083,single cue,2,6,2,9,No relationship,48.17557201
-2083,single cue,2,7,2,1,No relationship,47.62190648
-2083,single cue,2,8,2,8,No relationship,18.4377293
-2083,single cue,2,9,2,3,No relationship,28.04349276
-2083,single cue,2,10,2,4,No relationship,8.405043026
-2083,single cue,2,11,2,2,No relationship,48.82929758
-2084,differential,1,1,2,11,Similarity,37.99841039
-2084,differential,1,2,2,2,Similarity,19.79070076
-2084,differential,1,3,2,8,Similarity,59.18002384
-2084,differential,1,4,2,7,Similarity,72.45330507
-2084,differential,1,5,2,4,Similarity,27.38773347
-2084,differential,1,6,2,3,Similarity,20.1748576
-2084,differential,1,7,2,1,Similarity,35.95840509
-2084,differential,1,8,2,10,Similarity,69.12173798
-2084,differential,1,9,2,9,Similarity,49.2515565
-2084,differential,1,10,2,6,Similarity,70.54576765
-2084,differential,1,11,2,5,Similarity,60.50470261
-2085,single cue,1,1,2,3,Similarity,29.38495078
-2085,single cue,1,2,2,1,Similarity,9.255466737
-2085,single cue,1,3,2,6,Similarity,90.79738389
-2085,single cue,1,4,2,8,Similarity,37.8344454
-2085,single cue,1,5,2,7,Similarity,81.01341085
-2085,single cue,1,6,2,4,Similarity,27.86549514
-2085,single cue,1,7,2,11,Similarity,59.45035344
-2085,single cue,1,8,2,2,Similarity,17.54640946
-2085,single cue,1,9,2,10,Similarity,59.67496862
-2085,single cue,1,10,2,5,Similarity,29.8011495
-2085,single cue,1,11,2,9,Similarity,59.54284204
-2086,differential,2,1,2,6,Similarity,59.94329421
-2086,differential,2,2,2,7,Similarity,54.18040353
-2086,differential,2,3,2,4,Similarity,19.82724515
-2086,differential,2,4,2,3,Similarity,10.65541342
-2086,differential,2,5,2,5,Similarity,49.22194382
-2086,differential,2,6,2,8,Similarity,48.25926414
-2086,differential,2,7,2,11,Similarity,37.69616247
-2086,differential,2,8,2,9,Similarity,57.23987868
-2086,differential,2,9,2,1,Similarity,10.00923117
-2086,differential,2,10,2,2,Similarity,8.499274693
-2086,differential,2,11,2,10,Similarity,49.16260055
-2087,single cue,2,1,2,2,Other rule,70.64486351
-2087,single cue,2,2,2,4,Other rule,81.24752736
-2087,single cue,2,3,2,7,Other rule,70.06461822
-2087,single cue,2,4,2,10,Other rule,28.16827113
-2087,single cue,2,5,2,3,Other rule,59.07951998
-2087,single cue,2,6,2,8,Other rule,48.32520111
-2087,single cue,2,7,2,1,Other rule,28.16827113
-2087,single cue,2,8,2,11,Other rule,37.98628511
-2087,single cue,2,9,2,6,Other rule,70.22946064
-2087,single cue,2,10,2,5,Other rule,18.02716603
-2087,single cue,2,11,2,9,Other rule,70.16352367
-2089,single cue,1,1,2,6,No relationship,70.50883345
-2089,single cue,1,2,2,1,No relationship,55.60775491
-2089,single cue,1,3,2,9,No relationship,60.02779064
-2089,single cue,1,4,2,4,No relationship,81.18176404
-2089,single cue,1,5,2,8,No relationship,49.65923377
-2089,single cue,1,6,2,7,No relationship,81.5986237
-2089,single cue,1,7,2,11,No relationship,48.71964534
-2089,single cue,1,8,2,2,No relationship,48.49467346
-2089,single cue,1,9,2,10,No relationship,48.69317806
-2089,single cue,1,10,2,3,No relationship,59.90207106
-2089,single cue,1,11,2,5,No relationship,70.73380533
-2091,single cue,2,1,2,7,Similarity,100
-2091,single cue,2,2,2,11,Similarity,48.19316906
-2091,single cue,2,3,2,8,Similarity,69.91477836
-2091,single cue,2,4,2,5,Similarity,80.82843364
-2091,single cue,2,5,2,2,Similarity,82.2157627
-2091,single cue,2,6,2,9,Similarity,100
-2091,single cue,2,7,2,6,Similarity,48.25923234
-2091,single cue,2,8,2,3,Similarity,81.17856907
-2091,single cue,2,9,2,10,Similarity,37.74195679
-2091,single cue,2,10,2,1,Similarity,70.10636189
-2091,single cue,2,11,2,4,Similarity,48.2262007
-2093,single cue,1,1,2,5,No relationship,100
-2093,single cue,1,2,2,6,No relationship,100
-2093,single cue,1,3,2,10,No relationship,0
-2093,single cue,1,4,2,4,No relationship,100
-2093,single cue,1,5,2,9,No relationship,100
-2093,single cue,1,6,2,11,No relationship,0.059476606
-2093,single cue,1,7,2,7,No relationship,100
-2093,single cue,1,8,2,2,No relationship,49.17393603
-2093,single cue,1,9,2,1,No relationship,49.30610626
-2093,single cue,1,10,2,3,No relationship,49.01533175
-2093,single cue,1,11,2,8,No relationship,49.01533175
-2094,differential,2,1,2,3,Similarity,33.92845247
-2094,differential,2,2,2,7,Similarity,35.65385384
-2094,differential,2,3,2,8,Similarity,60.18253281
-2094,differential,2,4,2,2,Similarity,19.22590101
-2094,differential,2,5,2,9,Similarity,93.51808674
-2094,differential,2,6,2,1,Similarity,60.18253281
-2094,differential,2,7,2,5,Similarity,100
-2094,differential,2,8,2,11,Similarity,71.24775165
-2094,differential,2,9,2,6,Similarity,70.92132436
-2094,differential,2,10,2,4,Similarity,71.34767837
-2094,differential,2,11,2,10,Similarity,29.57164746
-2095,single cue,2,1,2,4,Similarity,18.70788744
-2095,single cue,2,2,2,5,Similarity,80.94860616
-2095,single cue,2,3,2,2,Similarity,9.486061567
-2095,single cue,2,4,2,9,Similarity,48.48064474
-2095,single cue,2,5,2,11,Similarity,59.44642621
-2095,single cue,2,6,2,3,Similarity,18.93909367
-2095,single cue,2,7,2,7,Similarity,70.20081913
-2095,single cue,2,8,2,10,Similarity,28.87435593
-2095,single cue,2,9,2,1,Similarity,9.06328445
-2095,single cue,2,10,2,6,Similarity,80.49940547
-2095,single cue,2,11,2,8,Similarity,59.5455146
-2096,differential,1,1,2,2,Similarity,0.033031644
-2096,differential,1,2,2,1,Similarity,0.05945696
-2096,differential,1,3,2,7,Similarity,81.21160071
-2096,differential,1,4,2,8,Similarity,81.11250578
-2096,differential,1,5,2,9,Similarity,81.21160071
-2096,differential,1,6,2,6,Similarity,80.95395389
-2096,differential,1,7,2,10,Similarity,49.38230825
-2096,differential,1,8,2,4,Similarity,0
-2096,differential,1,9,2,11,Similarity,49.256788
-2096,differential,1,10,2,5,Similarity,81.24463236
-2096,differential,1,11,2,3,Similarity,0.033031644
-2098,differential,2,1,2,6,Similarity,76.32205182
-2098,differential,2,2,2,3,Similarity,0
-2098,differential,2,3,2,7,Similarity,19.94976203
-2098,differential,2,4,2,2,Similarity,0
-2098,differential,2,5,2,11,Similarity,0
-2098,differential,2,6,2,1,Similarity,0
-2098,differential,2,7,2,9,Similarity,0
-2098,differential,2,8,2,10,Similarity,0
-2098,differential,2,9,2,8,Similarity,29.53463776
-2098,differential,2,10,2,5,Similarity,70.72977261
-2098,differential,2,11,2,4,Similarity,19.01110524
-2099,single cue,2,1,2,2,No relationship,49.98012455
-2099,single cue,2,2,2,5,No relationship,100
-2099,single cue,2,3,2,7,No relationship,59.13608056
-2099,single cue,2,4,2,1,No relationship,49.17185637
-2099,single cue,2,5,2,8,No relationship,70.69696568
-2099,single cue,2,6,2,6,No relationship,100
-2099,single cue,2,7,2,9,No relationship,48.81409832
-2099,single cue,2,8,2,10,No relationship,49.2712336
-2099,single cue,2,9,2,4,No relationship,70.53133696
-2099,single cue,2,10,2,11,No relationship,59.39446138
-2099,single cue,2,11,2,3,No relationship,49.13873062
-2100,differential,1,1,2,7,Linear,90.91811086
-2100,differential,1,2,2,5,Linear,9.075274507
-2100,differential,1,3,2,6,Linear,90.81889139
-2100,differential,1,4,2,11,Linear,70.3267628
-2100,differential,1,5,2,2,Linear,0
-2100,differential,1,6,2,9,Linear,90.66014023
-2100,differential,1,7,2,4,Linear,8.784230718
-2100,differential,1,8,2,10,Linear,90.62706707
-2100,differential,1,9,2,1,Linear,9.657362085
-2100,differential,1,10,2,3,Linear,8.817303876
-2100,differential,1,11,2,8,Linear,80.67204657
-2103,single cue,2,1,2,4,No relationship,92.84395199
-2103,single cue,2,2,2,1,No relationship,50.85081124
-2103,single cue,2,3,2,7,No relationship,70.79540958
-2103,single cue,2,4,2,6,No relationship,100
-2103,single cue,2,5,2,3,No relationship,39.92876929
-2103,single cue,2,6,2,10,No relationship,31.62511542
-2103,single cue,2,7,2,5,No relationship,100
-2103,single cue,2,8,2,9,No relationship,48.85239414
-2103,single cue,2,9,2,11,No relationship,37.83801609
-2103,single cue,2,10,2,2,No relationship,29.85094315
-2103,single cue,2,11,2,8,No relationship,81.01173988
-2104,differential,1,1,2,2,Similarity,0.032988058
-2104,differential,1,2,2,3,Similarity,0
-2104,differential,1,3,2,4,Similarity,99.80207165
-2104,differential,1,4,2,11,Similarity,48.25493171
-2104,differential,1,5,2,1,Similarity,0
-2104,differential,1,6,2,10,Similarity,48.8685096
-2104,differential,1,7,2,7,Similarity,49.57445405
-2104,differential,1,8,2,9,Similarity,48.67717886
-2104,differential,1,9,2,6,Similarity,48.41987201
-2104,differential,1,10,2,8,Similarity,48.6441908
-2104,differential,1,11,2,5,Similarity,48.70356931
-2105,single cue,1,1,2,10,Similarity,28.38277258
-2105,single cue,1,2,2,7,Similarity,81.47853209
-2105,single cue,1,3,2,3,Similarity,29.32510452
-2105,single cue,1,4,2,8,Similarity,28.74112416
-2105,single cue,1,5,2,4,Similarity,38.00517619
-2105,single cue,1,6,2,6,Similarity,81.73734156
-2105,single cue,1,7,2,1,Similarity,28.34959188
-2105,single cue,1,8,2,11,Similarity,28.41595328
-2105,single cue,1,9,2,5,Similarity,81.83688367
-2105,single cue,1,10,2,9,Similarity,18.24275002
-2105,single cue,1,11,2,2,Similarity,38.1047183
-2107,single cue,2,1,2,10,Linear,0.066622252
-2107,single cue,2,2,2,9,Linear,38.38107928
-2107,single cue,2,3,2,3,Linear,60.04663558
-2107,single cue,2,4,2,1,Linear,91.6655563
-2107,single cue,2,5,2,2,Linear,100
-2107,single cue,2,6,2,8,Linear,0
-2107,single cue,2,7,2,5,Linear,60.04663558
-2107,single cue,2,8,2,6,Linear,67.66822119
-2107,single cue,2,9,2,11,Linear,0.093271153
-2107,single cue,2,10,2,4,Linear,78.54097268
-2107,single cue,2,11,2,7,Linear,28.82078614
-2109,single cue,1,1,2,8,No relationship,48.25719567
-2109,single cue,1,2,2,10,No relationship,81.6741484
-2109,single cue,1,3,2,9,No relationship,79.41642461
-2109,single cue,1,4,2,3,No relationship,1.907842619
-2109,single cue,1,5,2,11,No relationship,70.08846052
-2109,single cue,1,6,2,6,No relationship,91.28597835
-2109,single cue,1,7,2,1,No relationship,38.03802482
-2109,single cue,1,8,2,2,No relationship,49.38605757
-2109,single cue,1,9,2,5,No relationship,89.3517296
-2109,single cue,1,10,2,4,No relationship,90.25613942
-2109,single cue,1,11,2,7,No relationship,59.47319778
-2110,differential,2,1,2,2,Similarity,17.62877736
-2110,differential,2,2,2,7,Similarity,59.44587714
-2110,differential,2,3,2,8,Similarity,59.53845137
-2110,differential,2,4,2,9,Similarity,59.08880513
-2110,differential,2,5,2,5,Similarity,8.946637572
-2110,differential,2,6,2,3,Similarity,18.17761026
-2110,differential,2,7,2,4,Similarity,8.496991338
-2110,differential,2,8,2,10,Similarity,48.75355419
-2110,differential,2,9,2,11,Similarity,49.40157376
-2110,differential,2,10,2,6,Similarity,8.496991338
-2110,differential,2,11,2,1,Similarity,49.1106262
-2111,single cue,2,1,2,7,No relationship,48.98599066
-2111,single cue,2,2,2,9,No relationship,49.80653769
-2111,single cue,2,3,2,5,No relationship,99.28619079
-2111,single cue,2,4,2,6,No relationship,100
-2111,single cue,2,5,2,8,No relationship,49.34623082
-2111,single cue,2,6,2,10,No relationship,49.4796531
-2111,single cue,2,7,2,11,No relationship,49.0527018
-2111,single cue,2,8,2,3,No relationship,49.31287525
-2111,single cue,2,9,2,1,No relationship,49.11941294
-2111,single cue,2,10,2,2,No relationship,48.98599066
-2111,single cue,2,11,2,4,No relationship,100
-2112,differential,1,1,2,5,Similarity,0
-2112,differential,1,2,2,10,Similarity,0.099219473
-2112,differential,1,3,2,8,Similarity,0.132292631
-2112,differential,1,4,2,7,Similarity,100
-2112,differential,1,5,2,2,Similarity,0
-2112,differential,1,6,2,1,Similarity,0.066146316
-2112,differential,1,7,2,6,Similarity,100
-2112,differential,1,8,2,4,Similarity,0.099219473
-2112,differential,1,9,2,9,Similarity,0
-2112,differential,1,10,2,3,Similarity,0.165365789
-2112,differential,1,11,2,11,Similarity,0.066146316
-2113,single cue,1,1,2,6,Similarity,49.22155689
-2113,single cue,1,2,2,4,Similarity,73.01397206
-2113,single cue,1,3,2,7,Similarity,70.21956088
-2113,single cue,1,4,2,1,Similarity,35.415835
-2113,single cue,1,5,2,11,Similarity,42.0758483
-2113,single cue,1,6,2,5,Similarity,74.11842981
-2113,single cue,1,7,2,8,Similarity,39.92681304
-2113,single cue,1,8,2,10,Similarity,39.99334664
-2113,single cue,1,9,2,2,Similarity,57.9906853
-2113,single cue,1,10,2,9,Similarity,53.18695941
-2113,single cue,1,11,2,3,Similarity,43.69926813
-2114,differential,2,1,2,11,Similarity,49.28321332
-2114,differential,2,2,2,10,Similarity,48.35172095
-2114,differential,2,3,2,4,Similarity,0
-2114,differential,2,4,2,6,Similarity,80.56418048
-2114,differential,2,5,2,3,Similarity,0.05945696
-2114,differential,2,6,2,7,Similarity,74.16925415
-2114,differential,2,7,2,5,Similarity,0.05945696
-2114,differential,2,8,2,2,Similarity,48.83398296
-2114,differential,2,9,2,8,Similarity,49.54746647
-2114,differential,2,10,2,9,Similarity,49.57389179
-2114,differential,2,11,2,1,Similarity,49.02556649
-2115,single cue,2,1,2,4,Similarity,100
-2115,single cue,2,2,2,10,Similarity,60.01329345
-2115,single cue,2,3,2,5,Similarity,28.43469591
-2115,single cue,2,4,2,6,Similarity,70.30907278
-2115,single cue,2,5,2,1,Similarity,11.1665005
-2115,single cue,2,6,2,7,Similarity,70.70122964
-2115,single cue,2,7,2,9,Similarity,49.88368229
-2115,single cue,2,8,2,2,Similarity,28.23529412
-2115,single cue,2,9,2,11,Similarity,58.67730143
-2115,single cue,2,10,2,8,Similarity,7.012296444
-2115,single cue,2,11,2,3,Similarity,69.88368229
-2116,differential,1,1,2,3,Similarity,0.033062223
-2116,differential,1,2,2,7,Similarity,100
-2116,differential,1,3,2,6,Similarity,70.91846856
-2116,differential,1,4,2,2,Similarity,0.099186669
-2116,differential,1,5,2,1,Similarity,0
-2116,differential,1,6,2,9,Similarity,0.099186669
-2116,differential,1,7,2,10,Similarity,9.495470475
-2116,differential,1,8,2,11,Similarity,37.68432189
-2116,differential,1,9,2,5,Similarity,91.98571712
-2116,differential,1,10,2,8,Similarity,48.30390795
-2116,differential,1,11,2,4,Similarity,27.54083185
-2117,single cue,1,1,2,2,Similarity,10.06268338
-2117,single cue,1,2,2,7,Similarity,70.40544145
-2117,single cue,1,3,2,6,Similarity,70.86556415
-2117,single cue,1,4,2,1,Similarity,19.33849026
-2117,single cue,1,5,2,3,Similarity,18.36489731
-2117,single cue,1,6,2,10,Similarity,8.435582822
-2117,single cue,1,7,2,4,Similarity,19.14510536
-2117,single cue,1,8,2,11,Similarity,9.995998933
-2117,single cue,1,9,2,5,Similarity,70.7988797
-2117,single cue,1,10,2,9,Similarity,19.53854361
-2117,single cue,1,11,2,8,Similarity,59.52253934
-2118,differential,2,1,2,8,Linear,90.76198687
-2118,differential,2,2,2,1,Linear,3.335764971
-2118,differential,2,3,2,5,Linear,39.89654486
-2118,differential,2,4,2,9,Linear,100
-2118,differential,2,5,2,2,Linear,0
-2118,differential,2,6,2,11,Linear,99.90052391
-2118,differential,2,7,2,3,Linear,9.715498375
-2118,differential,2,8,2,4,Linear,42.74819285
-2118,differential,2,9,2,10,Linear,94.58850056
-2118,differential,2,10,2,7,Linear,66.58266463
-2118,differential,2,11,2,6,Linear,57.21864845
-2119,single cue,2,1,2,11,Similarity,49.20286967
-2119,single cue,2,2,2,9,Similarity,48.49209512
-2119,single cue,2,3,2,7,Similarity,70.81838714
-2119,single cue,2,4,2,3,Similarity,28.57712236
-2119,single cue,2,5,2,1,Similarity,18.36056862
-2119,single cue,2,6,2,6,Similarity,70.59253355
-2119,single cue,2,7,2,2,Similarity,18.39378238
-2119,single cue,2,8,2,10,Similarity,49.40215225
-2119,single cue,2,9,2,8,Similarity,59.29321111
-2119,single cue,2,10,2,5,Similarity,49.40215225
-2119,single cue,2,11,2,4,Similarity,38.10947257
-2120,differential,1,1,2,1,Linear,0
-2120,differential,1,2,2,9,Linear,100
-2120,differential,1,3,2,10,Linear,100
-2120,differential,1,4,2,4,Linear,28.26677263
-2120,differential,1,5,2,2,Linear,0.033114776
-2120,differential,1,6,2,7,Linear,100
-2120,differential,1,7,2,8,Linear,99.25160607
-2120,differential,1,8,2,3,Linear,0.066229552
-2120,differential,1,9,2,5,Linear,27.61772303
-2120,differential,1,10,2,11,Linear,100
-2120,differential,1,11,2,6,Linear,80.38280681
-2121,single cue,1,1,2,8,No relationship,100
-2121,single cue,1,2,2,10,No relationship,0
-2121,single cue,1,3,2,6,No relationship,100
-2121,single cue,1,4,2,9,No relationship,18.46225289
-2121,single cue,1,5,2,1,No relationship,48.94520366
-2121,single cue,1,6,2,3,No relationship,48.84569457
-2121,single cue,1,7,2,2,No relationship,48.32824731
-2121,single cue,1,8,2,4,No relationship,48.39458671
-2121,single cue,1,9,2,11,No relationship,8.776701605
-2121,single cue,1,10,2,5,No relationship,100
-2121,single cue,1,11,2,7,No relationship,99.90049091
-2122,differential,2,1,2,7,Similarity,91.07690257
-2122,differential,2,2,2,9,Similarity,43.735839
-2122,differential,2,3,2,1,Similarity,29.58150073
-2122,differential,2,4,2,4,Similarity,0
-2122,differential,2,5,2,6,Similarity,51.93256031
-2122,differential,2,6,2,8,Similarity,46.04158337
-2122,differential,2,7,2,3,Similarity,18.02612288
-2122,differential,2,8,2,2,Similarity,28.24870052
-2122,differential,2,9,2,11,Similarity,49.23363988
-2122,differential,2,10,2,10,Similarity,50.013328
-2122,differential,2,11,2,5,Similarity,49.49353592
-2123,single cue,2,1,2,4,No relationship,82.16971714
-2123,single cue,2,2,2,5,No relationship,60.86522463
-2123,single cue,2,3,2,10,No relationship,29.5374376
-2123,single cue,2,4,2,3,No relationship,71.56738769
-2123,single cue,2,5,2,1,No relationship,49.81697171
-2123,single cue,2,6,2,2,No relationship,49.88352745
-2123,single cue,2,7,2,7,No relationship,91.38103161
-2123,single cue,2,8,2,8,No relationship,0
-2123,single cue,2,9,2,9,No relationship,50.69550749
-2123,single cue,2,10,2,11,No relationship,50.50249584
-2123,single cue,2,11,2,6,No relationship,100
-2124,differential,1,1,2,8,Linear,49.27401711
-2124,differential,1,2,2,6,Linear,49.04196778
-2124,differential,1,3,2,1,Linear,49.27401711
-2124,differential,1,4,2,10,Linear,49.07511768
-2124,differential,1,5,2,4,Linear,49.79115561
-2124,differential,1,6,2,11,Linear,49.55910628
-2124,differential,1,7,2,5,Linear,49.62540609
-2124,differential,1,8,2,3,Linear,49.2408672
-2124,differential,1,9,2,9,Linear,48.81654843
-2124,differential,1,10,2,7,Linear,49.91712524
-2124,differential,1,11,2,2,Linear,49.2408672
-2126,differential,2,1,2,3,Similarity,0
-2126,differential,2,2,2,4,Similarity,98.67917052
-2126,differential,2,3,2,10,Similarity,47.88667283
-2126,differential,2,4,2,2,Similarity,28.05441817
-2126,differential,2,5,2,6,Similarity,99.26033549
-2126,differential,2,6,2,1,Similarity,28.12045965
-2126,differential,2,7,2,9,Similarity,48.8574825
-2126,differential,2,8,2,7,Similarity,99.77545899
-2126,differential,2,9,2,11,Similarity,48.33575485
-2126,differential,2,10,2,8,Similarity,99.51789724
-2126,differential,2,11,2,5,Similarity,0
-2127,single cue,2,1,2,2,Linear,5.390408244
-2127,single cue,2,2,2,5,Linear,87.75928128
-2127,single cue,2,3,2,1,Linear,6.969216541
-2127,single cue,2,4,2,8,Linear,81.52992469
-2127,single cue,2,5,2,4,Linear,33.93446955
-2127,single cue,2,6,2,10,Linear,84.89232395
-2127,single cue,2,7,2,11,Linear,16.09855992
-2127,single cue,2,8,2,3,Linear,0
-2127,single cue,2,9,2,9,Linear,80.8230942
-2127,single cue,2,10,2,6,Linear,14.32157484
-2127,single cue,2,11,2,7,Linear,30.90236491
-2129,single cue,1,1,2,10,Linear,59.57784689
-2129,single cue,1,2,2,7,Linear,81.24131542
-2129,single cue,1,3,2,1,Linear,37.99378019
-2129,single cue,1,4,2,11,Linear,70.21769338
-2129,single cue,1,5,2,5,Linear,37.57692053
-2129,single cue,1,6,2,9,Linear,70.11844108
-2129,single cue,1,7,2,2,Linear,37.80189241
-2129,single cue,1,8,2,8,Linear,80.82445577
-2129,single cue,1,9,2,6,Linear,48.81889764
-2129,single cue,1,10,2,4,Linear,59.35287501
-2129,single cue,1,11,2,3,Linear,37.73572421
-2130,differential,2,1,2,8,Similarity,100
-2130,differential,2,2,2,2,Similarity,0
-2130,differential,2,3,2,3,Similarity,0
-2130,differential,2,4,2,11,Similarity,49.32852275
-2130,differential,2,5,2,7,Similarity,100
-2130,differential,2,6,2,10,Similarity,48.93432218
-2130,differential,2,7,2,1,Similarity,13.8371083
-2130,differential,2,8,2,4,Similarity,50.24386985
-2130,differential,2,9,2,9,Similarity,50.11024253
-2130,differential,2,10,2,6,Similarity,93.43221755
-2130,differential,2,11,2,5,Similarity,99.17819202
-2132,differential,1,1,2,9,Linear,59.30632777
-2132,differential,1,2,2,5,Linear,0
-2132,differential,1,3,2,4,Linear,0.125761186
-2132,differential,1,4,2,8,Linear,48.15329627
-2132,differential,1,5,2,11,Linear,48.66957903
-2132,differential,1,6,2,2,Linear,0
-2132,differential,1,7,2,1,Linear,0
-2132,differential,1,8,2,3,Linear,100
-2132,differential,1,9,2,10,Linear,100
-2132,differential,1,10,2,7,Linear,100
-2132,differential,1,11,2,6,Linear,100
-2135,single cue,2,1,2,10,Linear,99.48589507
-2135,single cue,2,2,2,6,Linear,0
-2135,single cue,2,3,2,9,Linear,99.74294753
-2135,single cue,2,4,2,8,Linear,99.6440812
-2135,single cue,2,5,2,4,Linear,0
-2135,single cue,2,6,2,5,Linear,0
-2135,single cue,2,7,2,7,Linear,99.32111785
-2135,single cue,2,8,2,1,Linear,0
-2135,single cue,2,9,2,2,Linear,18.15185869
-2135,single cue,2,10,2,11,Linear,80.95834432
-2135,single cue,2,11,2,3,Linear,18.15185869
-2140,differential,1,1,2,1,No relationship,0
-2140,differential,1,2,2,4,No relationship,99.84134329
-2140,differential,1,3,2,2,No relationship,0
-2140,differential,1,4,2,9,No relationship,0
-2140,differential,1,5,2,6,No relationship,0
-2140,differential,1,6,2,11,No relationship,59.35744034
-2140,differential,1,7,2,10,No relationship,58.48482845
-2140,differential,1,8,2,3,No relationship,0
-2140,differential,1,9,2,7,No relationship,0
-2140,differential,1,10,2,5,No relationship,0
-2140,differential,1,11,2,8,No relationship,70.1196536
-2141,single cue,1,1,2,3,Linear,58.98898766
-2141,single cue,1,2,2,9,Linear,59.66564946
-2141,single cue,1,3,2,10,Linear,8.776701605
-2141,single cue,1,4,2,7,Linear,70.85047101
-2141,single cue,1,5,2,1,Linear,38.31763301
-2141,single cue,1,6,2,8,Linear,8.876210694
-2141,single cue,1,7,2,2,Linear,59.69881916
-2141,single cue,1,8,2,5,Linear,49.01154305
-2141,single cue,1,9,2,4,Linear,71.04948919
-2141,single cue,1,10,2,11,Linear,18.59493167
-2141,single cue,1,11,2,6,Linear,37.83335545
-2145,single cue,1,1,2,9,No relationship,100
-2145,single cue,1,2,2,7,No relationship,81.10126917
-2145,single cue,1,3,2,4,No relationship,49.02829191
-2145,single cue,1,4,2,1,No relationship,37.53966155
-2145,single cue,1,5,2,11,No relationship,48.5126917
-2145,single cue,1,6,2,8,No relationship,80.84346906
-2145,single cue,1,7,2,6,No relationship,81.10126917
-2145,single cue,1,8,2,5,No relationship,58.32892649
-2145,single cue,1,9,2,10,No relationship,37.83051296
-2145,single cue,1,10,2,3,No relationship,28.11343205
-2145,single cue,1,11,2,2,No relationship,48.35404548
-2149,single cue,1,1,2,6,No relationship,48.68569158
-2149,single cue,1,2,2,11,No relationship,80.55353241
-2149,single cue,1,3,2,4,No relationship,18.97636231
-2149,single cue,1,4,2,2,No relationship,81.58643978
-2149,single cue,1,5,2,10,No relationship,90.90246971
-2149,single cue,1,6,2,7,No relationship,48.52678276
-2149,single cue,1,7,2,3,No relationship,18.13546977
-2149,single cue,1,8,2,8,No relationship,91.26001457
-2149,single cue,1,9,2,5,No relationship,70.48930676
-2149,single cue,1,10,2,9,No relationship,18.32748461
-2149,single cue,1,11,2,1,No relationship,38.01893664
-2150,differential,2,1,2,10,Similarity,19.1138486
-2150,differential,2,2,2,6,Similarity,99.96688522
-2150,differential,2,3,2,4,Similarity,0.066229552
-2150,differential,2,4,2,5,Similarity,100
-2150,differential,2,5,2,1,Similarity,0.066229552
-2150,differential,2,6,2,7,Similarity,99.54301609
-2150,differential,2,7,2,2,Similarity,0.066229552
-2150,differential,2,8,2,9,Similarity,0
-2150,differential,2,9,2,8,Similarity,99.28472084
-2150,differential,2,10,2,3,Similarity,0
-2150,differential,2,11,2,11,Similarity,0.132459103
-2151,single cue,2,1,2,2,Similarity,38.80407973
-2151,single cue,2,2,2,1,Similarity,49.41003933
-2151,single cue,2,3,2,6,Similarity,91.72721819
-2151,single cue,2,4,2,9,Similarity,29.33137791
-2151,single cue,2,5,2,5,Similarity,29.00473302
-2151,single cue,2,6,2,3,Similarity,38.73741751
-2151,single cue,2,7,2,7,Similarity,91.36724218
-2151,single cue,2,8,2,4,Similarity,29.78468102
-2151,single cue,2,9,2,10,Similarity,38.47743484
-2151,single cue,2,10,2,11,Similarity,28.48476768
-2151,single cue,2,11,2,8,Similarity,91.59389374
-2152,differential,1,1,2,1,Linear,0
-2152,differential,1,2,2,9,Linear,60.23968043
-2152,differential,1,3,2,7,Linear,100
-2152,differential,1,4,2,6,Linear,100
-2152,differential,1,5,2,11,Linear,49.28095872
-2152,differential,1,6,2,5,Linear,0
-2152,differential,1,7,2,8,Linear,100
-2152,differential,1,8,2,2,Linear,0
-2152,differential,1,9,2,10,Linear,60.23968043
-2152,differential,1,10,2,3,Linear,0
-2152,differential,1,11,2,4,Linear,0
-2154,differential,2,1,2,7,Linear,60.07396157
-2154,differential,2,2,2,8,Linear,0
-2154,differential,2,3,2,6,Linear,0
-2154,differential,2,4,2,5,Linear,60.68810672
-2154,differential,2,5,2,9,Linear,81.44357129
-2154,differential,2,6,2,10,Linear,0
-2154,differential,2,7,2,2,Linear,8.967839926
-2154,differential,2,8,2,3,Linear,0.033018556
-2154,differential,2,9,2,4,Linear,0.033018556
-2154,differential,2,10,2,11,Linear,0
-2154,differential,2,11,2,1,Linear,81.70111603
-2155,single cue,2,1,2,5,Similarity,81.50838727
-2155,single cue,2,2,2,6,Similarity,81.31686699
-2155,single cue,2,3,2,3,Similarity,90.1928411
-2155,single cue,2,4,2,1,Similarity,0
-2155,single cue,2,5,2,9,Similarity,57.885352
-2155,single cue,2,6,2,11,Similarity,70.34077401
-2155,single cue,2,7,2,10,Similarity,69.7265883
-2155,single cue,2,8,2,4,Similarity,72.15031039
-2155,single cue,2,9,2,8,Similarity,73.95324264
-2155,single cue,2,10,2,2,Similarity,48.30933826
-2155,single cue,2,11,2,7,Similarity,73.72870162
-2158,differential,2,1,2,8,Similarity,99.09523181
-2158,differential,2,2,2,2,Similarity,8.895786554
-2158,differential,2,3,2,3,Similarity,0.158499538
-2158,differential,2,4,2,4,Similarity,9.285431251
-2158,differential,2,5,2,7,Similarity,90.15321622
-2158,differential,2,6,2,10,Similarity,48.91691983
-2158,differential,2,7,2,5,Similarity,4.418174614
-2158,differential,2,8,2,6,Similarity,0.059437327
-2158,differential,2,9,2,1,Similarity,3.156782459
-2158,differential,2,10,2,9,Similarity,3.737947431
-2158,differential,2,11,2,11,Similarity,0
-2159,single cue,2,1,2,7,Linear,100
-2159,single cue,2,2,2,10,Linear,100
-2159,single cue,2,3,2,4,Linear,0
-2159,single cue,2,4,2,11,Linear,100
-2159,single cue,2,5,2,5,Linear,49.3341284
-2159,single cue,2,6,2,8,Linear,100
-2159,single cue,2,7,2,1,Linear,49.17511429
-2159,single cue,2,8,2,9,Linear,0
-2159,single cue,2,9,2,3,Linear,49.04260253
-2159,single cue,2,10,2,2,Linear,49.24137017
-2159,single cue,2,11,2,6,Linear,0
-2162,differential,2,1,2,3,Linear,0.066383431
-2162,differential,2,2,2,2,Linear,8.689591078
-2162,differential,2,3,2,8,Linear,91.60249602
-2162,differential,2,4,2,5,Linear,38.50902815
-2162,differential,2,5,2,4,Linear,28.71747212
-2162,differential,2,6,2,11,Linear,82.18932554
-2162,differential,2,7,2,10,Linear,81.05416888
-2162,differential,2,8,2,7,Linear,49.36935741
-2162,differential,2,9,2,6,Linear,59.61232076
-2162,differential,2,10,2,1,Linear,10.11683484
-2162,differential,2,11,2,9,Linear,81.22012746
-2163,single cue,2,1,2,6,Similarity,99.32508436
-2163,single cue,2,2,2,11,Similarity,18.32197446
-2163,single cue,2,3,2,2,Similarity,18.58003044
-2163,single cue,2,4,2,7,Similarity,90.59088202
-2163,single cue,2,5,2,4,Similarity,91.53047046
-2163,single cue,2,6,2,3,Similarity,37.51075233
-2163,single cue,2,7,2,9,Similarity,27.52597102
-2163,single cue,2,8,2,5,Similarity,90.7827698
-2163,single cue,2,9,2,10,Similarity,18.03083438
-2163,single cue,2,10,2,1,Similarity,17.99775028
-2163,single cue,2,11,2,8,Similarity,18.58003044
-2165,single cue,1,1,2,10,Similarity,61.9720169
-2165,single cue,1,2,2,4,Similarity,93.97439282
-2165,single cue,1,3,2,3,Similarity,91.19588173
-2165,single cue,1,4,2,7,Similarity,49.49841605
-2165,single cue,1,5,2,9,Similarity,38.47676874
-2165,single cue,1,6,2,6,Similarity,81.00580781
-2165,single cue,1,7,2,1,Similarity,27.07233369
-2165,single cue,1,8,2,8,Similarity,18.17581837
-2165,single cue,1,9,2,2,Similarity,11.18664203
-2165,single cue,1,10,2,11,Similarity,18.14281943
-2165,single cue,1,11,2,5,Similarity,50.1781943
+subj,,cb,trialNum,phase,x,group,y
+2058,diff,2,1,2,11,linear,100
+2058,diff,2,2,2,6,linear,0
+2058,diff,2,3,2,8,linear,100
+2058,diff,2,4,2,1,linear,48.16826856
+2058,diff,2,5,2,7,linear,100
+2058,diff,2,6,2,9,linear,99.95821145
+2058,diff,2,7,2,10,linear,76.4869759
+2058,diff,2,8,2,3,linear,41.41245299
+2058,diff,2,9,2,4,linear,0.362167433
+2058,diff,2,10,2,2,linear,48.53043599
+2058,diff,2,11,2,5,linear,3.217718345
+2062,diff,2,1,2,4,linear,0.046511628
+2062,diff,2,2,2,11,linear,90.67906977
+2062,diff,2,3,2,1,linear,28.20465116
+2062,diff,2,4,2,9,linear,100
+2062,diff,2,5,2,2,linear,18.7627907
+2062,diff,2,6,2,5,linear,0
+2062,diff,2,7,2,7,linear,99.95348837
+2062,diff,2,8,2,8,linear,99.95348837
+2062,diff,2,9,2,10,linear,100
+2062,diff,2,10,2,6,linear,0
+2062,diff,2,11,2,3,linear,9.088372093
+2066,diff,2,1,2,5,linear,9.809390981
+2066,diff,2,2,2,8,linear,69.51185495
+2066,diff,2,3,2,10,linear,38.72617387
+2066,diff,2,4,2,11,linear,38.72617387
+2066,diff,2,5,2,6,linear,0.278940028
+2066,diff,2,6,2,1,linear,49.13063691
+2066,diff,2,7,2,7,linear,58.70757787
+2066,diff,2,8,2,2,linear,29.05625291
+2066,diff,2,9,2,9,linear,38.59600186
+2066,diff,2,10,2,3,linear,28.74012087
+2066,diff,2,11,2,4,linear,28.74012087
+2070,diff,2,1,2,4,linear,0
+2070,diff,2,2,2,10,linear,0
+2070,diff,2,3,2,11,linear,48.60335196
+2070,diff,2,4,2,5,linear,1.229050279
+2070,diff,2,5,2,7,linear,99.95344507
+2070,diff,2,6,2,6,linear,90.57728119
+2070,diff,2,7,2,8,linear,90.62383613
+2070,diff,2,8,2,3,linear,0
+2070,diff,2,9,2,2,linear,0.223463687
+2070,diff,2,10,2,9,linear,48.55679702
+2070,diff,2,11,2,1,linear,0.176908752
+2078,diff,2,1,2,6,linear,70.35688274
+2078,diff,2,2,2,5,linear,28.28577104
+2078,diff,2,3,2,8,linear,90.55154605
+2078,diff,2,4,2,3,linear,0.125802821
+2078,diff,2,5,2,11,linear,80.32179037
+2078,diff,2,6,2,10,linear,81.48712176
+2078,diff,2,7,2,7,linear,49.30146329
+2078,diff,2,8,2,4,linear,0.026484804
+2078,diff,2,9,2,1,linear,0.092696815
+2078,diff,2,10,2,9,linear,80.58001722
+2078,diff,2,11,2,2,linear,0.05959081
+2080,diff,1,1,2,5,linear,2.068327496
+2080,diff,1,2,2,2,linear,0
+2080,diff,1,3,2,9,linear,100
+2080,diff,1,4,2,8,linear,92.28176832
+2080,diff,1,5,2,7,linear,77.87616467
+2080,diff,1,6,2,3,linear,2.874512654
+2080,diff,1,7,2,10,linear,76.45542853
+2080,diff,1,8,2,6,linear,52.82495209
+2080,diff,1,9,2,11,linear,100
+2080,diff,1,10,2,1,linear,1.585938016
+2080,diff,1,11,2,4,linear,20.07533206
+2100,diff,1,1,2,7,linear,90.91811086
+2100,diff,1,2,2,5,linear,9.075274507
+2100,diff,1,3,2,6,linear,90.81889139
+2100,diff,1,4,2,11,linear,70.3267628
+2100,diff,1,5,2,2,linear,0
+2100,diff,1,6,2,9,linear,90.66014023
+2100,diff,1,7,2,4,linear,8.784230718
+2100,diff,1,8,2,10,linear,90.62706707
+2100,diff,1,9,2,1,linear,9.657362085
+2100,diff,1,10,2,3,linear,8.817303876
+2100,diff,1,11,2,8,linear,80.67204657
+2118,diff,2,1,2,8,linear,90.76198687
+2118,diff,2,2,2,1,linear,3.335764971
+2118,diff,2,3,2,5,linear,39.89654486
+2118,diff,2,4,2,9,linear,100
+2118,diff,2,5,2,2,linear,0
+2118,diff,2,6,2,11,linear,99.90052391
+2118,diff,2,7,2,3,linear,9.715498375
+2118,diff,2,8,2,4,linear,42.74819285
+2118,diff,2,9,2,10,linear,94.58850056
+2118,diff,2,10,2,7,linear,66.58266463
+2118,diff,2,11,2,6,linear,57.21864845
+2120,diff,1,1,2,1,linear,0
+2120,diff,1,2,2,9,linear,100
+2120,diff,1,3,2,10,linear,100
+2120,diff,1,4,2,4,linear,28.26677263
+2120,diff,1,5,2,2,linear,0.033114776
+2120,diff,1,6,2,7,linear,100
+2120,diff,1,7,2,8,linear,99.25160607
+2120,diff,1,8,2,3,linear,0.066229552
+2120,diff,1,9,2,5,linear,27.61772303
+2120,diff,1,10,2,11,linear,100
+2120,diff,1,11,2,6,linear,80.38280681
+2124,diff,1,1,2,8,linear,49.27401711
+2124,diff,1,2,2,6,linear,49.04196778
+2124,diff,1,3,2,1,linear,49.27401711
+2124,diff,1,4,2,10,linear,49.07511768
+2124,diff,1,5,2,4,linear,49.79115561
+2124,diff,1,6,2,11,linear,49.55910628
+2124,diff,1,7,2,5,linear,49.62540609
+2124,diff,1,8,2,3,linear,49.2408672
+2124,diff,1,9,2,9,linear,48.81654843
+2124,diff,1,10,2,7,linear,49.91712524
+2124,diff,1,11,2,2,linear,49.2408672
+2132,diff,1,1,2,9,linear,59.30632777
+2132,diff,1,2,2,5,linear,0
+2132,diff,1,3,2,4,linear,0.125761186
+2132,diff,1,4,2,8,linear,48.15329627
+2132,diff,1,5,2,11,linear,48.66957903
+2132,diff,1,6,2,2,linear,0
+2132,diff,1,7,2,1,linear,0
+2132,diff,1,8,2,3,linear,100
+2132,diff,1,9,2,10,linear,100
+2132,diff,1,10,2,7,linear,100
+2132,diff,1,11,2,6,linear,100
+2152,diff,1,1,2,1,linear,0
+2152,diff,1,2,2,9,linear,60.23968043
+2152,diff,1,3,2,7,linear,100
+2152,diff,1,4,2,6,linear,100
+2152,diff,1,5,2,11,linear,49.28095872
+2152,diff,1,6,2,5,linear,0
+2152,diff,1,7,2,8,linear,100
+2152,diff,1,8,2,2,linear,0
+2152,diff,1,9,2,10,linear,60.23968043
+2152,diff,1,10,2,3,linear,0
+2152,diff,1,11,2,4,linear,0
+2154,diff,2,1,2,7,linear,60.07396157
+2154,diff,2,2,2,8,linear,0
+2154,diff,2,3,2,6,linear,0
+2154,diff,2,4,2,5,linear,60.68810672
+2154,diff,2,5,2,9,linear,81.44357129
+2154,diff,2,6,2,10,linear,0
+2154,diff,2,7,2,2,linear,8.967839926
+2154,diff,2,8,2,3,linear,0.033018556
+2154,diff,2,9,2,4,linear,0.033018556
+2154,diff,2,10,2,11,linear,0
+2154,diff,2,11,2,1,linear,81.70111603
+2162,diff,2,1,2,3,linear,0.066383431
+2162,diff,2,2,2,2,linear,8.689591078
+2162,diff,2,3,2,8,linear,91.60249602
+2162,diff,2,4,2,5,linear,38.50902815
+2162,diff,2,5,2,4,linear,28.71747212
+2162,diff,2,6,2,11,linear,82.18932554
+2162,diff,2,7,2,10,linear,81.05416888
+2162,diff,2,8,2,7,linear,49.36935741
+2162,diff,2,9,2,6,linear,59.61232076
+2162,diff,2,10,2,1,linear,10.11683484
+2162,diff,2,11,2,9,linear,81.22012746
+2060,diff,1,1,2,10,similarity,48.48315392
+2060,diff,1,2,2,5,similarity,80.21809031
+2060,diff,1,3,2,6,similarity,80.58157416
+2060,diff,1,4,2,1,similarity,48.52509437
+2060,diff,1,5,2,8,similarity,80.35789179
+2060,diff,1,6,2,2,similarity,48.2454914
+2060,diff,1,7,2,7,similarity,80.39983224
+2060,diff,1,8,2,3,similarity,0.181741926
+2060,diff,1,9,2,4,similarity,0.405424297
+2060,diff,1,10,2,11,similarity,48.2454914
+2060,diff,1,11,2,9,similarity,48.42723333
+2064,diff,1,1,2,2,similarity,28.40070955
+2064,diff,1,2,2,11,similarity,70.20819718
+2064,diff,1,3,2,6,similarity,93.93147232
+2064,diff,1,4,2,7,similarity,96.25618523
+2064,diff,1,5,2,3,similarity,5.751097003
+2064,diff,1,6,2,5,similarity,75.22173467
+2064,diff,1,7,2,8,similarity,80.42199608
+2064,diff,1,8,2,10,similarity,80.42199608
+2064,diff,1,9,2,4,similarity,4.42535711
+2064,diff,1,10,2,9,similarity,80.69274578
+2064,diff,1,11,2,1,similarity,9.21482588
+2068,diff,1,1,2,6,similarity,100
+2068,diff,1,2,2,5,similarity,100
+2068,diff,1,3,2,9,similarity,48.78026071
+2068,diff,1,4,2,1,similarity,0
+2068,diff,1,5,2,11,similarity,48.37057728
+2068,diff,1,6,2,4,similarity,60.51210428
+2068,diff,1,7,2,2,similarity,0.996275605
+2068,diff,1,8,2,8,similarity,48.51024209
+2068,diff,1,9,2,7,similarity,69.42271881
+2068,diff,1,10,2,3,similarity,0.09310987
+2068,diff,1,11,2,10,similarity,47.87709497
+2084,diff,1,1,2,11,similarity,37.99841039
+2084,diff,1,2,2,2,similarity,19.79070076
+2084,diff,1,3,2,8,similarity,59.18002384
+2084,diff,1,4,2,7,similarity,72.45330507
+2084,diff,1,5,2,4,similarity,27.38773347
+2084,diff,1,6,2,3,similarity,20.1748576
+2084,diff,1,7,2,1,similarity,35.95840509
+2084,diff,1,8,2,10,similarity,69.12173798
+2084,diff,1,9,2,9,similarity,49.2515565
+2084,diff,1,10,2,6,similarity,70.54576765
+2084,diff,1,11,2,5,similarity,60.50470261
+2086,diff,2,1,2,6,similarity,59.94329421
+2086,diff,2,2,2,7,similarity,54.18040353
+2086,diff,2,3,2,4,similarity,19.82724515
+2086,diff,2,4,2,3,similarity,10.65541342
+2086,diff,2,5,2,5,similarity,49.22194382
+2086,diff,2,6,2,8,similarity,48.25926414
+2086,diff,2,7,2,11,similarity,37.69616247
+2086,diff,2,8,2,9,similarity,57.23987868
+2086,diff,2,9,2,1,similarity,10.00923117
+2086,diff,2,10,2,2,similarity,8.499274693
+2086,diff,2,11,2,10,similarity,49.16260055
+2094,diff,2,1,2,3,similarity,33.92845247
+2094,diff,2,2,2,7,similarity,35.65385384
+2094,diff,2,3,2,8,similarity,60.18253281
+2094,diff,2,4,2,2,similarity,19.22590101
+2094,diff,2,5,2,9,similarity,93.51808674
+2094,diff,2,6,2,1,similarity,60.18253281
+2094,diff,2,7,2,5,similarity,100
+2094,diff,2,8,2,11,similarity,71.24775165
+2094,diff,2,9,2,6,similarity,70.92132436
+2094,diff,2,10,2,4,similarity,71.34767837
+2094,diff,2,11,2,10,similarity,29.57164746
+2096,diff,1,1,2,2,similarity,0.033031644
+2096,diff,1,2,2,1,similarity,0.05945696
+2096,diff,1,3,2,7,similarity,81.21160071
+2096,diff,1,4,2,8,similarity,81.11250578
+2096,diff,1,5,2,9,similarity,81.21160071
+2096,diff,1,6,2,6,similarity,80.95395389
+2096,diff,1,7,2,10,similarity,49.38230825
+2096,diff,1,8,2,4,similarity,0
+2096,diff,1,9,2,11,similarity,49.256788
+2096,diff,1,10,2,5,similarity,81.24463236
+2096,diff,1,11,2,3,similarity,0.033031644
+2098,diff,2,1,2,6,similarity,76.32205182
+2098,diff,2,2,2,3,similarity,0
+2098,diff,2,3,2,7,similarity,19.94976203
+2098,diff,2,4,2,2,similarity,0
+2098,diff,2,5,2,11,similarity,0
+2098,diff,2,6,2,1,similarity,0
+2098,diff,2,7,2,9,similarity,0
+2098,diff,2,8,2,10,similarity,0
+2098,diff,2,9,2,8,similarity,29.53463776
+2098,diff,2,10,2,5,similarity,70.72977261
+2098,diff,2,11,2,4,similarity,19.01110524
+2104,diff,1,1,2,2,similarity,0.032988058
+2104,diff,1,2,2,3,similarity,0
+2104,diff,1,3,2,4,similarity,99.80207165
+2104,diff,1,4,2,11,similarity,48.25493171
+2104,diff,1,5,2,1,similarity,0
+2104,diff,1,6,2,10,similarity,48.8685096
+2104,diff,1,7,2,7,similarity,49.57445405
+2104,diff,1,8,2,9,similarity,48.67717886
+2104,diff,1,9,2,6,similarity,48.41987201
+2104,diff,1,10,2,8,similarity,48.6441908
+2104,diff,1,11,2,5,similarity,48.70356931
+2110,diff,2,1,2,2,similarity,17.62877736
+2110,diff,2,2,2,7,similarity,59.44587714
+2110,diff,2,3,2,8,similarity,59.53845137
+2110,diff,2,4,2,9,similarity,59.08880513
+2110,diff,2,5,2,5,similarity,8.946637572
+2110,diff,2,6,2,3,similarity,18.17761026
+2110,diff,2,7,2,4,similarity,8.496991338
+2110,diff,2,8,2,10,similarity,48.75355419
+2110,diff,2,9,2,11,similarity,49.40157376
+2110,diff,2,10,2,6,similarity,8.496991338
+2110,diff,2,11,2,1,similarity,49.1106262
+2112,diff,1,1,2,5,similarity,0
+2112,diff,1,2,2,10,similarity,0.099219473
+2112,diff,1,3,2,8,similarity,0.132292631
+2112,diff,1,4,2,7,similarity,100
+2112,diff,1,5,2,2,similarity,0
+2112,diff,1,6,2,1,similarity,0.066146316
+2112,diff,1,7,2,6,similarity,100
+2112,diff,1,8,2,4,similarity,0.099219473
+2112,diff,1,9,2,9,similarity,0
+2112,diff,1,10,2,3,similarity,0.165365789
+2112,diff,1,11,2,11,similarity,0.066146316
+2114,diff,2,1,2,11,similarity,49.28321332
+2114,diff,2,2,2,10,similarity,48.35172095
+2114,diff,2,3,2,4,similarity,0
+2114,diff,2,4,2,6,similarity,80.56418048
+2114,diff,2,5,2,3,similarity,0.05945696
+2114,diff,2,6,2,7,similarity,74.16925415
+2114,diff,2,7,2,5,similarity,0.05945696
+2114,diff,2,8,2,2,similarity,48.83398296
+2114,diff,2,9,2,8,similarity,49.54746647
+2114,diff,2,10,2,9,similarity,49.57389179
+2114,diff,2,11,2,1,similarity,49.02556649
+2116,diff,1,1,2,3,similarity,0.033062223
+2116,diff,1,2,2,7,similarity,100
+2116,diff,1,3,2,6,similarity,70.91846856
+2116,diff,1,4,2,2,similarity,0.099186669
+2116,diff,1,5,2,1,similarity,0
+2116,diff,1,6,2,9,similarity,0.099186669
+2116,diff,1,7,2,10,similarity,9.495470475
+2116,diff,1,8,2,11,similarity,37.68432189
+2116,diff,1,9,2,5,similarity,91.98571712
+2116,diff,1,10,2,8,similarity,48.30390795
+2116,diff,1,11,2,4,similarity,27.54083185
+2122,diff,2,1,2,7,similarity,91.07690257
+2122,diff,2,2,2,9,similarity,43.735839
+2122,diff,2,3,2,1,similarity,29.58150073
+2122,diff,2,4,2,4,similarity,0
+2122,diff,2,5,2,6,similarity,51.93256031
+2122,diff,2,6,2,8,similarity,46.04158337
+2122,diff,2,7,2,3,similarity,18.02612288
+2122,diff,2,8,2,2,similarity,28.24870052
+2122,diff,2,9,2,11,similarity,49.23363988
+2122,diff,2,10,2,10,similarity,50.013328
+2122,diff,2,11,2,5,similarity,49.49353592
+2126,diff,2,1,2,3,similarity,0
+2126,diff,2,2,2,4,similarity,98.67917052
+2126,diff,2,3,2,10,similarity,47.88667283
+2126,diff,2,4,2,2,similarity,28.05441817
+2126,diff,2,5,2,6,similarity,99.26033549
+2126,diff,2,6,2,1,similarity,28.12045965
+2126,diff,2,7,2,9,similarity,48.8574825
+2126,diff,2,8,2,7,similarity,99.77545899
+2126,diff,2,9,2,11,similarity,48.33575485
+2126,diff,2,10,2,8,similarity,99.51789724
+2126,diff,2,11,2,5,similarity,0
+2130,diff,2,1,2,8,similarity,100
+2130,diff,2,2,2,2,similarity,0
+2130,diff,2,3,2,3,similarity,0
+2130,diff,2,4,2,11,similarity,49.32852275
+2130,diff,2,5,2,7,similarity,100
+2130,diff,2,6,2,10,similarity,48.93432218
+2130,diff,2,7,2,1,similarity,13.8371083
+2130,diff,2,8,2,4,similarity,50.24386985
+2130,diff,2,9,2,9,similarity,50.11024253
+2130,diff,2,10,2,6,similarity,93.43221755
+2130,diff,2,11,2,5,similarity,99.17819202
+2150,diff,2,1,2,10,similarity,19.1138486
+2150,diff,2,2,2,6,similarity,99.96688522
+2150,diff,2,3,2,4,similarity,0.066229552
+2150,diff,2,4,2,5,similarity,100
+2150,diff,2,5,2,1,similarity,0.066229552
+2150,diff,2,6,2,7,similarity,99.54301609
+2150,diff,2,7,2,2,similarity,0.066229552
+2150,diff,2,8,2,9,similarity,0
+2150,diff,2,9,2,8,similarity,99.28472084
+2150,diff,2,10,2,3,similarity,0
+2150,diff,2,11,2,11,similarity,0.132459103
+2158,diff,2,1,2,8,similarity,99.09523181
+2158,diff,2,2,2,2,similarity,8.895786554
+2158,diff,2,3,2,3,similarity,0.158499538
+2158,diff,2,4,2,4,similarity,9.285431251
+2158,diff,2,5,2,7,similarity,90.15321622
+2158,diff,2,6,2,10,similarity,48.91691983
+2158,diff,2,7,2,5,similarity,4.418174614
+2158,diff,2,8,2,6,similarity,0.059437327
+2158,diff,2,9,2,1,similarity,3.156782459
+2158,diff,2,10,2,9,similarity,3.737947431
+2158,diff,2,11,2,11,similarity,0
