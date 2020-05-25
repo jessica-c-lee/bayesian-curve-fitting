@@ -4,11 +4,12 @@
 
 Simulate_Data <- function(params, nSubj, dimVals = dim_vals, fName = "toy_data") {
   # This function simulates augmented Gaussian gradients for two groups of N=nSubj
-  # M, W1, W2, H, and noise are all vectors of length nSubj
-  # dimVals must range between -.5 and +.5
+  # Note
+  # - params is a list of length 2 (number of groups), and each item consists of 
+  # a list: M, W1, W2, H, and noise are vectors of length nSubj
   
   toyData <- list()
-
+  
   for (g in 1:2) {
     
     simData <- matrix(nrow = nSubj, ncol = length(dimVals))
@@ -25,9 +26,9 @@ Simulate_Data <- function(params, nSubj, dimVals = dim_vals, fName = "toy_data")
         rnorm(length(dimVals), 0, noise)
       mIdx <- which(round(dimVals,1) == round(M[i], 1))
       if (mIdx == 1) {
-        simData[i,] <- c(gausLeft[1], gausRight[(mIdx+1):11])
+        simData[i,] <- c(gausLeft[1], gausRight[(mIdx+1):length(dimVals)])
       } else {
-        simData[i,] <- c(gausLeft[1:(mIdx-1)], gausRight[mIdx:11])
+        simData[i,] <- c(gausLeft[1:(mIdx-1)], gausRight[mIdx:length(dimVals)])
       }
     }
     subj <- rep(((g-1)*nSubj + 1):(nSubj*g), each = length(dimVals))
@@ -70,17 +71,14 @@ Simulate_Data <- function(params, nSubj, dimVals = dim_vals, fName = "toy_data")
 #_______________________________________________________________________________
 Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
   
-  # This function reads data, prepares the data list for stan, and plots the
-  # gradients.
-  # The stimulus dimension column must be named "x", responses as "y", group as
-  # "group", subject ID as "subj"
-  
-  # Note that the "x" column does not have to match the dimVals argument
-  # But the dimVals argument should match the order of the "x" column, 
-  # and the position of the CS+ should be 0.
-  
-  # Note that changing the dimVals parameter may also require changing the 
-  # parameters of the prior distributions in the model string.
+  # This function reads long data, prepares the data list for stan, and plots 
+  # the gradients
+  # Note
+  # - Responses should be labelled as "y", subject ID as "subj", group names 
+  # labelled as "group" (and should match groupName1 and groupName2)
+  # - The "x" column does not have to match the dimVals argument but the dimVals 
+  # argument should match the order of the "x" column, and the position of the 
+  # CS+ should be 0 (see demo1.csv)
   
   data <- read.csv(fileName, header = TRUE)
   
@@ -131,6 +129,8 @@ Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
 
 Run_Model <- function(dataList, modelName, modelFile, params) {
   
+  # This function runs the model in stan
+  
   stanfit <- stan(file = modelFile,
                   data = dataList, 
                   pars = params,
@@ -142,28 +142,34 @@ Run_Model <- function(dataList, modelName, modelFile, params) {
                   algorithm = "NUTS",
                   cores = parallel::detectCores())
   
+  # save diagnostics
   diag <- rstan::get_sampler_params(stanfit, inc_warmup = FALSE)
+  
+  # save samples
   samples <- rstan::extract(stanfit)
   
+  # save summary file
   summary <- rstan::summary(stanfit, probs = c(0.025, 0.50, 0.975))$summary
   write.csv(summary, file = paste0(file_name_root, modelName, "-summary.csv"), row.names = TRUE)
   
   # calculate waic
-  loglik <- loo::extract_log_lik(stanfit)
-  waic <- loo::waic(loglik)
+  loglik <- extract_log_lik(stanfit)
+  waic <- waic(loglik)
+  loo <- loo(loglik)
   
   # output
-  out <- list(stanfit, diag, samples, summary, waic)
-  names(out) <- c("stanfit", "diag", "samples", "summary", "waic")
+  out <- list(stanfit, diag, samples, summary, waic, loo)
+  names(out) <- c("stanfit", "diag", "samples", "summary", "waic", "loo")
   return(out)
 }
 #_______________________________________________________________________________
 
 Posterior_Preds <- function(samples, responses, modelName, nSubj, subjList, 
-                            nStim, summary, nRow = nRow, figMult) {
+                            nStim, summary, nRow = nRow, figMult, labels) {
   
-  # This function plots the posterior predictives overlayed on the empirical 
-  # gradients facetting by subject
+  # This function plots the posterior predictives for each subject overlayed on 
+  # the empirical gradients
+  # - Optional labels: display the mean of the posterior for each parameter
   
   post_preds <- matrix(NA, nrow = nSubj*nStim*n_samp, ncol = 4)
   post_preds <- as.data.frame(post_preds)
@@ -191,12 +197,12 @@ Posterior_Preds <- function(samples, responses, modelName, nSubj, subjList,
   for (i in 1:nSubj) {
     label[i] <- paste0("M: ", round(summary$mean[i], 2),
                        " SD +: ", round(summary$mean[nSubj + i], 2),
-                       " SD -: ", round(summary$mean[nSubj*2 + i]),
+                       " SD -: ", round(summary$mean[nSubj*2 + i], 2),
                        " H: ", round(summary$mean[nSubj*3 + i]))
   }
   post_preds$label <- rep(label, each = n_samp * nStim)
   
-  # plot empirical gradients with posterior samples overlayed
+  # figure layers
   grad_layers <- list(
     geom_line(stat = "identity", size = 1.25),
     labs(title = "", x = "dimension", y = "responding"),
@@ -213,26 +219,38 @@ Posterior_Preds <- function(samples, responses, modelName, nSubj, subjList,
           legend.position="none")
   )
   
-  fig <- ggplot(post_preds, aes(y = response, x = dim)) + 
-    grad_layers +
-    geom_text(data = post_preds, mapping = aes(label = label, x = 6, y = 115),  
-              size = 2, colour = "black")
+  # plot gradients alone
+  if (labels == TRUE) {
+    fig <- ggplot(post_preds, aes(y = response, x = dim)) + 
+      grad_layers +
+      geom_text(data = post_preds, mapping = aes(label = label, x = 6, y = 115),  
+                     size = 2.5, colour = "black")
+  } else if (labels == FALSE) {
+    fig <- ggplot(post_preds, aes(y = response, x = dim)) + 
+      grad_layers
+  }
   ggsave(file = paste0(file_name_root, modelName, "-gradients", graph_file_type), 
          plot = fig + facet_wrap(~ subj, nrow = nRow),
          width = gg_width*figMult, height = gg_height*figMult, 
-         # width = 25, height = 20,
          units = "cm", dpi = dpi)
   
-  fig <- ggplot(post_preds, aes(y = response, x = dim)) + 
-    grad_layers +
-    geom_point(aes(y = pred, x = dim), colour = scat_col, size = scat_size, 
-               shape = scat_shape) +
-    geom_text(data = post_preds, mapping = aes(label = label, x = 6, y = 115),  
-              size = 2, colour = "black")
+  # plot gradients with posterior predictives
+  if (labels == TRUE) {
+    fig <- ggplot(post_preds, aes(y = response, x = dim)) + 
+      grad_layers +
+      geom_point(aes(y = pred, x = dim), colour = scat_col, size = scat_size, 
+                 shape = scat_shape) +
+      geom_text(data = post_preds, mapping = aes(label = label, x = 6, y = 115),  
+                size = 2.5, colour = "black")
+  } else if (labels == FALSE) {
+    fig <- ggplot(post_preds, aes(y = response, x = dim)) + 
+      grad_layers +
+      geom_point(aes(y = pred, x = dim), colour = scat_col, size = scat_size, 
+                 shape = scat_shape)
+  }
   ggsave(file = paste0(file_name_root, modelName, "-postpreds", graph_file_type), 
          plot = fig + facet_wrap(~ subj, nrow = nRow),
          width = gg_width*figMult, height = gg_height*figMult, 
-         # width = 25, height = 20,
          units = "cm", dpi = dpi)
 }
 #_______________________________________________________________________________
@@ -240,13 +258,18 @@ Posterior_Preds <- function(samples, responses, modelName, nSubj, subjList,
 Plot_Densities <- function(samples1, samples2, groupName1, groupName2, graphName,
                            paramNames, dimVals) {
   
-  # This function plots the densities of each augmented Gaussian parameter for 2 groups
+  # This function produces a multi-panelled figure with:
+  # a) The mean empirical gradients for each group
+  # b) Posterior distribution for the Mean parameter for each group
+  # c) Posterior distribution for the Height parameter for each group
+  # d) Posterior distribution for the Width- parameter for each group
+  # e) Posterior distribution for the Width+ parameter for each group
   
   estimates <- as.data.frame(
     cbind(
       c(as.vector(samples1$M_group), as.vector(samples2$M_group)),
-      c(as.vector(samples1$SDMinus_group), as.vector(samples2$SDMinus_group)),
       c(as.vector(samples1$SDPlus_group), as.vector(samples2$SDPlus_group)),
+      c(as.vector(samples1$SDMinus_group), as.vector(samples2$SDMinus_group)),
       c(as.vector(samples1$height_group), as.vector(samples2$height_group))))
   colnames(estimates) <- paramNames
   estimates$group <- c(rep(groupName1, length(as.vector(samples1$M_group))),
@@ -258,62 +281,51 @@ Plot_Densities <- function(samples1, samples2, groupName1, groupName2, graphName
                          scale_fill_manual(values = density_cols),
                          theme_classic())
   
-  M_fig <- ggplot(estimates, aes(M, fill = group)) + 
+  M_fig <- ggplot(estimates, aes(M_group, fill = group)) + 
     density_layers +
     scale_x_continuous(limits = c(min(dimVals), max(dimVals)), breaks = dimVals, 
                        labels = c(min(dimVals), "", "", "", "", 0, "", "", "", "", max(dimVals))) +
-    # geom_vline(xintercept = mean(samples1$M_group), linetype = "solid", colour = density_cols[1],
-    #            size = 1) +
-    # geom_vline(xintercept = mean(samples2$M_group), linetype = "solid", colour = density_cols[2],
-    #            size = 1) +
     theme(axis.title.x = element_blank()) +
     ggtitle("b) Mean")
   
-  height_fig <- ggplot(estimates, aes(height, fill = group)) + 
+  height_fig <- ggplot(estimates, aes(height_group, fill = group)) + 
     density_layers +
     scale_x_continuous(limits = c(40, 100), breaks = seq(40, 100, 10)) +
-    # geom_vline(xintercept = mean(samples1$height_group), linetype = "solid", colour = density_cols[1],
-    #            size = 1) +
-    # geom_vline(xintercept = mean(samples2$height_group), linetype = "solid", colour = density_cols[2],
-    #            size = 1) +
     theme(axis.title.x = element_blank()) +
     ggtitle("c) Height")
   
-  SDMinus_fig <- ggplot(estimates, aes(SDMinus, fill = group)) + 
+  SDMinus_fig <- ggplot(estimates, aes(SDMinus_group, fill = group)) + 
     density_layers +
-    scale_x_continuous(limits = c(0, 1)) +
-    # geom_vline(xintercept = mean(samples1$SDMinus_group), linetype = "solid", colour = density_cols[1],
-    #            size = 1) +
-    # geom_vline(xintercept = mean(samples2$SDMinus_group), linetype = "solid", colour = density_cols[2],
-    #            size = 1) +
+    scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, .2)) +
     theme(axis.title.x = element_blank()) +
     ggtitle("d) Width -")
   
-  SDPlus_fig <- ggplot(estimates, aes(SDPlus, fill = group)) + 
+  SDPlus_fig <- ggplot(estimates, aes(SDPlus_group, fill = group)) + 
     density_layers +
-    scale_x_continuous(limits = c(0, 1)) +
-    # geom_vline(xintercept = mean(samples1$SDPlus_group), linetype = "solid", colour = density_cols[1],
-    #            size = 1) +
-    # geom_vline(xintercept = mean(samples2$SDPlus_group), linetype = "solid", colour = density_cols[2],
-    #            size = 1) +
+    scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, .2)) +
     theme(axis.title.x = element_blank()) +
     ggtitle("e) Width +")
-
+  
   fig_panel <- M_fig + height_fig + SDMinus_fig + SDPlus_fig +
     plot_layout(nrow = 2, byrow = TRUE)
-  # ggsave(paste0(file_name_root, graphName, "density", graph_file_type), fig_panel, 
-  #        "jpeg", height = gg_height*1.5, width = gg_width*1.5, units = "cm", dpi = dpi)
-  
 }
 
 #_______________________________________________________________________________
-# Run analysis comparing two groups
-
-Run_Analysis <- function(fileName, dimVals, nRow = c(6,6), figMult, graphName,
-                         paramNames, groupName1, groupName2, modelFile, params) {
+Fit_Aug_Gaussian <- function(fileName, modelFile, groupName1, groupName2, graphName, 
+                             dimVals, params, groupParams, 
+                             ropeLow, ropeHigh, ropeLowDiffs, ropeHighDiffs,
+                             hdiLim, nRow = c(5,5), figMult = 2, labels = TRUE) {
   
-  # Function that reads data, runs the analysis, and saves the output
-  # Note that groupName1 and groupName2 must match those in the data files
+  # Master function that reads the data file, runs the analysis, and generates summary output
+  
+  # Note
+  # - groupName1 and groupName2 must match those in the data files
+  # - all ROPE parameters must be of length(groupParams) and specified in the 
+  # same order as groupParams
+  # - ropeLow and ropeHigh refer to custom ROPE limits for each parameter
+  # - ropeLowDiffs and ropeHighDiffs refer to custom ROPE limits for the group
+  # difference in each parameter
+  # - also calculates standard ROPE limits (+- 0.1xSD) for each group difference
   
   # 1. read data
   out <- Read_Gen_Data(fileName, dimVals, groupName1, groupName2)
@@ -330,81 +342,107 @@ Run_Analysis <- function(fileName, dimVals, nRow = c(6,6), figMult, graphName,
   Posterior_Preds(samples = samples_1, responses = as.vector(t(data_list_1$responses)), 
                   modelName = groupName1, nSubj = data_list_1$nSubj, 
                   nStim = data_list_1$nStim, summary = as.data.frame(mcmc_out_1$summary), 
-                  nRow = nRow[1], figMult = figMult)
+                  nRow = nRow[1], figMult = figMult, labels = labels)
   Posterior_Preds(samples = samples_2, responses = as.vector(t(data_list_2$responses)), 
                   modelName = groupName2, nSubj = data_list_2$nSubj, 
                   nStim = data_list_2$nStim, summary = as.data.frame(mcmc_out_2$summary), 
-                  nRow = nRow[2], figMult = figMult)
+                  nRow = nRow[2], figMult = figMult, labels = labels)
   
-  # 4. compare posteriors between groups
+  # 4. plot gradients + posteriors
   density_fig <- Plot_Densities(samples_1, samples_2, groupName1 = groupName1, 
                                 groupName2 = groupName2, graphName = graphName, 
-                                paramNames = paramNames, dimVals = dimVals)
-  # plot gradients + posteriors
+                                paramNames = groupParams, dimVals = dimVals)
+  
   fig_panel <- out[[3]] + ggtitle("a) Generalisation gradients ") +
     density_fig +
     plot_layout(widths = c(1, 1.75), guides = "collect")
   ggsave(paste0(file_name_root, graphName, "density", graph_file_type), fig_panel, 
          "jpeg", height = gg_height, width = gg_width*2.5, units = "cm", dpi = dpi)
   
-  # 5. calculate HDIs for posterior estimates
-  hdi_m1 <- bayestestR::hdi(as.vector(samples_1$M_group), ci = hdi_limit) 
-  hdi_m2 <- bayestestR::hdi(as.vector(samples_2$M_group), ci = hdi_limit) 
-  hdi_sdplus1 <- bayestestR::hdi(as.vector(samples_1$SDPlus_group), ci = hdi_limit) 
-  hdi_sdplus2 <- bayestestR::hdi(as.vector(samples_2$SDPlus_group), ci = hdi_limit)
-  hdi_sdminus1 <- bayestestR::hdi(as.vector(samples_1$SDMinus_group), ci = hdi_limit) 
-  hdi_sdminus2 <- bayestestR::hdi(as.vector(samples_2$SDMinus_group), ci = hdi_limit)
-  hdi_h1 <- bayestestR::hdi(as.vector(samples_1$height_group), ci = hdi_limit) 
-  hdi_h2 <- bayestestR::hdi(as.vector(samples_2$height_group), ci = hdi_limit)
-  temp <- as.data.frame(t(c(hdi_m1$CI_low, hdi_m1$CI_high, hdi_m2$CI_low, hdi_m2$CI_high, 
-                            hdi_sdplus1$CI_low, hdi_sdplus1$CI_high, hdi_sdplus2$CI_low, hdi_sdplus2$CI_high,
-                            hdi_sdminus1$CI_low, hdi_sdminus1$CI_high, hdi_sdminus2$CI_low, hdi_sdminus2$CI_high,
-                            hdi_h1$CI_low, hdi_h1$CI_high, hdi_h2$CI_low, hdi_h2$CI_high)))
-  colnames(temp) <- paste0(rep(c("m", "sdplus", "sdminus", "h"), each = 4),
-                           rep(c("1", "1", "2", "2"), times = 4), rep(c("_low", "_high"), times = 8))
-  write_csv(temp, paste0(file_name_root, "HDIs.csv"))
+  # 5. HDIS and posterior summary stats for the group parameters 
+  temp <- data.frame(group = rep(c(groupName1, groupName2), each = length(groupParams)),
+                     param = rep(groupParams, times = 2),
+                     hdi_lim = hdiLim,
+                     hdi_low = rep(NA, length(groupParams)*2),
+                     hdi_high = rep(NA, length(groupParams)*2),
+                     p_dir = rep(NA, length(groupParams)*2),
+                     rope_low = rep(ropeLow, 2),
+                     rope_high = rep(ropeHigh, 2),
+                     prop_rope = rep(NA, length(groupParams)*2))
+  for (i in 1:length(groupParams)) {
+    temp$hdi_low[i] <- hdi(as.vector(samples_1[[groupParams[i]]]), ci = hdiLim)$CI_low
+    temp$hdi_low[length(groupParams) + i] <- hdi(as.vector(samples_2[[groupParams[i]]]), ci = hdiLim)$CI_low
+    temp$hdi_high[i] <- hdi(as.vector(samples_1[[groupParams[i]]]), ci = hdiLim)$CI_high
+    temp$hdi_high[length(groupParams) + i] <- hdi(as.vector(samples_2[[groupParams[i]]]), ci = hdiLim)$CI_high
+    temp$p_dir[i] <- p_direction(as.vector(samples_1[[groupParams[i]]]), ci = hdiLim)
+    temp$p_dir[length(groupParams) + i] <- p_direction(as.vector(samples_2[[groupParams[i]]]), ci = hdiLim)
+    # custom ROPE
+    temp$prop_rope[i] <- rope(as.vector(samples_1[[groupParams[i]]]), ci = hdiLim,
+                              range = c(ropeLow[i], ropeHigh[i]))$ROPE_Percentage
+    temp$prop_rope[length(groupParams) + i] <- rope(as.vector(samples_2[[groupParams[i]]]), ci = hdiLim,
+                                                    range = c(ropeLow[i], ropeHigh[i]))$ROPE_Percentage
+  }
+  write_csv(format(temp, scientific = FALSE), paste0(file_name_root, "hdis.csv"))
   
-  # 6. calculate HDIs and ROPE for group difference scores
-  # M
+  # 6. HDIS and posterior summary stats for the group differences 
   diff_m <- as.vector(samples_1$M_group) - c(as.vector(samples_2$M_group))
-  hdi_m <- bayestestR::hdi(diff_m, ci = hdi_limit) 
-  rope_m <- bayestestR::rope(diff_m) 
-  # W+
   diff_wplus <- as.vector(samples_1$SDPlus_group) - c(as.vector(samples_2$SDPlus_group))
-  hdi_wplus <- bayestestR::hdi(diff_wplus, ci = hdi_limit) 
-  rope_wplus <- bayestestR::rope(diff_wplus) 
-  # W-
   diff_wminus <- as.vector(samples_1$SDMinus_group) - c(as.vector(samples_2$SDMinus_group))
-  hdi_wminus <- bayestestR::hdi(diff_wminus, ci = hdi_limit) 
-  rope_wminus <- bayestestR::rope(diff_wminus)
-  # H
   diff_h <- as.vector(samples_1$height_group) - c(as.vector(samples_2$height_group))
-  hdi_h <- bayestestR::hdi(diff_h, ci = hdi_limit) 
-  rope_h <- bayestestR::rope(diff_h)
+  samples_diffs <- as.data.frame(cbind(diff_m, diff_wplus, diff_wminus, diff_h))
+  colnames(samples_diffs) <- groupParams
+  temp <- data.frame(param = groupParams,
+                     hdi_lim = hdiLim,
+                     hdi_low = rep(NA, length(groupParams)),
+                     hdi_high = rep(NA, length(groupParams)),
+                     p_dir = rep(NA, length(groupParams)),
+                     rope_low = ropeLowDiffs, # custom ROPE limits
+                     rope_high = ropeHighDiffs, 
+                     prop_rope = rep(NA, length(groupParams)),
+                     rope_low_stand = rep(NA, length(groupParams)), # standardised ROPE limits
+                     rope_high_stand = rep(NA, length(groupParams)),
+                     prop_rope_stand = rep(NA, length(groupParams)))
+  for (i in 1:length(groupParams)) {
+    temp$hdi_low[i] <- hdi(as.vector(samples_diffs[[groupParams[i]]]), ci = hdiLim)$CI_low
+    temp$hdi_high[i] <- hdi(as.vector(samples_diffs[[groupParams[i]]]), ci = hdiLim)$CI_high
+    temp$p_dir[i] <- p_direction(as.vector(samples_diffs[[groupParams[i]]]), ci = hdiLim)
+    # custom ROPE
+    temp$prop_rope[i] <- rope(as.vector(samples_diffs[[groupParams[i]]]), ci = hdiLim,
+                                    range = c(temp$rope_low[i], temp$rope_high[i]))$ROPE_Percentage
+    # standardised ROPE
+    temp$rope_low_stand[i] <- -0.1 * sd(samples_diffs[[groupParams[i]]])
+    temp$rope_high_stand[i] <- +0.1 * sd(samples_diffs[[groupParams[i]]])
+    temp$prop_rope_stand[i] <- rope(as.vector(samples_diffs[[groupParams[i]]]), ci = hdiLim,
+                              range = c(temp$rope_low_stand[i], temp$rope_high_stand[i]))$ROPE_Percentage
+  }
+  write_csv(format(temp, scientific = FALSE), paste0(file_name_root, "group_diff_hdis.csv"))
   
-  temp <- as.data.frame(t(c(hdi_m$CI_low, hdi_m$CI_high, 
-                            hdi_wplus$CI_low, hdi_wplus$CI_high, 
-                            hdi_wminus$CI_low, hdi_wminus$CI_high,
-                            hdi_h$CI_low, hdi_h$CI_high)))
-  colnames(temp) <- paste0(rep(c("m", "sdplus", "sdminus", "h"), each = 2),
-                           rep(c("_low", "_high"), times = 4))
-  write_csv(temp, paste0(file_name_root, "group_diff_HDIs.csv"))
+  # 7. predictive accuracy measures
+  loo_1 <- mcmc_out_1[["loo"]]
+  loo_2 <- mcmc_out_2[["loo"]]
+  waic_1 <- mcmc_out_1[["waic"]]
+  waic_2 <- mcmc_out_2[["waic"]]
+  temp <- data.frame(group = c(groupName1, groupName2),
+                     elpd_waic = c(waic_1$estimates[1,1], waic_2$estimates[1,1]),
+                     p_waic = c(waic_1$estimates[2,1], waic_2$estimates[2,1]),
+                     waic = c(waic_1$estimates[3,1], waic_2$estimates[3,1]))
+  write_csv(temp, paste0(file_name_root, "waics.csv"))
   
-  out <- list(data_list_1, data_list_2, mcmc_out_1, mcmc_out_2, 
-              samples_1, samples_2, diff_m, hdi_m, rope_m, diff_wplus, 
-              hdi_wplus, rope_wplus, diff_wminus, hdi_wminus, rope_wminus, 
-              diff_h, hdi_h, rope_h)
+  # return output list
+  out <- list(data_list_1, data_list_2, mcmc_out_1, mcmc_out_2, waic_1, waic_2,
+              loo_1, loo_2)
   names(out) <- c("data_list_1", "data_list_2", "mcmc_out_1", "mcmc_out_2", 
-                  "samples_1", "samples_2", "diff_m", "hdi_m", "rope_m", 
-                  "diff_wplus", "hdi_wplus", "rope_wplus", "diff_wminus", 
-                  "hdi_wminus", "rope_wminus", "diff_h", "hdi_h", "rope_h")
+                  "waic_1", "waic_2", "loo_1", "loo_2")
   return(out)
 }
+
 #_______________________________________________________________________________
 Plot_Param_Recovery <- function(params, samples1, samples2, nSubj, fName) {
-  # This function plots the simulated parameters (params) against the recovered 
-  # parameters (samples)
-  # Both params and samples are lists of length 2 (number of groups)
+  
+  # This function plots simulated parameters (params) against recovered 
+  # parameters (samples1 and samples2)
+  # - params is a list of length 2 (number of groups), and each item consists of 
+  # a list: M, W1, W2, H, and noise are vectors of length nSubj
   
   H1 <- WM1 <- WP1 <- M1 <- H2 <- WM2 <- WP2 <- M2 <- rep(NA, nSubj)
   
@@ -446,5 +484,17 @@ Plot_Param_Recovery <- function(params, samples1, samples2, nSubj, fName) {
          units = "cm", dpi = dpi)
   write_csv(rbind(temp1, temp2), paste0("output/", fName, "-recovered_params.csv"))
 }
-
+#_______________________________________________________________________________
+Compare_Gaussians <- function(mod1_loo, mod2_loo, mod1_waic, mod2_waic) {
+  
+  # This function compares standard vs. augmented Gaussian models using waic 
+  # and loo
+  
+  aug_v_norm <- list(
+    loo_compare(mod1_loo, mod2_loo),
+    loo_compare(mod1_waic, mod2_waic)
+  )
+  names(aug_v_norm) <- c("loo_comp", "waic_comp")
+  return(aug_v_norm)
+}
 #_______________________________________________________________________________

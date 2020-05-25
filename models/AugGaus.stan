@@ -12,23 +12,21 @@ parameters {
       real<lower=1,upper=100> height[nSubj];
       real<lower=0> noise;
       real predR[nSubj,nStim];
-real<lower=-.5,upper=.5> M_group;
+      real<lower=-.5,upper=.5> M_group;
       real<lower=0,upper=1> SDPlus_group;
       real<lower=0,upper=1> SDMinus_group;
       real<lower=1,upper=100> height_group;
 }
 
 transformed parameters {
-   matrix[nSubj,nStim] gausFuncMinus;
-      matrix[nSubj,nStim] gausFuncPlus;
-      matrix[nSubj,nStim] gausFunc;
+   matrix[nSubj,nStim] gausFunc;
     
-      for (subj in 1:nSubj) {
-        for (stim in 1:nStim) {
-          if (xs[stim] > M[subj])
-             gausFunc[subj,stim] = height[subj] * exp(1)^-(square(xs[stim]-M[subj])/(2*square(SDPlus[subj])));
-          else
-            gausFunc[subj,stim] = height[subj] * exp(1)^-(square(xs[stim]-M[subj])/(2*square(SDMinus[subj])));
+    for (subj in 1:nSubj) {
+      for (stim in 1:nStim) {
+        if (xs[stim] > M[subj])
+          gausFunc[subj,stim] = height[subj] * exp(1)^-(square(xs[stim]-M[subj])/(2*square(SDPlus[subj])));
+        else
+          gausFunc[subj,stim] = height[subj] * exp(1)^-(square(xs[stim]-M[subj])/(2*square(SDMinus[subj])));
         }
       }
 }
@@ -55,9 +53,9 @@ model {
 
 generated quantities {
    real log_lik[nSubj,nStim];
-      for (subj in 1:nSubj) {
-        for (stim in 1:nStim) {
-          log_lik[subj,stim] = normal_lpdf(responses[subj,stim] | gausFunc[subj,stim], noise);
-        }
+    for (subj in 1:nSubj) {
+      for (stim in 1:nStim) {
+        log_lik[subj,stim] = normal_lpdf(responses[subj,stim] | gausFunc[subj,stim], noise);
       }
+    }
 }

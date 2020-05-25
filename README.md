@@ -1,6 +1,8 @@
 # bayesian-curve-fitting
 
-R code to fit augmented Gaussians to individual generalization gradients in a hierarchical Bayesian model. The augmented Gaussian has 4 parameters that allow it to fit asymmetrical gradients:
+R code to fit augmented Gaussians to individual generalization gradients in a hierarchical Bayesian model. Uses the [rstan](https://mc-stan.org/users/interfaces/rstan) and [bayestestR](https://github.com/easystats/bayestestR) packages.
+
+The augmented Gaussian has 4 parameters that allow it to fit asymmetrical gradients:
 * mean: the location of the gradient peak
 * width-: the width (SD) of the left side of the gradient
 * width+: the width (SD) of the right side of the gradient
@@ -18,17 +20,22 @@ Lee, J. C., Lovibond, P. F., Hayes, B. K., & Navarro, D. J. (2019). Negative evi
 
 Lovibond, P. F., Lee, J. C., & Hayes, B. K. (2019). Stimulus discriminability and induction as independent components of generalization. *Journal of Experimental Psychology: Learning, Memory, and Cognition.*
 
-## Author note
-Still in development! Please feel free to contact me at jessica.lee@unsw.edu.au.
-
 ## How to use
-* Run the index.R file. Note that the code is set up to compare gradients between two groups.
-* The data file must be in long format, with the grouping variable labelled as "group", the stimulus dimension variable labelled as "x" and the dependent variable labelled as "y" (see demo1.csv).
+* Run the index.R file. Note that the code is set up to compare gradients between two groups 
+* The data file must be in long format, with the grouping variable labelled as "group", the stimulus dimension variable labelled as "x" and the dependent variable labelled as "y" (see demo1.csv)
+
+## Note
+* The code is set up to fit gradients across 11 test stimuli, with the CS+ at the midpoint of the dimension (coded as 0). All functions use the fixed stimulus values -0.5:0.1:+0.5. These values are arbitrary, but the model specification is dependent on these values.
+* The code is set up to model responses ranging from 0-100. The model must be re-specified to work with a different range.
 
 ## Output generated
-* summary.csv: summary statistics for the posterior samples
+* summary.csv: summary statistics for the posterior samples for each parameter
 * gradients.jpeg: plot of the empirical gradients facetted by subject
 * postpreds.jpeg: plot of the empirical gradients facetted by subject with posterior predictives overlayed
-* HDIs.csv: 95% Highest Density Intervals (HDIs) for each parameter for each group
-* group_diff_HDIs.csv: 95% HDIs for the group difference for each parameter
-* density.jpeg: density plots of the 4 group-level parameters
+* density.jpeg: 5 panelled figure with the mean generalisation gradients (a) and density plots of the 4 group-level parameters (b-e)
+* waics.csv: Widely Applicable Information Criterions for both groups, computed with the [loo package](https://cran.r-project.org/web/packages/loo/index.html)
+* HDIs.csv: 95% Highest Density Intervals (HDIs), p(direction), and p(posterior within user-defined ROPE) for each parameter for each group
+* group_diff_HDIs.csv: 95% Highest Density Intervals (HDIs), p(direction), p(posterior within user-defined ROPE), and p(posterior within standardised ROPE) for the group differences for each parameter
+
+## Contact
+Contact jessica.lee@unsw.edu.au. 

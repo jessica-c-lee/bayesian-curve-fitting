@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-#          MODELLING GENERALIZATION GRADIENTS AS AUGMENTED GAUSSIANS
+#          MODELLING GENERALISATION GRADIENTS AS AUGMENTED GAUSSIANS
 #-------------------------------------------------------------------------------
 
 seed_num <- 1000
@@ -11,20 +11,28 @@ dir.create(file_name_root)
 library(tidyverse)
 library(patchwork)
 library(rstan)
+library(bayestestR)
+library(loo)
+
+# user-defined parameters ------------------------------------------------------
 
 # experiment-specific parameters
-dim_vals <- seq(-.5, +.5, .1) # dimension values, must range between -.5 and +.5, CS+ should be at 0
+dim_vals <- seq(-.5, +.5, .1) # dimension values, CS+ should be at 0
 
 # mcmc parameters
 n_chains <- 4
-n_iter <- 10000
+n_iter <- 20000
 n_burnin <- 1000
 n_thin <- 1
 n_samp <- 50
-param_names <- c("M", "SDMinus", "SDPlus", "height")
-hdi_limit <- c(.95) 
-params <- c("M", "SDPlus", "SDMinus", "height", "noise", "predR", "log_lik",
-            "M_group", "SDPlus_group", "SDMinus_group", "height_group")
+hdi_limit <- .95
+rope_low <- c(-0.05, .1, .1, 70) # ROPE limits for raw parameters (M, W-, W+, H)
+rope_high <- c(+0.05, .2, .2, 80)
+rope_low_diffs <- c(-0.05, -.05, -.05, -5) # ROPE limits for group diffs (M, W-, W+, H)
+rope_high_diffs <- abs(rope_low_diffs)
+augG_params <- c("M", "SDPlus", "SDMinus", "height", "noise", "predR", "log_lik",
+                 "M_group", "SDPlus_group", "SDMinus_group", "height_group")
+augG_group_params <- c("M_group", "SDPlus_group", "SDMinus_group", "height_group")
 
 # figure parameters
 graph_file_type <- ".jpeg"
@@ -44,38 +52,9 @@ source("R/build_model.R")
 # source functions
 source("R/functions.R")
 
-# --------------------------- SIMULATION & RECOVERY ----------------------------
-# DEMO 1
-nSubj_toy <- 25
-# generate gradients for two groups of subjects differing in mean, width+ and height
-toy_params_1 <- list(
-  list(M = rnorm(nSubj_toy, 0, .1), H = rnorm(nSubj_toy, 70, 1), 
-       WM = rnorm(nSubj_toy, .2, .1), WP = rnorm(nSubj_toy, .2, .1), 
-       noise = rep(2, nSubj_toy)
-  ),
-  list(M = rnorm(nSubj_toy, .1, .1), H = rnorm(nSubj_toy, 90, 1), 
-       WM = rnorm(nSubj_toy, .2, .1), WP = rnorm(nSubj_toy, .4, .1), 
-       noise = rep(2, nSubj_toy)
-  )
-)
-
-toy_data_1 <- Simulate_Data(toy_params_1, nSubj = nSubj_toy, fName = "demo1")
-
-# run analysis to recover parameters
-file_name_root <- paste0("output/", "demo1", "-")
-toyout1 <- Run_Analysis(fileName = "data/demo1.csv", 
-                       modelFile = "models/gausAhier.stan", params = params,
-                       dimVals = dim_vals, nRow = c(4,4), figMult = 2, 
-                       graphName = "", paramNames = param_names,
-                       groupName1 = "group1", groupName2 = "group2")
-
-# plot simulated vs. recovered values
-Plot_Param_Recovery(params = toy_params_1, samples1 = toyout1$samples_1, 
-                    samples2 = toyout1$samples_2, nSubj = nSubj_toy, fName = "demo1")
-
-# --------------------------------- ANALYSES -----------------------------------
+# ------------------------------- RE-ANALYSES ----------------------------------
 # Fit augmented Gaussian functions to individual gradients and estimate mean,
-# width-, width+, and height parameters for each subject and each group
+# width-, width+, and height parameters for each subject and group
 
 
 # Re-analysis of Lee, Hayes, & Lovibond (2018, Exp 2) --------------------------
@@ -84,32 +63,50 @@ Plot_Param_Recovery(params = toy_params_1, samples1 = toyout1$samples_1,
 # and a subgroup who reported generalising on he basis of the linear 
 # relationship between the CS+ and CS- (linear) following intradimensional 
 # training
+
 file_name_root <- paste0("output/", "NSW02", "-")
-nsw02out <- Run_Analysis(fileName = "data/NSW02-Data.csv", 
-                         modelFile = "models/gausAhier.stan", params = params,
-                         dimVals = dim_vals, nRow = c(5,5), figMult = 2, 
-                         graphName = "SimLin-", paramNames = param_names,
-                         groupName1 = "similarity", groupName2 = "linear")
+nsw02out <- Fit_Aug_Gaussian(fileName = "data/NSW02-Data.csv", 
+                             modelFile = "models/AugGaus.stan", 
+                             groupName1 = "similarity", groupName2 = "linear", 
+                             graphName = "simlin-", dimVals = dim_vals, 
+                             params = augG_params, groupParams = augG_group_params,
+                             ropeLow = rope_low, ropeHigh = rope_high, 
+                             ropeLowDiffs = rope_low_diffs, ropeHighDiffs = rope_high_diffs,
+                             hdiLim = hdi_limit, nRow = c(5,4), figMult = 2)
 
 # Re-analysis of Lee, Lovibond, Hayes, & Navarro (2019, Exp 1) -----------------
 # This analysis compares gradients between a group given single cue training 
 # (single pos group) and a group given interdimensional discrimination 
 # training (distant neg group)
+
 file_name_root <- paste0("output/", "NSW09", "-")
-nsw09out <- Run_Analysis(fileName = "data/NSW09-Data.csv", 
-                         modelFile = "models/gausAhier.stan", params = params,
-                         dimVals = dim_vals, nRow = c(7,7), figMult = 2.5, 
-                         graphName = "SingDist-", paramNames = param_names,
-                         groupName1 = "single pos", groupName2 = "distant neg")
+nsw09out <- Fit_Aug_Gaussian(fileName = "data/NSW09-Data.csv",
+                             modelFile = "models/AugGaus.stan", 
+                             groupName1 = "single pos", groupName2 = "distant neg", 
+                             graphName = "singdist-", dimVals = dim_vals, 
+                             params = augG_params, groupParams = augG_group_params,
+                             ropeLow = rope_low, ropeHigh = rope_high, 
+                             ropeLowDiffs = rope_low_diffs, ropeHighDiffs = rope_high_diffs,
+                             hdiLim = hdi_limit, nRow = c(7,7), figMult = 4)
 
 # Re-analysis of Lovibond, Lee, & Hayes (2020, Exp 1) --------------------------
 # This analysis compares gradients between a group given single cue training
 # (single) and a group given intradimensional discrimination training 
 # (differential)
+
 file_name_root <- paste0("output/", "NSW19", "-")
-nsw19out <- Run_Analysis(fileName = "data/NSW19-Data.csv", 
-                         modelFile = "models/gausAhier.stan", params = params,
-                         dimVals = dim_vals, nRow = c(10,10), figMult = 4, 
-                         graphName = "SingDiff-", paramNames = param_names, 
-                         groupName1 = "single", groupName2 = "differential")
-#_______________________________________________________________________________
+nsw19out <- Fit_Aug_Gaussian(fileName = "data/NSW19-Data.csv",
+                             modelFile = "models/AugGaus.stan", 
+                             groupName1 = "single", groupName2 = "differential", 
+                             graphName = "singdiff-", dimVals = dim_vals, 
+                             params = augG_params, groupParams = augG_group_params,
+                             ropeLow = rope_low, ropeHigh = rope_high, 
+                             ropeLowDiffs = rope_low_diffs, ropeHighDiffs = rope_high_diffs,
+                             hdiLim = hdi_limit, nRow = c(10,10), figMult = 5)
+
+# --------------------------- SUPPLEMENTAL ANALYSES ----------------------------
+# simulate gradients for parameter recovery exercise (see Supplemental Materials)
+source("R/param_recovery.R")
+
+# fit normal Gaussians to Lee et al. (2018)
+source("R/norm_gaussian.R")
