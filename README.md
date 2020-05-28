@@ -34,8 +34,19 @@ Lovibond, P. F., Lee, J. C., & Hayes, B. K. (2019). Stimulus discriminability an
 * postpreds.jpeg: plot of the empirical gradients facetted by subject with posterior predictives overlayed
 * density.jpeg: 5 panelled figure with the mean generalisation gradients (a) and density plots of the 4 group-level parameters (b-e)
 * waics.csv: Widely Applicable Information Criterions for both groups, computed with the [loo package](https://cran.r-project.org/web/packages/loo/index.html)
-* HDIs.csv: 95% Highest Density Intervals (HDIs), p(direction), and p(posterior within user-defined ROPE) for each parameter for each group
-* group_diff_HDIs.csv: 95% Highest Density Intervals (HDIs), p(direction), p(posterior within user-defined ROPE), and p(posterior within standardised ROPE) for the group differences for each parameter
+* HDIs.csv
+  - HDI lim: Highest Density Interval calculated (%)
+  - HDI low: Highest Density Interval lower limit
+  - HDI high: Highest Density Interval upper limit
+  - p(direction): proportion of the posterior that is positive or negative (whatever is most probable). Note that this is meaningless for the width and height parameters since they can only be positive
+* group_diff_HDIs.csv: 
+  - HDI lim: Highest Density Interval calculated (%)
+  - HDI low: Highest Density Interval lower limit
+  - HDI high: Highest Density Interval upper limit
+  - p(direction): proportion of the posterior that is positive or negative (whatever is most probable)
+  - ROPE low: Region of Practical Equivalence lower limit (-0.1 SD)
+  - ROPE high: Region of Practical Equivalence upper limit (+ 0.1 SD)
+  - p(ROPE): proportion of the posterior that lies within the ROPE
 
 ## Contact
 Contact jessica.lee@unsw.edu.au. 

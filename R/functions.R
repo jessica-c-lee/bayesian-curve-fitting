@@ -196,8 +196,8 @@ Posterior_Preds <- function(samples, responses, modelName, nSubj, subjList,
   label <- rep(NA, nSubj)
   for (i in 1:nSubj) {
     label[i] <- paste0("M: ", round(summary$mean[i], 2),
-                       " SD +: ", round(summary$mean[nSubj + i], 2),
-                       " SD -: ", round(summary$mean[nSubj*2 + i], 2),
+                       " W-: ", round(summary$mean[nSubj*2 + i], 2),
+                       " W+: ", round(summary$mean[nSubj + i], 2),
                        " H: ", round(summary$mean[nSubj*3 + i]))
   }
   post_preds$label <- rep(label, each = n_samp * nStim)
