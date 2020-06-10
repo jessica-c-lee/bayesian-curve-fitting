@@ -26,9 +26,9 @@ n_burnin <- 1000
 n_thin <- 1
 n_samp <- 50
 hdi_limit <- .95
-rope_low <- c(-0.05, .1, .1, 70) # ROPE limits for raw parameters (M, W-, W+, H)
-rope_high <- c(+0.05, .2, .2, 80)
-rope_low_diffs <- c(-0.05, -.05, -.05, -5) # ROPE limits for group diffs (M, W-, W+, H)
+rope_low <- c(-.05, .1, .1, 70) # ROPE limits for raw parameters (M, W-, W+, H)
+rope_high <- c(+.05, .2, .2, 80)
+rope_low_diffs <- c(-.05, -.05, -.05, -2.5) # ROPE limits for group diffs (M, W-, W+, H)
 rope_high_diffs <- abs(rope_low_diffs)
 augG_params <- c("M", "SDPlus", "SDMinus", "height", "noise", "predR", "log_lik",
                  "M_group", "SDPlus_group", "SDMinus_group", "height_group")
@@ -43,7 +43,6 @@ scat_col <- alpha(fig_cols[2], .1)
 gg_height <- 10
 gg_width <- 10
 dpi <- 600
-n_row <- 5
 density_cols <- c("darkblue", "orange") # group1, group2
 
 # build augmented Gaussian model string

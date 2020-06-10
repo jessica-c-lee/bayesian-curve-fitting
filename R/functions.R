@@ -71,18 +71,17 @@ Simulate_Data <- function(params, nSubj, dimVals = dim_vals, fName = "toy_data")
 #_______________________________________________________________________________
 Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
   
-  # This function reads long data, prepares the data list for stan, and plots 
-  # the gradients
+  # This function reads data in long format, prepares the data list for stan, 
+  # and plots the gradients
   # Note
   # - Responses should be labelled as "y", subject ID as "subj", group names 
   # labelled as "group" (and should match groupName1 and groupName2)
   # - The "x" column does not have to match the dimVals argument but the dimVals 
-  # argument should match the order of the "x" column, and the position of the 
-  # CS+ should be 0 (see demo1.csv)
+  # argument should match the order of the "x" column, and the CS+ should be 0 
+  # See demo1.csv for an example
   
   data <- read.csv(fileName, header = TRUE)
   
-  # groupNames <- unique(data$group)
   groupNames <- c(groupName1, groupName2)
   
   out <- vector("list", 2)
@@ -101,6 +100,7 @@ Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
   
   layers <- list(
     geom_line(size = 1.5),
+    geom_point(shape = c(rep(21, length(dimVals)), rep(24, length(dimVals))), fill = "white", size = 2),
     geom_vline(xintercept = 0, linetype = "dotted", colour = "grey"),
     scale_x_continuous(limits = c(min(dimVals), max(dimVals)),
                        breaks = dimVals,
@@ -110,8 +110,8 @@ Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
                        labels = c(0, "", "", "", "", 50, "", "", "", "", 100)),
     scale_colour_manual(values = density_cols),
     labs(x = "stimulus", y = "mean response"),
-    theme_classic()
-    # theme(legend.position = c(0.1, 0.8))
+    theme_classic(),
+    guides(colour = guide_legend(override.aes = list(shape = c(21, 24))))
   )
   
   gradients <- data %>%
@@ -120,8 +120,8 @@ Read_Gen_Data <- function(fileName, dimVals, groupName1, groupName2) {
     summarise(y = mean(y)) %>%
     mutate(x = dimVals)
   
-  fig <- ggplot(gradients, aes(x = x, y = y, group = group, colour = group)) +
-    layers
+  fig <- ggplot(gradients, aes(x = x, y = y, group = group, colour = group, 
+                               shape = group)) + layers
   
   return(list(out, groupNames, fig))
 }
@@ -214,8 +214,8 @@ Posterior_Preds <- function(samples, responses, modelName, nSubj, subjList,
     theme_classic(),
     theme(panel.background = element_rect(colour = "black", size = 0.5, 
                                           linetype = "solid", fill = NA),
-          axis.line.x = element_line(colour="black", size=0.5, linetype="solid"),
-          axis.line.y = element_line(colour="black", size=0.5, linetype="solid"),
+          axis.line.x = element_line(colour = "black", size = 0.5, linetype = "solid"),
+          axis.line.y = element_line(colour = "black", size = 0.5, linetype = "solid"),
           legend.position="none")
   )
   
@@ -224,7 +224,7 @@ Posterior_Preds <- function(samples, responses, modelName, nSubj, subjList,
     fig <- ggplot(post_preds, aes(y = response, x = dim)) + 
       grad_layers +
       geom_text(data = post_preds, mapping = aes(label = label, x = 6, y = 115),  
-                     size = 2.5, colour = "black")
+                size = 2.5, colour = "black")
   } else if (labels == FALSE) {
     fig <- ggplot(post_preds, aes(y = response, x = dim)) + 
       grad_layers
@@ -259,11 +259,10 @@ Plot_Densities <- function(samples1, samples2, groupName1, groupName2, graphName
                            paramNames, dimVals) {
   
   # This function produces a multi-panelled figure with:
-  # a) The mean empirical gradients for each group
-  # b) Posterior distribution for the Mean parameter for each group
-  # c) Posterior distribution for the Height parameter for each group
-  # d) Posterior distribution for the Width- parameter for each group
-  # e) Posterior distribution for the Width+ parameter for each group
+  # 1. Posterior distribution for the Mean parameter for each group
+  # 2. Posterior distribution for the Height parameter for each group
+  # 3. Posterior distribution for the Width- parameter for each group
+  # 4. Posterior distribution for the Width+ parameter for each group
   
   estimates <- as.data.frame(
     cbind(
@@ -314,9 +313,10 @@ Plot_Densities <- function(samples1, samples2, groupName1, groupName2, graphName
 Fit_Aug_Gaussian <- function(fileName, modelFile, groupName1, groupName2, graphName, 
                              dimVals, params, groupParams, 
                              ropeLow, ropeHigh, ropeLowDiffs, ropeHighDiffs,
-                             hdiLim, nRow = c(5,5), figMult = 2, labels = TRUE) {
+                             hdiLim = .95, propPost = 1,
+                             nRow = c(5,5), figMult = 2, labels = TRUE) {
   
-  # Master function that reads the data file, runs the analysis, and generates summary output
+  # Master function that reads the data file, runs the analysis, and saves output
   
   # Note
   # - groupName1 and groupName2 must match those in the data files
@@ -325,8 +325,9 @@ Fit_Aug_Gaussian <- function(fileName, modelFile, groupName1, groupName2, graphN
   # - ropeLow and ropeHigh refer to custom ROPE limits for each parameter
   # - ropeLowDiffs and ropeHighDiffs refer to custom ROPE limits for the group
   # difference in each parameter
-  # - also calculates standard ROPE limits (+- 0.1xSD) for each group difference
-  
+  # - hdiLim sets the limit for the HDI
+  # - propPost refers to the proportion of the posterior used to calculate p(direction) and p(ROPE)
+
   # 1. read data
   out <- Read_Gen_Data(fileName, dimVals, groupName1, groupName2)
   data_list_1 <- out[[1]][[1]]
@@ -374,12 +375,11 @@ Fit_Aug_Gaussian <- function(fileName, modelFile, groupName1, groupName2, graphN
     temp$hdi_low[length(groupParams) + i] <- hdi(as.vector(samples_2[[groupParams[i]]]), ci = hdiLim)$CI_low
     temp$hdi_high[i] <- hdi(as.vector(samples_1[[groupParams[i]]]), ci = hdiLim)$CI_high
     temp$hdi_high[length(groupParams) + i] <- hdi(as.vector(samples_2[[groupParams[i]]]), ci = hdiLim)$CI_high
-    temp$p_dir[i] <- p_direction(as.vector(samples_1[[groupParams[i]]]), ci = hdiLim)
-    temp$p_dir[length(groupParams) + i] <- p_direction(as.vector(samples_2[[groupParams[i]]]), ci = hdiLim)
-    # custom ROPE
-    temp$prop_rope[i] <- rope(as.vector(samples_1[[groupParams[i]]]), ci = hdiLim,
+    temp$p_dir[i] <- p_direction(as.vector(samples_1[[groupParams[i]]]), ci = propPost)
+    temp$p_dir[length(groupParams) + i] <- p_direction(as.vector(samples_2[[groupParams[i]]]), ci = propPost)
+    temp$prop_rope[i] <- rope(as.vector(samples_1[[groupParams[i]]]), ci = propPost,
                               range = c(ropeLow[i], ropeHigh[i]))$ROPE_Percentage
-    temp$prop_rope[length(groupParams) + i] <- rope(as.vector(samples_2[[groupParams[i]]]), ci = hdiLim,
+    temp$prop_rope[length(groupParams) + i] <- rope(as.vector(samples_2[[groupParams[i]]]), ci = propPost,
                                                     range = c(ropeLow[i], ropeHigh[i]))$ROPE_Percentage
   }
   write_csv(format(temp, scientific = FALSE), paste0(file_name_root, "hdis.csv"))
@@ -396,28 +396,33 @@ Fit_Aug_Gaussian <- function(fileName, modelFile, groupName1, groupName2, graphN
                      hdi_low = rep(NA, length(groupParams)),
                      hdi_high = rep(NA, length(groupParams)),
                      p_dir = rep(NA, length(groupParams)),
-                     rope_low = ropeLowDiffs, # custom ROPE limits
+                     rope_low = ropeLowDiffs,
                      rope_high = ropeHighDiffs, 
-                     prop_rope = rep(NA, length(groupParams)),
-                     rope_low_stand = rep(NA, length(groupParams)), # standardised ROPE limits
-                     rope_high_stand = rep(NA, length(groupParams)),
-                     prop_rope_stand = rep(NA, length(groupParams)))
+                     prop_rope = rep(NA, length(groupParams)))
   for (i in 1:length(groupParams)) {
     temp$hdi_low[i] <- hdi(as.vector(samples_diffs[[groupParams[i]]]), ci = hdiLim)$CI_low
     temp$hdi_high[i] <- hdi(as.vector(samples_diffs[[groupParams[i]]]), ci = hdiLim)$CI_high
-    temp$p_dir[i] <- p_direction(as.vector(samples_diffs[[groupParams[i]]]), ci = hdiLim)
-    # custom ROPE
-    temp$prop_rope[i] <- rope(as.vector(samples_diffs[[groupParams[i]]]), ci = hdiLim,
-                                    range = c(temp$rope_low[i], temp$rope_high[i]))$ROPE_Percentage
-    # standardised ROPE
-    temp$rope_low_stand[i] <- -0.1 * sd(samples_diffs[[groupParams[i]]])
-    temp$rope_high_stand[i] <- +0.1 * sd(samples_diffs[[groupParams[i]]])
-    temp$prop_rope_stand[i] <- rope(as.vector(samples_diffs[[groupParams[i]]]), ci = hdiLim,
-                              range = c(temp$rope_low_stand[i], temp$rope_high_stand[i]))$ROPE_Percentage
+    temp$p_dir[i] <- p_direction(as.vector(samples_diffs[[groupParams[i]]]), ci = propPost)
+    temp$prop_rope[i] <- rope(as.vector(samples_diffs[[groupParams[i]]]), ci = propPost,
+                              range = c(temp$rope_low[i], temp$rope_high[i]))$ROPE_Percentage
   }
   write_csv(format(temp, scientific = FALSE), paste0(file_name_root, "group_diff_hdis.csv"))
   
-  # 7. predictive accuracy measures
+  # 7. plot posterior group differences
+  group_diffs <- data.frame(param = rep(c("Mean", "Height", "Width -", "Width +"), each = length(diff_m)),
+                            y = c(diff_m, diff_h, diff_wminus, diff_wplus))
+  group_diffs <- group_diffs %>%
+    mutate(param = fct_relevel(param, levels = c("Mean", "Height", "Width -", "Width +")))
+  fig_panel <- ggplot(group_diffs, aes(y)) +
+    geom_density(fill = "grey") +
+    theme_classic() +
+    theme(axis.title.x = element_blank()) +
+    facet_wrap(~param, scales = "free")
+  ggsave(file = paste0(file_name_root, "groupdiff-density", graph_file_type), 
+         plot = fig_panel, width = gg_width+2, height = gg_height+2, 
+         units = "cm", dpi = dpi)
+  
+  # 8. predictive accuracy measures
   loo_1 <- mcmc_out_1[["loo"]]
   loo_2 <- mcmc_out_2[["loo"]]
   waic_1 <- mcmc_out_1[["waic"]]
@@ -442,7 +447,7 @@ Plot_Param_Recovery <- function(params, samples1, samples2, nSubj, fName) {
   # This function plots simulated parameters (params) against recovered 
   # parameters (samples1 and samples2)
   # - params is a list of length 2 (number of groups), and each item consists of 
-  # a list: M, W1, W2, H, and noise are vectors of length nSubj
+  # a list containing M, W1, W2, H, and noise vectors of length nSubj
   
   H1 <- WM1 <- WP1 <- M1 <- H2 <- WM2 <- WP2 <- M2 <- rep(NA, nSubj)
   
@@ -466,10 +471,27 @@ Plot_Param_Recovery <- function(params, samples1, samples2, nSubj, fName) {
                                     params[[2]]$WM, params[[2]]$WP),
                       recovered = c(M2, H2, WM2, WP2))
   
+  # calculate Rsquared
+  rsq <- function (x, y) {
+    cor(x, y) ^ 2
+  }
+  
+  temp1$rsq <- c(rep(rsq(temp1$simulated[temp1$param == "M"], temp1$recovered[temp1$param == "M"]), nSubj),
+                 rep(rsq(temp1$simulated[temp1$param == "H"], temp1$recovered[temp1$param == "H"]), nSubj),
+                 rep(rsq(temp1$simulated[temp1$param == "WM"], temp1$recovered[temp1$param == "WM"]), nSubj),
+                 rep(rsq(temp1$simulated[temp1$param == "WP"], temp1$recovered[temp1$param == "WP"]), nSubj))
+  
+  temp2$rsq <- c(rep(rsq(temp2$simulated[temp2$param == "M"], temp2$recovered[temp2$param == "M"]), nSubj),
+                 rep(rsq(temp2$simulated[temp2$param == "H"], temp2$recovered[temp2$param == "H"]), nSubj),
+                 rep(rsq(temp2$simulated[temp2$param == "WM"], temp2$recovered[temp2$param == "WM"]), nSubj),
+                 rep(rsq(temp2$simulated[temp2$param == "WP"], temp2$recovered[temp2$param == "WP"]), nSubj))
+  
   layers <- list(
     geom_point(),
     geom_abline(),
     theme_classic(),
+    geom_text(mapping = aes(label = paste0("R^2 == ", round(rsq,2)), x = Inf, y = -Inf), 
+              hjust = "inward", vjust = "inward", size = 3, colour = "red3", parse = TRUE),
     facet_wrap(~param, scales = "free")
   )
   
@@ -477,7 +499,6 @@ Plot_Param_Recovery <- function(params, samples1, samples2, nSubj, fName) {
     ggtitle("Group 1")
   fig2 <- ggplot(temp2, aes(x = simulated, y = recovered)) + layers +
     ggtitle("Group 2")
-  
   fig_panel <- fig1 + fig2
   ggsave(file = paste0("output/",fName, "-param_recovery", graph_file_type), 
          plot = fig_panel, width = gg_width*2.5, height = gg_height*1.5, 
