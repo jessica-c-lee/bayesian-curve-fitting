@@ -1,7 +1,7 @@
 # bayesian-curve-fitting
 
 Accompanies the paper:
-Lee, J. C., Mills, L., Hayes, B. K., & Livesey, E. J. (2021). Modelling generalisation gradients as augmented Gaussian functions. Quarterly Journal of Experimental Psychology, 74(1), 106-121. https://doi.org/10.1177/1747021820949470 
+Lee, J. C., Mills, L., Hayes, B. K., & Livesey, E. J. (2021). Modelling generalisation gradients as augmented Gaussian functions. *Quarterly Journal of Experimental Psychology, 74(1)*, 106-121. https://doi.org/10.1177/1747021820949470 
 
 R code to fit augmented Gaussians to individual generalization gradients in a hierarchical Bayesian model. Uses the [rstan](https://mc-stan.org/users/interfaces/rstan) and [bayestestR](https://github.com/easystats/bayestestR) packages.
 
@@ -12,7 +12,7 @@ The augmented Gaussian has 4 parameters that allow it to fit asymmetrical gradie
 * height: the height (peak) of the gradient
 
 Provides a re-analysis of results from 3 studies:
-* Experiment 1 of Lovibond, Lee, & Hayes (2019): single cue vs. differential training groups
+* Experiment 1 of Lovibond, Lee, & Hayes (2020): single cue vs. differential training groups
 * Experiment 2 of Lee, Hayes, & Lovibond (2018): similarity vs. linear rule subgroups
 * Experiment 2 of Lee, Lovibond, Hayes, & Navarro (2019): single pos vs. distant neg training groups.
 
