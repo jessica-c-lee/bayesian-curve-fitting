@@ -1,9 +1,13 @@
 # bayesian-curve-fitting
 
-Accompanies the paper:
+## Note
+Updated code repo available at: https://github.com/jessica-c-lee/augmented-gaussian
+
+## Citation
 Lee, J. C., Mills, L., Hayes, B. K., & Livesey, E. J. (2021). Modelling generalisation gradients as augmented Gaussian functions. *Quarterly Journal of Experimental Psychology, 74(1)*, 106-121. https://doi.org/10.1177/1747021820949470 
 
-R code to fit augmented Gaussians to individual generalization gradients in a hierarchical Bayesian model. Uses the [rstan](https://mc-stan.org/users/interfaces/rstan) and [bayestestR](https://github.com/easystats/bayestestR) packages.
+## Description
+This repo contains R code to fit augmented Gaussians to individual gradients in [rstan](https://mc-stan.org/users/interfaces/rstan). The code reproduces the re-analyses reported in Lee et al. (2021) QJEP.
 
 The augmented Gaussian has 4 parameters that allow it to fit asymmetrical gradients:
 * mean: the location of the gradient peak
@@ -11,10 +15,11 @@ The augmented Gaussian has 4 parameters that allow it to fit asymmetrical gradie
 * width+: the width (SD) of the right side of the gradient
 * height: the height (peak) of the gradient
 
-Provides a re-analysis of results from 3 studies:
+In the paper, we report re-analyses of 3 studies:
 * Experiment 1 of Lovibond, Lee, & Hayes (2020): single cue vs. differential training groups
 * Experiment 2 of Lee, Hayes, & Lovibond (2018): similarity vs. linear rule subgroups
 * Experiment 2 of Lee, Lovibond, Hayes, & Navarro (2019): single pos vs. distant neg training groups.
+See https://osf.io/tq8bv/ for the datasets.
 
 ## References
 Lee, J. C., Hayes, B. K., & Lovibond, P. F. (2018). Peak shift and rules in human generalization. *Journal of Experimental Psychology: Learning, Memory, and Cognition, 44(12)*, 1955-1970.
@@ -27,7 +32,7 @@ Lovibond, P. F., Lee, J. C., & Hayes, B. K. (2020). Stimulus discriminability an
 * Open the .Rproj file and run the index.R file. Note that the code is set up to compare gradients between two groups 
 * The data file must be in long format, with the grouping variable labelled as "group", the stimulus dimension variable labelled as "x" and the dependent variable labelled as "y" (see demo1.csv)
 
-## Note
+### Note
 * The code is set up to fit gradients across 11 test stimuli, with the CS+ at the midpoint of the dimension (coded as 0). All functions use the fixed stimulus values -0.5:0.1:+0.5. These values are arbitrary, but the model specification is dependent on these values.
 * The code is set up to model responses ranging from 0-100. The model must be re-specified to work with a different range.
 
